@@ -14,7 +14,7 @@ PROGRAMMER_FLAGS = -f interface/stlink.cfg -f target/stm32f4x.cfg
 
 all: $(BINARY)
 
-$(BINARY): main.o gpio.o startup.o system_stm32f4xx.o
+$(BINARY): main.o startup.o system_stm32f4xx.o
 	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $^ -o $(BINARY)
 
 main.o: main.cpp
