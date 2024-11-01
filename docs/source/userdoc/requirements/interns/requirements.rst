@@ -9,9 +9,7 @@ This section shall contain all of the software requirements relevant for the pro
    :caption: Contents:
 
    
-   abdulhadi-velagic/requirements
    adna-njuhovic/requirements
-   amar-tahirovic/requirements
    anesa-lakovic/requirements
    demir-hasicic/requirements
    emina-mesic/requirements
