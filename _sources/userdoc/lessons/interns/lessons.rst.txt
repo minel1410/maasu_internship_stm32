@@ -9,9 +9,7 @@ This section shall contain all of the software requirements relevant for the pro
    :caption: Contents:
 
    
-   abdulhadi-velagic/lessons
    adna-njuhovic/lessons
-   amar-tahirovic/lessons
    anesa-lakovic/lessons
    demir-hasicic/lessons
    emina-mesic/lessons
