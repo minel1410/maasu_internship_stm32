@@ -1,8 +1,9 @@
-==================================
-Requirements by Muhibija Kavazović
-==================================
+.. _Initial:
 
-.. req:: Initial requierment
+Initial requirement by Muhibija Kavazović
+=========================================
+
+.. req:: Initial requirement
    :id: REQ_INT3_1730985601
    :status: Draft
    :date-released:

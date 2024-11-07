@@ -9,4 +9,4 @@ This section shall contain all of the software requirements relevant for the pro
    :caption: Contents:
 
    interns/requirements
-   interns/muhibija-kavazovic/initial
+   
