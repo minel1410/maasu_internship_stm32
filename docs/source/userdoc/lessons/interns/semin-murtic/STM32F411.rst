@@ -1,0 +1,103 @@
+.. _STM32F411:
+
+STM32F411
+=========
+
+An overview of the STM32F411 microcontroller, focusing on its core features, GPIO functionality, clock initialization, USART configuration, and PWM/timer usage.
+
+Features
+--------
+
+- **Core**: ARM Cortex-M4 running at 100 MHz, with an FPU and ART accelerator for fast memory access.
+- **Memory**: 512 KB of Flash memory, 128 KB of SRAM.
+- **Power Consumption**:
+  - **Run**: 100 μA/MHz.
+  - **Stop**: 42 μA/MHz (fast wake-up), 9 μA/MHz (deep power-down).
+  - **Standby**: 1.8 μA.
+- **Voltage Range**: 1.7V to 3.6V.
+- **Analog**: 12-bit ADC with 16 channels.
+- **Timers**: 11 timers, including a watchdog and SysTick timer.
+- **Communication Interfaces**: I2C, USART, SPI, USB, and more.
+
+GPIO (General-Purpose Input/Output)
+-----------------------------------
+
+- **Purpose**: Interface between the microcontroller and external devices.
+- **Key Registers**:
+  - **MODER**: Configures the pin mode (input, output, analog).
+  - **PUPDR**: Configures pull-up/pull-down resistors for inputs.
+  - **OTYPER**: Sets output type (e.g., push-pull).
+  - **OSPEEDR**: Configures output speed.
+  - **AFR**: Specifies alternate functions.
+  - **IDR/ODR**: Used for reading and writing pin states.
+  - **BSSR**: Allows setting and resetting individual pins.
+- **Modes**:
+  - Input (signal reading)
+  - Output (device control)
+  - Analog (ADC/DAC)
+- **Applications**: Digital control, signal monitoring, communication, PWM.
+- **Importance**: Proper configuration ensures efficient system performance.
+
+Clock Initialization
+--------------------
+
+- **RCC (Reset and Clock Control)**: Manages system clocks and resets.
+- **Key Registers**:
+  - **CR (Control Register)**: Manages clock sources.
+  - **APB1ENR**: Enables or disables the peripheral clock for the APB1 bus.
+  - **PLLCFGR**: Configures the PLL (adjusts multipliers and dividers for frequency).
+- **Clock Sources**:
+  - **HSI**: 8 MHz internal clock.
+  - **HSE**: External high-speed clock.
+  - **LSI**: Low-speed internal clock.
+- **PLL Configuration**:
+  - **PLLM**: Main clock multiplier.
+  - **PLLN**: PLL multiplier.
+  - **PLLP**: PLL divider for main clock output.
+- **Flash Configuration**:
+  - **FLASH_ACR_LATENCY**: Sets wait states for flash memory.
+- **Power Control**:
+  - **VOS**: Voltage scaling to balance performance and power.
+- **Importance**:
+  - **Accuracy**: Crucial for timing-sensitive tasks.
+  - **Performance**: Ensures optimal microcontroller speed.
+  - **Power Efficiency**: Reduces power usage in low-power modes.
+- Proper clock initialization is essential for accurate, efficient, and optimized operations.
+
+USART (Universal Synchronous/Asynchronous Receiver-Transmitter)
+----------------------------------------------------------------
+
+- **Overview**: Supports both asynchronous (with start/stop bits) and synchronous (data with clock) communication.
+- **Oversampling**: Default 16x for better accuracy.
+- **Baud Rate**: Determines data transmission speed.
+- **Configuration Steps**:
+  1. Enable the clock in RCC.
+  2. Configure GPIO for TX/RX in alternate function mode.
+  3. Set the baud rate using `Baud Rate = Fck / (Baudrate * 2)` and write it to the BRR register.
+  4. Enable USART by setting relevant bits in `CR1` (UE, TE, RE).
+- **Transmission**: Check the `TXE` flag, then write data to `DR`.
+- **Key Registers**:
+  - **CR1**: Configures USART, enabling TX/RX.
+  - **BRR**: Sets baud rate.
+  - **DR**: Holds data for transmission.
+  - **SR**: Indicates the transmission status.
+- Proper configuration ensures reliable serial communication.
+
+Timer and PWM (Pulse Width Modulation)
+--------------------------------------
+
+- **Overview**: Each STM32 timer can be used for PWM outputs.
+- **Configuration Steps**:
+  1. Enable the timer's clock through the RCC registers.
+  2. Configure the GPIO pin for PWM output.
+  3. Set the PWM mode using the timer's Capture/Compare Registers and enable output using the `CCER`.
+- **Modes**:
+  - **Edge-Aligned**: Timer counts from 0 to `ARR`.
+  - **Center-Aligned**: Timer counts up and down for symmetrical output.
+- **Applications**: PWM can be used to control power to motors, LEDs, etc.
+- **Importance**: Proper PWM configuration allows for adjustable frequency and duty cycles for effective power management.
+
+Overview of Register Importance
+-------------------------------
+
+Registers in STM32 microcontrollers provide direct control over hardware. Proper register management is vital for setting up peripherals, controlling GPIO pins, and configuring timers, enabling efficient and precise hardware programming.
