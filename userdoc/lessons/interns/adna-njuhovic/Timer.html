@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1.1.6. Timer Lesson &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.1.2. Lessons by Anesa Laković" href="../anesa-lakovic/lessons.html" />
+    <link rel="prev" title="4.1.1.5. USART Functionalities for the STM32F411" href="USART.html" />
+<link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.1. Lessons by Adna Njuhović</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.1.1. V Model in Embedded Systems Engineering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.1.2. MCU (Microcontroller Unit)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.1.3. GPIO Firmware for STM32F411 MCU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Clock.html">4.1.1.4. Clock Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.1.5. USART Functionalities for the STM32F411</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.1.6. Timer Lesson</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.3. Lessons by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamija-fatic/lessons.html">4.1.5. Lessons by Lamija Fatić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.8. Lessons by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../requirements/requirements.html">5. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
+          <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.1. </span>Lessons by Adna Njuhović</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.1.6. </span>Timer Lesson</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/userdoc/lessons/interns/adna-njuhovic/Timer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="timer-lesson">
+<h1><span class="section-number">4.1.1.6. </span>Timer Lesson<a class="headerlink" href="#timer-lesson" title="Link to this heading"></a></h1>
+<section id="overview-of-timers">
+<h2><span class="section-number">4.1.1.6.1. </span>Overview of Timers<a class="headerlink" href="#overview-of-timers" title="Link to this heading"></a></h2>
+<p>Timers are essential peripherals in microcontrollers, including the STM32F411, that offer precise timing and counting functionalities.
+In applications requiring time delays, signal generation, or event counting, timers provide versatility and efficiency.</p>
+</section>
+<section id="timer-modes-in-stm32f411">
+<h2><span class="section-number">4.1.1.6.2. </span>Timer Modes in STM32F411<a class="headerlink" href="#timer-modes-in-stm32f411" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Basic Mode</strong>:
+- Ideal for generating periodic interrupts and simple time delays.
+- Common in software timing applications requiring precision interrupts.</p></li>
+<li><p><strong>Capture/Compare Mode</strong>:
+- Allows capturing external events and comparing internal counter values.
+- Suitable for measuring frequency, input capture for timing, or precise waveform generation.</p></li>
+<li><p><strong>PWM (Pulse Width Modulation) Mode</strong>:
+- Generates PWM signals with adjustable frequency and duty cycle.
+- Applications include motor control and LED dimming.</p></li>
+<li><p><strong>Encoder Mode</strong>:
+- Used for rotary encoder inputs to track rotational motion.
+- Applied in robotics, motor positioning, and motion tracking.</p></li>
+</ol>
+</section>
+<section id="key-timer-configurations-for-pwm-signal-generation">
+<h2><span class="section-number">4.1.1.6.3. </span>Key Timer Configurations for PWM Signal Generation<a class="headerlink" href="#key-timer-configurations-for-pwm-signal-generation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Timer Frequency</strong>:
+- Derived from the microcontroller clock and prescaler.
+- Formula: <code class="docutils literal notranslate"><span class="pre">Timer</span> <span class="pre">Frequency</span> <span class="pre">=</span> <span class="pre">Timer</span> <span class="pre">Clock</span> <span class="pre">/</span> <span class="pre">(Prescaler</span> <span class="pre">+</span> <span class="pre">1)</span></code></p></li>
+<li><p><strong>PWM Frequency</strong>:
+- Defined by the auto-reload register (ARR) for the PWM period.
+- Formula: <code class="docutils literal notranslate"><span class="pre">PWM</span> <span class="pre">Frequency</span> <span class="pre">=</span> <span class="pre">Timer</span> <span class="pre">Frequency</span> <span class="pre">/</span> <span class="pre">(ARR</span> <span class="pre">+</span> <span class="pre">1)</span></code></p></li>
+<li><p><strong>Duty Cycle</strong>:
+- Controlled by the capture/compare register (CCR) to set high-time percentage.
+- Formula: <code class="docutils literal notranslate"><span class="pre">Duty</span> <span class="pre">Cycle</span> <span class="pre">(%)</span> <span class="pre">=</span> <span class="pre">(CCR</span> <span class="pre">/</span> <span class="pre">(ARR</span> <span class="pre">+</span> <span class="pre">1))</span> <span class="pre">*</span> <span class="pre">100</span></code></p></li>
+<li><p><strong>Output Mode</strong>:
+- Configures PWM output on designated pins.</p></li>
+</ol>
+</section>
+<section id="practical-example-configuring-pwm-signal-generation">
+<h2><span class="section-number">4.1.1.6.4. </span>Practical Example: Configuring PWM Signal Generation<a class="headerlink" href="#practical-example-configuring-pwm-signal-generation" title="Link to this heading"></a></h2>
+<p>This example configures Timer 3 on the STM32F411 to generate a PWM signal with a frequency of 1 kHz and a duty cycle of 50%.</p>
+<p><strong>Example Setup</strong>:
+- Timer: Timer 3, Channel 1
+- System Clock: 84 MHz
+- Desired PWM Frequency: 1 kHz
+- Desired Duty Cycle: 50%</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Enable Timer 3 clock</span>
+<span class="n">RCC</span><span class="o">-&gt;</span><span class="n">APB1ENR</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">RCC_APB1ENR_TIM3EN</span><span class="p">;</span>
+
+<span class="c1">// Configure the prescaler for 1 MHz timer frequency</span>
+<span class="n">TIM3</span><span class="o">-&gt;</span><span class="n">PSC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">83</span><span class="p">;</span>
+
+<span class="c1">// Set ARR for 1 kHz PWM frequency</span>
+<span class="n">TIM3</span><span class="o">-&gt;</span><span class="n">ARR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">999</span><span class="p">;</span>
+
+<span class="c1">// Set CCR1 for a 50% duty cycle</span>
+<span class="n">TIM3</span><span class="o">-&gt;</span><span class="n">CCR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+
+<span class="c1">// Configure PWM mode on channel 1 and enable output</span>
+<span class="n">TIM3</span><span class="o">-&gt;</span><span class="n">CCMR1</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">TIM_CCMR1_OC1M_PWM1</span><span class="p">;</span>
+<span class="n">TIM3</span><span class="o">-&gt;</span><span class="n">CCER</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">TIM_CCER_CC1E</span><span class="p">;</span>
+
+<span class="c1">// Start Timer 3</span>
+<span class="n">TIM3</span><span class="o">-&gt;</span><span class="n">CR1</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">TIM_CR1_CEN</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>Explanation</strong>:</p>
+<ol class="arabic simple">
+<li><p>Timer Clock Enable: Enables Timer 3.</p></li>
+<li><p>Prescaler Configuration: Divides the clock for 1 MHz frequency.</p></li>
+<li><p>ARR: Sets PWM frequency to 1 kHz.</p></li>
+<li><p>CCR1: Sets duty cycle to 50%.</p></li>
+<li><p>Start Timer: Finalizes configuration.</p></li>
+</ol>
+</section>
+<section id="applications-of-pwm-generation">
+<h2><span class="section-number">4.1.1.6.5. </span>Applications of PWM Generation<a class="headerlink" href="#applications-of-pwm-generation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Motor Speed Control</strong>: Vary duty cycle for speed adjustments.</p></li>
+<li><p><strong>LED Brightness Control</strong>: Adjust brightness with varying duty cycles.</p></li>
+<li><p><strong>Audio Signal Generation</strong>: Generate tones or modulate signals for transmission.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="USART.html" class="btn btn-neutral float-left" title="4.1.1.5. USART Functionalities for the STM32F411" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../anesa-lakovic/lessons.html" class="btn btn-neutral float-right" title="4.1.2. Lessons by Anesa Laković" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

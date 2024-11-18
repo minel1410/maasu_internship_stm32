@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.1.1. Lessons by Adna Njuhović &mdash; Maasu Internship 4 1 documentation</title>
+  <title>4.1.1.4. Clock Initialization &mdash; Maasu Internship 4 1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
@@ -32,8 +32,8 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="4.1.1.1. V Model in Embedded Systems Engineering" href="vmodel.html" />
-    <link rel="prev" title="4.1. Lessons written by each intern" href="../lessons.html" />
+    <link rel="next" title="4.1.1.5. USART Functionalities for the STM32F411" href="USART.html" />
+    <link rel="prev" title="4.1.1.3. GPIO Firmware for STM32F411 MCU" href="GPIO.html" />
 <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -64,11 +64,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">4.1.1. Lessons by Adna Njuhović</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.1. Lessons by Adna Njuhović</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.1.1. V Model in Embedded Systems Engineering</a></li>
 <li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.1.2. MCU (Microcontroller Unit)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.1.3. GPIO Firmware for STM32F411 MCU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Clock.html">4.1.1.4. Clock Initialization</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.1.4. Clock Initialization</a></li>
 <li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.1.5. USART Functionalities for the STM32F411</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Timer.html">4.1.1.6. Timer Lesson</a></li>
 </ul>
@@ -106,9 +106,10 @@
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
           <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.1.1. </span>Lessons by Adna Njuhović</li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.1. </span>Lessons by Adna Njuhović</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.1.4. </span>Clock Initialization</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../../_sources/userdoc/lessons/interns/adna-njuhovic/lessons.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../../_sources/userdoc/lessons/interns/adna-njuhovic/Clock.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -116,74 +117,119 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="lessons-by-adna-njuhovic">
-<h1><span class="section-number">4.1.1. </span>Lessons by Adna Njuhović<a class="headerlink" href="#lessons-by-adna-njuhovic" title="Link to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+  <section id="clock-initialization">
+<h1><span class="section-number">4.1.1.4. </span>Clock Initialization<a class="headerlink" href="#clock-initialization" title="Link to this heading"></a></h1>
+<section id="overview-of-clock-initialization-in-the-stm32f411">
+<h2><span class="section-number">4.1.1.4.1. </span>Overview of Clock Initialization in the STM32F411<a class="headerlink" href="#overview-of-clock-initialization-in-the-stm32f411" title="Link to this heading"></a></h2>
+<p>Clock initialization in the STM32F411 is crucial for setting the operational speed of the
+microcontroller and ensuring reliable peripheral communication. STM32F411 provides flexible
+clock source options and prescalers to adjust the clock frequency as needed for application
+requirements. Here are the primary components and steps involved in this process:</p>
+<ol class="arabic">
+<li><p><strong>Clock Sources:</strong></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="vmodel.html">4.1.1.1. V Model in Embedded Systems Engineering</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vmodel.html#sdlc-v-model">4.1.1.1.1. SDLC V-model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmodel.html#development-phases">4.1.1.1.2. Development Phases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmodel.html#verification-phases">4.1.1.1.3. Verification Phases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmodel.html#coding-phases">4.1.1.1.4. Coding Phases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmodel.html#validation-phases">4.1.1.1.5. Validation Phases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmodel.html#importance-of-v-model">4.1.1.1.6. Importance of V-Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmodel.html#principles-of-v-model">4.1.1.1.7. Principles of V-Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmodel.html#advantages-and-disadvantages-of-v-model">4.1.1.1.8. Advantages and Disadvantages of V-Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmodel.html#conclusion">4.1.1.1.9. Conclusion</a></li>
+<li><p><strong>High-Speed Sources:</strong>
+- <strong>HSI (High-Speed Internal)</strong>: A 16 MHz RC oscillator, quick to start but less precise.</p>
+<blockquote>
+<div><p>Useful in applications where timing accuracy is not critical.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>HSE (High-Speed External)</strong>: An external crystal or oscillator, typically between 8 and
+25 MHz (often 25 MHz in STM32F411 applications). HSE is highly stable and accurate,
+ideal for applications where clock precision is key.</p></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="stm32overview.html">4.1.1.2. MCU (Microcontroller Unit)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#fundamental-elements">4.1.1.2.1. Fundamental Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#stm32f411-overview">4.1.1.2.2. STM32F411 Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#introduction-to-gpio">4.1.1.2.3. Introduction to GPIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#gpio-modes-and-configurations">4.1.1.2.4. GPIO Modes and Configurations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#configuring-gpio-in-embedded-development">4.1.1.2.5. Configuring GPIO in Embedded Development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#gpio-in-practical-applications">4.1.1.2.6. GPIO in Practical Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#optimizing-gpio-usage">4.1.1.2.7. Optimizing GPIO Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#key-takeaways">4.1.1.2.8. Key Takeaways</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="GPIO.html">4.1.1.3. GPIO Firmware for STM32F411 MCU</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="GPIO.html#what-is-gpio">4.1.1.3.1. 1. What is GPIO?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPIO.html#gpio-functionality-and-configuration">4.1.1.3.2. 2. GPIO Functionality and Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPIO.html#gpio-output-registers-odr-and-bsrr">4.1.1.3.3. 3. GPIO Output Registers: ODR and BSRR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPIO.html#differences-between-odr-output-data-register-and-bsrr-bit-set-reset-register">4.1.1.3.4. 4. Differences Between ODR (Output Data Register) and BSRR (Bit Set/Reset Register)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPIO.html#practical-example-toggling-an-led-using-odr-and-bsrr">4.1.1.3.5. 5. Practical Example: Toggling an LED Using ODR and BSRR</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Clock.html">4.1.1.4. Clock Initialization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Clock.html#overview-of-clock-initialization-in-the-stm32f411">4.1.1.4.1. Overview of Clock Initialization in the STM32F411</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Clock.html#configuring-the-pll-to-obtain-100-mhz-from-a-25-mhz-input">4.1.1.4.2. Configuring the PLL to Obtain 100 MHz from a 25 MHz Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Clock.html#significance-of-this-configuration">4.1.1.4.3. Significance of This Configuration</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="USART.html">4.1.1.5. USART Functionalities for the STM32F411</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="USART.html#what-is-usart">4.1.1.5.1. What is USART?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="USART.html#key-configurations-for-usart-communication">4.1.1.5.2. Key Configurations for USART Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="USART.html#example-configuring-usart-for-serial-monitor-communication">4.1.1.5.3. Example: Configuring USART for Serial Monitor Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="USART.html#transmitting-data-sending-a-character-over-usart">4.1.1.5.4. Transmitting Data: Sending a Character Over USART</a></li>
-<li class="toctree-l2"><a class="reference internal" href="USART.html#conclusion">4.1.1.5.5. Conclusion</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Timer.html">4.1.1.6. Timer Lesson</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Timer.html#overview-of-timers">4.1.1.6.1. Overview of Timers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Timer.html#timer-modes-in-stm32f411">4.1.1.6.2. Timer Modes in STM32F411</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Timer.html#key-timer-configurations-for-pwm-signal-generation">4.1.1.6.3. Key Timer Configurations for PWM Signal Generation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Timer.html#practical-example-configuring-pwm-signal-generation">4.1.1.6.4. Practical Example: Configuring PWM Signal Generation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Timer.html#applications-of-pwm-generation">4.1.1.6.5. Applications of PWM Generation</a></li>
+<li><p><strong>Low-Speed Sources:</strong>
+- <strong>LSI (Low-Speed Internal)</strong>: Runs at approximately 32 kHz and is used for low-power</p>
+<blockquote>
+<div><p>applications, such as the watchdog timer.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>LSE (Low-Speed External)</strong>: A 32.768 kHz crystal oscillator, suitable for real-time clock
+(RTC) applications where timing accuracy is essential over long periods.</p></li>
 </ul>
 </li>
 </ul>
-</div>
+</li>
+<li><p><strong>Reset and Clock Control (RCC):</strong></p>
+<ul>
+<li><p>The RCC module enables clock selection, adjustment, and control across the system. It
+manages clock signals for the CPU, buses, and peripherals, making it central to achieving
+optimal performance and power management.</p></li>
+<li><p>Key RCC Registers:
+- <strong>RCC_CR (Clock Control Register)</strong>: Controls the activation of HSI, HSE, and PLL oscillators.</p>
+<blockquote>
+<div><p>Contains bits to enable oscillators and check stability flags (e.g., <cite>HSERDY</cite> for HSE stability).</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>RCC_PLLCFGR (PLL Configuration Register)</strong>: Configures the PLL parameters, allowing
+the user to adjust the input frequency and set multipliers and dividers to achieve target
+frequencies.</p></li>
+<li><p><strong>RCC_CFGR (Clock Configuration Register)</strong>: Defines the system clock source and prescalers
+for the AHB and APB buses.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Prescalers:</strong></p>
+<ul class="simple">
+<li><p>The RCC offers prescalers that divide clock frequencies for different system components,
+such as the Advanced High-Performance Bus (AHB) and the Advanced Peripheral Buses (APB1
+and APB2). For example, APB1 operates with a maximum clock of 50 MHz, while APB2 supports
+up to 100 MHz.</p></li>
+</ul>
+</li>
+<li><p><strong>Phase-Locked Loop (PLL):</strong></p>
+<ul class="simple">
+<li><p>The PLL is a programmable clock multiplier used to reach higher frequencies by configuring
+the source input, dividers, and multipliers. This is especially useful for generating high
+frequencies from a lower input clock, necessary for high-speed processing.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="configuring-the-pll-to-obtain-100-mhz-from-a-25-mhz-input">
+<h2><span class="section-number">4.1.1.4.2. </span>Configuring the PLL to Obtain 100 MHz from a 25 MHz Input<a class="headerlink" href="#configuring-the-pll-to-obtain-100-mhz-from-a-25-mhz-input" title="Link to this heading"></a></h2>
+<p>To achieve a 100 MHz system clock from a 25 MHz external clock source, the following settings should be applied to the PLL parameters in the <cite>RCC_PLLCFGR</cite> register:</p>
+<ol class="arabic">
+<li><p>Enable and Stabilize HSE:
+- Set the <cite>HSEON</cite> bit in the <cite>RCC_CR</cite> register to enable the High-Speed External (HSE) clock.
+- Check the <cite>HSERDY</cite> flag to confirm that the HSE oscillator is stable before proceeding.</p></li>
+<li><p>Configure PLL Parameters:
+- <strong>PLLM (Prescaler):</strong> To meet the recommended input frequency range for the PLL, divide the 25 MHz HSE clock down to approximately 1-2 MHz. Set <cite>PLLM = 12</cite>,</p>
+<blockquote>
+<div><p>which divides 25 MHz by 12 to yield approximately 2.08 MHz input to the PLL.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>PLLN (Multiplier):</strong> Set <cite>PLLN = 192</cite> to multiply the 2.08 MHz input by 192, producing a high intermediate frequency of 400 MHz.</p></li>
+<li><p><strong>PLLP (Post-divider):</strong> Set <cite>PLLP = 4</cite>, which divides the 400 MHz by 4, resulting in the target 100 MHz system clock frequency.</p></li>
+</ul>
+</li>
+<li><p>Enable the PLL and Set it as the System Clock:
+- Enable the PLL by setting the <cite>PLLON</cite> bit in <cite>RCC_CR</cite> and wait for the <cite>PLLRDY</cite> flag to confirm stability.
+- In <cite>RCC_CFGR</cite>, configure the PLL as the system clock source by setting the <cite>SW</cite> bits to <cite>10</cite>, activating the PLL as the main clock.</p></li>
+</ol>
+</section>
+<section id="significance-of-this-configuration">
+<h2><span class="section-number">4.1.1.4.3. </span>Significance of This Configuration<a class="headerlink" href="#significance-of-this-configuration" title="Link to this heading"></a></h2>
+<p>Configuring the PLL to achieve a 100 MHz clock frequency allows the STM32F411 to operate at
+its full performance potential, essential for time-sensitive tasks like high-speed data processing,
+advanced motor control, or communication protocols (e.g., USB, CAN). High frequencies enable
+faster instruction execution and peripheral handling, supporting applications where timing
+precision and processing power are essential.</p>
+<p>In summary, STM32F411’s clock system enables flexibility to meet different application requirements.
+Proper clock initialization, including selecting an optimal clock source and configuring the PLL, is
+crucial to balance performance, precision, and power efficiency across various microcontroller
+operations.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../lessons.html" class="btn btn-neutral float-left" title="4.1. Lessons written by each intern" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="vmodel.html" class="btn btn-neutral float-right" title="4.1.1.1. V Model in Embedded Systems Engineering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GPIO.html" class="btn btn-neutral float-left" title="4.1.1.3. GPIO Firmware for STM32F411 MCU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="USART.html" class="btn btn-neutral float-right" title="4.1.1.5. USART Functionalities for the STM32F411" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
