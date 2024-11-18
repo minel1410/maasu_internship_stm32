@@ -7,7 +7,7 @@ Lessons by Demir Hasičić
    vmodel
    stm32overview
    GPIO
-   Clock initialization
+   Clock_initialization
    USART
    Timer
 

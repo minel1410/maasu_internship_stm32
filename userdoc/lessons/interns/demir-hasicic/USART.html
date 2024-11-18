@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.1.3.4. USART &mdash; Maasu Internship 4 1 documentation</title>
+  <title>4.1.3.5. USART &mdash; Maasu Internship 4 1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
@@ -32,8 +32,8 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="4.1.3.5. Timer" href="Timer.html" />
-    <link rel="prev" title="4.1.3.3. GPIO" href="GPIO.html" />
+    <link rel="next" title="4.1.3.6. Timer" href="Timer.html" />
+    <link rel="prev" title="4.1.3.4. Clock Initialization" href="Clock_initialization.html" />
 <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -70,8 +70,9 @@
 <li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.3.1. V-model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.3.2. STM32F411</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.3.3. GPIO</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.3.4. USART</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Timer.html">4.1.3.5. Timer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Clock_initialization.html">4.1.3.4. Clock Initialization</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.3.5. USART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Timer.html">4.1.3.6. Timer</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
@@ -106,7 +107,7 @@
           <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
           <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
           <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.3. </span>Lessons by Demir Hasičić</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.1.3.4. </span>USART</li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.3.5. </span>USART</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/userdoc/lessons/interns/demir-hasicic/USART.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -117,20 +118,20 @@
            <div itemprop="articleBody">
              
   <section id="usart">
-<h1><span class="section-number">4.1.3.4. </span>USART<a class="headerlink" href="#usart" title="Link to this heading"></a></h1>
+<h1><span class="section-number">4.1.3.5. </span>USART<a class="headerlink" href="#usart" title="Link to this heading"></a></h1>
 <section id="introduction">
-<h2><span class="section-number">4.1.3.4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.3.5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>USART (Universal Synchronous/Asynchronous Receiver/Transmitter) is a key peripheral in STM32F411 microcontrollers, enabling serial communication between microcontrollers and other devices such as computers, sensors, or peripherals. It supports both synchronous and asynchronous modes, making it highly versatile for various embedded applications.</p>
 </section>
 <section id="common-use-cases">
-<h2><span class="section-number">4.1.3.4.2. </span>Common Use Cases:<a class="headerlink" href="#common-use-cases" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.3.5.2. </span>Common Use Cases:<a class="headerlink" href="#common-use-cases" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Debugging or sending logs using a serial terminal (e.g., PuTTY or Tera Term).</p></li>
 <li><p>Real-time data exchange with external devices like GPS modules or sensors.</p></li>
 </ul>
 </section>
 <section id="key-configurations-for-usart-communication">
-<h2><span class="section-number">4.1.3.4.3. </span>Key Configurations for USART Communication<a class="headerlink" href="#key-configurations-for-usart-communication" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.3.5.3. </span>Key Configurations for USART Communication<a class="headerlink" href="#key-configurations-for-usart-communication" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><p><strong>Baud Rate</strong>:
 - Determines the rate at which data is transmitted and received, measured in bits per second (bps).
@@ -157,7 +158,7 @@
 </ol>
 </section>
 <section id="usart-configuration-on-stm32f411">
-<h2><span class="section-number">4.1.3.4.4. </span>USART Configuration on STM32F411<a class="headerlink" href="#usart-configuration-on-stm32f411" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.3.5.4. </span>USART Configuration on STM32F411<a class="headerlink" href="#usart-configuration-on-stm32f411" title="Link to this heading"></a></h2>
 <p>To configure USART for communication, follow these steps:</p>
 <ol class="arabic">
 <li><p><strong>Enable the USART Peripheral Clock</strong>:
@@ -203,7 +204,7 @@
 </ol>
 </section>
 <section id="example-setting-up-usart-for-communication">
-<h2><span class="section-number">4.1.3.4.5. </span>Example: Setting Up USART for Communication<a class="headerlink" href="#example-setting-up-usart-for-communication" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.3.5.5. </span>Example: Setting Up USART for Communication<a class="headerlink" href="#example-setting-up-usart-for-communication" title="Link to this heading"></a></h2>
 <p>This example demonstrates setting up USART2 for communication at 9600 baud with a serial monitor.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Enable the USART2 peripheral clock</span>
 <span class="n">RCC</span><span class="o">-&gt;</span><span class="n">APB1ENR</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">RCC_APB1ENR_USART2EN</span><span class="p">;</span>
@@ -225,7 +226,7 @@
 </div>
 </section>
 <section id="conclusion">
-<h2><span class="section-number">4.1.3.4.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.3.5.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
 <p>USART is a versatile and essential peripheral in STM32 microcontrollers, providing robust solutions for serial communication in both synchronous and asynchronous modes. By properly configuring key parameters such as baud rate, data format, and control registers, USART enables efficient data exchange with external devices like sensors, computers, and other microcontrollers. Mastering the initialization process, pin configurations, and data transmission ensures reliable communication, making USART an indispensable tool for embedded applications.</p>
 </section>
 </section>
@@ -234,8 +235,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="GPIO.html" class="btn btn-neutral float-left" title="4.1.3.3. GPIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Timer.html" class="btn btn-neutral float-right" title="4.1.3.5. Timer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Clock_initialization.html" class="btn btn-neutral float-left" title="4.1.3.4. Clock Initialization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Timer.html" class="btn btn-neutral float-right" title="4.1.3.6. Timer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
