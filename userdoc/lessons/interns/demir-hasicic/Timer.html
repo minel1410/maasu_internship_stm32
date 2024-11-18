@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1.3.5. Timer &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.1.4. Lessons by Emina Mešić" href="../emina-mesic/lessons.html" />
+    <link rel="prev" title="4.1.3.4. USART" href="USART.html" />
+<link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.3. Lessons by Demir Hasičić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.3.1. V-model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.3.2. STM32F411</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.3.3. GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.3.4. USART</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.3.5. Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamija-fatic/lessons.html">4.1.5. Lessons by Lamija Fatić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.8. Lessons by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../requirements/requirements.html">5. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
+          <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.3. </span>Lessons by Demir Hasičić</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.3.5. </span>Timer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/userdoc/lessons/interns/demir-hasicic/Timer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="timer">
+<h1><span class="section-number">4.1.3.5. </span>Timer<a class="headerlink" href="#timer" title="Link to this heading"></a></h1>
+<p>Timers in STM32 microcontrollers are versatile peripherals used for precise time-based operations, signal generation, and event counting. This lesson covers the initialization, configuration, and application of Pulse Width Modulation (PWM) using timers in the STM32F411 series.</p>
+<section id="initialization-process">
+<h2><span class="section-number">4.1.3.5.1. </span>Initialization Process<a class="headerlink" href="#initialization-process" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Clock Enablement</strong>:
+- Use the RCC (Reset and Clock Control) registers to enable the timer’s clock.</p></li>
+<li><p><strong>GPIO Configuration</strong>:
+- Map the timer channels to appropriate GPIO pins in Alternate Function (AF) mode using the datasheet.</p></li>
+<li><p><strong>PWM Mode Setup</strong>:
+- Configure PWM mode in the Capture/Compare Mode Register (CCMR).
+- Enable the output using the Capture/Compare Enable Register (CCER).</p></li>
+</ol>
+</section>
+<section id="setting-pwm-frequency">
+<h2><span class="section-number">4.1.3.5.2. </span>Setting PWM Frequency<a class="headerlink" href="#setting-pwm-frequency" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Determine Timer Clock Frequency</strong>:
+- APB1 timers run at 50 MHz; APB2 timers run at 100 MHz.</p></li>
+<li><p><strong>Calculate Prescaler and ARR Values</strong>:
+- Use the formula: <code class="docutils literal notranslate"><span class="pre">ARR</span> <span class="pre">=</span> <span class="pre">(Timer</span> <span class="pre">Clock</span> <span class="pre">/</span> <span class="pre">(Frequency</span> <span class="pre">*</span> <span class="pre">Prescaler))</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p></li>
+<li><p><strong>Configure Timer Registers</strong>:
+- Write the calculated prescaler (PSC) and ARR values to the respective timer registers.</p></li>
+</ol>
+</section>
+<section id="configuring-duty-cycle">
+<h2><span class="section-number">4.1.3.5.3. </span>Configuring Duty Cycle<a class="headerlink" href="#configuring-duty-cycle" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Calculate CCR Value</strong>:
+- Formula: <code class="docutils literal notranslate"><span class="pre">CCR</span> <span class="pre">=</span> <span class="pre">(Duty</span> <span class="pre">Cycle</span> <span class="pre">*</span> <span class="pre">(ARR</span> <span class="pre">+</span> <span class="pre">1))</span> <span class="pre">/</span> <span class="pre">100</span></code>.</p></li>
+<li><p><strong>Update CCR Registers</strong>:
+- Write the computed value to the channel’s CCR register.</p></li>
+</ol>
+</section>
+<section id="enabling-disabling-pwm">
+<h2><span class="section-number">4.1.3.5.4. </span>Enabling/Disabling PWM<a class="headerlink" href="#enabling-disabling-pwm" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Enable PWM</strong>:
+- Set the timer’s enable bits in the control register.</p></li>
+<li><p><strong>Disable PWM</strong>:
+- Clear the enable bits to stop PWM output.</p></li>
+</ol>
+</section>
+<section id="modes-center-aligned-vs-edge-aligned">
+<h2><span class="section-number">4.1.3.5.5. </span>Modes: Center-Aligned vs Edge-Aligned<a class="headerlink" href="#modes-center-aligned-vs-edge-aligned" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Edge-Aligned Mode</strong>: Default; the timer counts up to ARR and resets.</p></li>
+<li><p><strong>Center-Aligned Mode</strong>: The timer counts up and down, providing symmetrical signals.</p></li>
+</ul>
+</section>
+<section id="example-configuring-tim3-for-pwm">
+<h2><span class="section-number">4.1.3.5.6. </span>Example: Configuring TIM3 for PWM<a class="headerlink" href="#example-configuring-tim3-for-pwm" title="Link to this heading"></a></h2>
+<p><strong>Objective</strong>: Configure TIM3 Channel 3 to generate a 20 kHz signal with a 25% duty cycle.</p>
+<ol class="arabic">
+<li><p><strong>Clock Enablement</strong>:
+.. code-block:: c</p>
+<blockquote>
+<div><p>RCC-&gt;APB1ENR <a href="#id1"><span class="problematic" id="id2">|</span></a>= RCC_APB1ENR_TIM3EN;</p>
+</div></blockquote>
+</li>
+<li><p><strong>GPIO Configuration</strong>:
+.. code-block:: c</p>
+<blockquote>
+<div><p>GPIOB-&gt;MODER <a href="#id3"><span class="problematic" id="id4">|</span></a>= (0x2 &lt;&lt; (2 * 0)); // Set PB0 as Alternate Function
+GPIOB-&gt;AFR[0] <a href="#id5"><span class="problematic" id="id6">|</span></a>= (0x2 &lt;&lt; (4 * 0)); // Set AF2 for TIM3</p>
+</div></blockquote>
+</li>
+<li><p><strong>Set Frequency and ARR</strong>:
+.. code-block:: c</p>
+<blockquote>
+<div><p>TIM3-&gt;PSC = 0; // No prescaler
+TIM3-&gt;ARR = 2499; // For 20 kHz frequency</p>
+</div></blockquote>
+</li>
+<li><p><strong>Set Duty Cycle</strong>:
+.. code-block:: c</p>
+<blockquote>
+<div><p>TIM3-&gt;CCR3 = 625; // For 25% duty cycle</p>
+</div></blockquote>
+</li>
+<li><p><strong>Enable PWM</strong>:
+.. code-block:: c</p>
+<blockquote>
+<div><p>TIM3-&gt;CR1 <a href="#id7"><span class="problematic" id="id8">|</span></a>= TIM_CR1_CEN;</p>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="key-timer-registers">
+<h2><span class="section-number">4.1.3.5.7. </span>Key Timer Registers<a class="headerlink" href="#key-timer-registers" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>ARR (Auto-Reload Register)</strong>: Sets timer period.</p></li>
+<li><p><strong>PSC (Prescaler)</strong>: Divides timer clock.</p></li>
+<li><p><strong>CCMR (Capture/Compare Mode Register)</strong>: Configures PWM mode.</p></li>
+<li><p><strong>CCR (Capture/Compare Register)</strong>: Sets duty cycle.</p></li>
+</ul>
+</section>
+<section id="conclusion">
+<h2><span class="section-number">4.1.3.5.8. </span>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>This guide covered PWM configuration for STM32 microcontrollers, including clock enablement, GPIO mapping, and PWM settings. An example demonstrated TIM3’s setup for a specific frequency and duty cycle. Mastering these concepts enables precise control over peripherals in embedded systems.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="USART.html" class="btn btn-neutral float-left" title="4.1.3.4. USART" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../emina-mesic/lessons.html" class="btn btn-neutral float-right" title="4.1.4. Lessons by Emina Mešić" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1.3.3. GPIO &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.1.3.4. USART" href="USART.html" />
+    <link rel="prev" title="4.1.3.2. STM32F411" href="stm32overview.html" />
+<link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.3. Lessons by Demir Hasičić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.3.1. V-model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.3.2. STM32F411</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.3.3. GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.3.4. USART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Timer.html">4.1.3.5. Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamija-fatic/lessons.html">4.1.5. Lessons by Lamija Fatić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.8. Lessons by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../requirements/requirements.html">5. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
+          <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.3. </span>Lessons by Demir Hasičić</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.3.3. </span>GPIO</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/userdoc/lessons/interns/demir-hasicic/GPIO.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gpio">
+<h1><span class="section-number">4.1.3.3. </span>GPIO<a class="headerlink" href="#gpio" title="Link to this heading"></a></h1>
+<section id="general-overview-of-gpio">
+<h2><span class="section-number">4.1.3.3.1. </span>General Overview of GPIO<a class="headerlink" href="#general-overview-of-gpio" title="Link to this heading"></a></h2>
+<p>General-Purpose Input/Output (GPIO) pins are fundamental interfaces in embedded systems, enabling the microcontroller to interact with external hardware. In the STM32F411 microcontroller, GPIO pins are versatile, capable of operating in input, output, analog, or alternate function modes. These configurations are crucial for tasks such as controlling LEDs, reading sensor data, and enabling communication protocols like UART, SPI, or I2C.</p>
+</section>
+<section id="gpio-registers">
+<h2><span class="section-number">4.1.3.3.2. </span>GPIO Registers<a class="headerlink" href="#gpio-registers" title="Link to this heading"></a></h2>
+<p>GPIO functionality is governed by a set of registers that define the behavior of each pin. These include:</p>
+<ol class="arabic">
+<li><p><strong>MODER (Mode Register)</strong>:
+- Determines the mode of each pin (input, output, analog, or alternate function).
+- Each pin is controlled by two bits:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">00</span></code>: Input mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">01</span></code>: Output mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code>: Alternate function mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">11</span></code>: Analog mode.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>PUPDR (Pull-Up/Pull-Down Register)</strong>:
+- Configures internal resistors for each pin.
+- Bit settings:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">00</span></code>: No pull-up or pull-down (floating).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">01</span></code>: Pull-up.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code>: Pull-down.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>OTYPER (Output Type Register)</strong>:
+- Configures the output type as:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Push-Pull</strong>: Actively drives high and low signals.</p></li>
+<li><p><strong>Open-Drain</strong>: Requires an external pull-up resistor for the high state.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>OSPEEDR (Output Speed Register)</strong>:
+- Sets the output speed (low, medium, fast, or high). The options are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">00</span></code>: Low speed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">01</span></code>: Medium speed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code>: High speed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">11</span></code>: Very high speed</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>AFR (Alternate Function Register)</strong>:
+- The Alternate Function Register (AFR) allows GPIO pins to interface with various on-chip peripherals, such as UART, SPI, I2C, PWM, and timers. Each pin can be multiplexed to serve multiple roles, and the AFR determines which alternate function to activate.
+- The AFR is divided into two registers:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>AFRL</strong>: For pins 0 to 7.</p></li>
+<li><p><strong>AFRH</strong>: For pins 8 to 15.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>IDR (Input Data Register)</strong>:
+- The Input Data Register (IDR) provides real-time information about the state of GPIO pins configured as inputs.
+- Each bit in the IDR corresponds to a specific GPIO pin, with <code class="docutils literal notranslate"><span class="pre">1</span></code> indicating a high logic level and <code class="docutils literal notranslate"><span class="pre">0</span></code> a low logic level.</p></li>
+<li><p><strong>ODR (Output Data Register)</strong>:
+- The ODR controls the logical state (high or low) of GPIO pins when configured in output mode.
+- Writing <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code> to a specific bit sets the corresponding pin to high or low.</p></li>
+<li><p><strong>BSRR (Bit Set/Reset Register)</strong>:
+- The BSRR provides an efficient way to set or reset individual pins without affecting others.
+- Lower 16 bits are for setting pins, and upper 16 bits are for resetting pins.
+- This enables atomic operations, ensuring that simultaneous pin manipulations remain error-free.</p></li>
+</ol>
+</section>
+<section id="example-configurations">
+<h2><span class="section-number">4.1.3.3.3. </span>Example Configurations<a class="headerlink" href="#example-configurations" title="Link to this heading"></a></h2>
+<p><strong>Configuring a GPIO Pin for an LED on PA9</strong>:</p>
+<ul class="simple">
+<li><p>Enable the clock for GPIOA using <code class="docutils literal notranslate"><span class="pre">RCC_AHB1ENR</span></code>.</p></li>
+<li><p>Set the mode to output by configuring <code class="docutils literal notranslate"><span class="pre">GPIOA_MODER</span></code>.</p></li>
+<li><p>Configure the output type as push-pull in <code class="docutils literal notranslate"><span class="pre">GPIOA_OTYPER</span></code>.</p></li>
+<li><p>Set the desired output speed in <code class="docutils literal notranslate"><span class="pre">GPIOA_OSPEEDR</span></code>.</p></li>
+<li><p>Optionally, configure a pull-up resistor in <code class="docutils literal notranslate"><span class="pre">GPIOA_PUPDR</span></code>.</p></li>
+<li><p>Toggle the LED state using <code class="docutils literal notranslate"><span class="pre">GPIOA_ODR</span></code> or <code class="docutils literal notranslate"><span class="pre">GPIOA_BSRR</span></code>.</p></li>
+</ul>
+<p><strong>Configuring a GPIO Pin for a Button on PA0</strong>:</p>
+<ul class="simple">
+<li><p>Enable the clock for GPIOA using <code class="docutils literal notranslate"><span class="pre">RCC_AHB1ENR</span></code>.</p></li>
+<li><p>Set the pin to input mode by configuring <code class="docutils literal notranslate"><span class="pre">GPIOA_MODER</span></code>.</p></li>
+<li><p>Configure a pull-up or pull-down resistor in <code class="docutils literal notranslate"><span class="pre">GPIOA_PUPDR</span></code> to prevent floating states.</p></li>
+<li><p>Read the button state using <code class="docutils literal notranslate"><span class="pre">GPIOA_IDR</span></code>.</p></li>
+</ul>
+</section>
+<section id="conclusion">
+<h2><span class="section-number">4.1.3.3.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>GPIO configuration in the STM32F411 microcontroller is essential for interacting with external components and peripherals. The microcontroller’s GPIO pins can be configured in different modes to support various functions, including input, output, analog, and alternate functions. Registers like <strong>MODER</strong>, <strong>PUPDR</strong>, <strong>OTYPER</strong>, <strong>OSPEEDR</strong>, <strong>AFR</strong>, <strong>IDR</strong>, <strong>ODR</strong>, and <strong>BSRR</strong> provide control over each pin’s behavior, enabling flexibility and efficiency in design.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stm32overview.html" class="btn btn-neutral float-left" title="4.1.3.2. STM32F411" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="USART.html" class="btn btn-neutral float-right" title="4.1.3.4. USART" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

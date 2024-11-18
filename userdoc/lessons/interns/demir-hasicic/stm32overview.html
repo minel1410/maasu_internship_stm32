@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.1.4. Lessons by Emina Mešić &mdash; Maasu Internship 4 1 documentation</title>
+  <title>4.1.3.2. STM32F411 &mdash; Maasu Internship 4 1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
@@ -32,8 +32,8 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="4.1.5. Lessons by Lamija Fatić" href="../lamija-fatic/lessons.html" />
-    <link rel="prev" title="4.1.3.5. Timer" href="../demir-hasicic/Timer.html" />
+    <link rel="next" title="4.1.3.3. GPIO" href="GPIO.html" />
+    <link rel="prev" title="4.1.3.1. V-model" href="vmodel.html" />
 <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -66,8 +66,15 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.3. Lessons by Demir Hasičić</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">4.1.4. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.3. Lessons by Demir Hasičić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.3.1. V-model</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.3.2. STM32F411</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.3.3. GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.3.4. USART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Timer.html">4.1.3.5. Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lamija-fatic/lessons.html">4.1.5. Lessons by Lamija Fatić</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
@@ -98,9 +105,10 @@
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
           <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.1.4. </span>Lessons by Emina Mešić</li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.3. </span>Lessons by Demir Hasičić</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.3.2. </span>STM32F411</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../../_sources/userdoc/lessons/interns/emina-mesic/lessons.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../../_sources/userdoc/lessons/interns/demir-hasicic/stm32overview.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -108,16 +116,67 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="lessons-by-emina-mesic">
-<h1><span class="section-number">4.1.4. </span>Lessons by Emina Mešić<a class="headerlink" href="#lessons-by-emina-mesic" title="Link to this heading"></a></h1>
+  <section id="stm32f411">
+<h1><span class="section-number">4.1.3.2. </span>STM32F411<a class="headerlink" href="#stm32f411" title="Link to this heading"></a></h1>
+<p>STM32F411 microcontrollers are a part of the STM32 Dynamic Efficiency line based on <strong>ARM Cortex-M4</strong> core, part of the <strong>ARMv7-M</strong> architecture. They are considered entry-level microcontrollers from a high-performing F4 series. These microcontrollers offer a good balance of energy consumption and performance.</p>
+<p><strong>Physical features</strong></p>
+<ul class="simple">
+<li><p><strong>Operating voltage</strong>: 1.7 V to 3.6 V</p></li>
+<li><p><strong>Temperature range</strong>: -40°C to 85/105/125 °C</p></li>
+</ul>
+<p><strong>Performance and processing</strong></p>
+<ul class="simple">
+<li><p><strong>Operating frequency</strong>: up to 100 MHz</p></li>
+<li><p><strong>FPU</strong> (Floating Point Unit) - Allows faster processing of decimal numbers.</p></li>
+<li><p><strong>ART</strong> (Adaptive Real-Time Accelerator) - Accelerator designed for faster access to FLASH memory.</p></li>
+<li><p><strong>DSP</strong> (Digital Signal Processing) - Set of instructions used to process signals, useful for audio, video, and analog signals.</p></li>
+<li><p><strong>BAM</strong> (Batch Acquisition Mode) - Enables data exchange through communication peripherals with the rest of the microcontroller while in power-saving mode.</p></li>
+<li><p><strong>DMA</strong> (Direct Memory Access) - Allows certain hardware components to access system memory directly, without involving the CPU. This enables autonomous data transfer between memory and peripherals, freeing up the CPU for other tasks or even allowing it to enter low-power mode.</p></li>
+<li><p><strong>CRC</strong> (Cyclic Redundancy Check) - Error-detecting code useful for detecting accidental changes or corruption in data as it is transferred or stored.</p></li>
+</ul>
+<p><strong>Memory</strong></p>
+<ul class="simple">
+<li><p><strong>Flash memory</strong>: 256-512 kB</p></li>
+<li><p><strong>RAM memory</strong>: 128 kB</p></li>
+</ul>
+<p><strong>Communication interfaces</strong></p>
+<ul class="simple">
+<li><p><strong>USART</strong>: 3x USARTs, up to 1.25 Mbps</p></li>
+<li><p><strong>SPI</strong>: 5x SPI interfaces</p></li>
+<li><p><strong>I²C</strong>: 3x I²C interfaces, up to 1 Mbps</p></li>
+<li><p><strong>SDIO</strong>: 1x SDIO, up to 48 MHz</p></li>
+<li><p><strong>USB</strong>: 1x USB 2.0 OTG</p></li>
+<li><p><strong>I²S</strong>: 2x full duplex I²S interfaces</p></li>
+</ul>
+<p><strong>Analog features</strong></p>
+<ul class="simple">
+<li><p><strong>A/D converter</strong>: 1x12-bit, up to 16 channels</p></li>
+</ul>
+<p><strong>Timers</strong></p>
+<ul class="simple">
+<li><p><strong>Timers</strong>: 11 total - up to six 16-bit and two 32-bit, up to 100 MHz</p></li>
+</ul>
+<p><strong>Registers</strong></p>
+<p>In a microcontroller, <strong>registers</strong> are small, high-speed storage locations within the processor that hold data temporarily. They control various aspects of the microcontroller’s operation by allowing the CPU to quickly access and manipulate data, configure settings, and manage peripherals.</p>
+<p>Some of the registers included are:</p>
+<ul class="simple">
+<li><p><strong>General-purpose registers</strong> - Temporary storage locations within the microcontroller that hold data needed during arithmetic and logic operations.</p></li>
+<li><p><strong>Special-purpose registers</strong> - Designed to manage particular tasks or operations, such as program counters, stack pointers, and interrupt vectors.</p></li>
+<li><p><strong>Control registers</strong> - Configure the behavior and settings of various microcontroller features and peripherals. By writing specific values to control registers, developers can enable or disable functions, set modes of operation, and adjust parameters for features like timers, communication protocols, and interrupt priorities.</p></li>
+<li><p><strong>Status registers</strong> - Provide real-time information about the current state of the microcontroller or specific peripherals. These registers contain flags or bits that reflect conditions such as carry, zero, overflow, or whether an operation has completed.</p></li>
+</ul>
+<p><strong>The Build Process</strong></p>
+<p>First, the source files are passed into the <strong>compiler</strong>, which turns them into individual object files. The object files are then “linked together” by the <strong>linker</strong> to form an executable. Finally, we use a <strong>programmer</strong> to upload the executable to the microcontroller, which then executes the code.</p>
+<p>The figure below shows a simplified diagram for this process:</p>
+<a class="reference internal image-reference" href="../../../../_images/Build_process.png"><img alt="Build process diagram" class="align-center" src="../../../../_images/Build_process.png" style="width: 80%;" /></a>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../demir-hasicic/Timer.html" class="btn btn-neutral float-left" title="4.1.3.5. Timer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../lamija-fatic/lessons.html" class="btn btn-neutral float-right" title="4.1.5. Lessons by Lamija Fatić" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="vmodel.html" class="btn btn-neutral float-left" title="4.1.3.1. V-model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="GPIO.html" class="btn btn-neutral float-right" title="4.1.3.3. GPIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
