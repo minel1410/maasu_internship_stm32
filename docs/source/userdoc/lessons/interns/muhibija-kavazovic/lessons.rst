@@ -8,3 +8,7 @@ Lessons by Muhibija Kavazović
 
    vmodel
    stm32f411
+   Clock
+   GPIO
+   USART
+   Timer
