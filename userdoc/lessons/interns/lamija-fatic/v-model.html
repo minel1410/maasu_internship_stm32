@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1.5.1. V-Model in Embedded Engineering &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.1.5.2. SMT32F411 Overview" href="STM32F411MCU.html" />
+    <link rel="prev" title="4.1.5. Lessons by Lamija Fatić" href="lessons.html" />
+<link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.3. Lessons by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.5. Lessons by Lamija Fatić</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.5.1. V-Model in Embedded Engineering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="STM32F411MCU.html">4.1.5.2. SMT32F411 Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.5.3. GPIO for STM32F411 MCU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Clock.html">4.1.5.4. STM32 Clock Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timer.html">4.1.5.6. STM32F411 Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.8. Lessons by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../requirements/requirements.html">5. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
+          <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.5. </span>Lessons by Lamija Fatić</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.5.1. </span>V-Model in Embedded Engineering</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/userdoc/lessons/interns/lamija-fatic/v-model.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="v-model-in-embedded-engineering">
+<h1><span class="section-number">4.1.5.1. </span>V-Model in Embedded Engineering<a class="headerlink" href="#v-model-in-embedded-engineering" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">4.1.5.1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p><strong>Software Development Life Cycle (SDLC)</strong>
+SDLC is a structured process followed to design, develop, test, and maintain software.
+Steps included in SDLC are analysis, design, implementation, testing, deployment and maintenance.  SDLC Ensures systematic development and management, minimizing risks, costs, and time while maximizing quality and its purpose is to deliver high-quality software that meets or exceeds customer expectations.
+It consists of a detailed plan describing how to develop, maintain, replace and alter or enhance specific software. The life cycle defines a methodology for improving the quality of software and the overall development process.</p>
+</section>
+<section id="sdlc-stages">
+<h2><span class="section-number">4.1.5.1.2. </span>SDLC Stages<a class="headerlink" href="#sdlc-stages" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Project Planning</strong></p></li>
+<li><p><strong>Gathering Requirements &amp; Analysis</strong></p></li>
+<li><p><strong>Design</strong></p></li>
+<li><p><strong>Coding (Implementation)</strong></p></li>
+<li><p><strong>Testing</strong></p></li>
+<li><p><strong>Deployment</strong></p></li>
+<li><p><strong>Maintenance</strong></p></li>
+</ol>
+</section>
+<section id="sdlc-methodologies">
+<h2><span class="section-number">4.1.5.1.3. </span>SDLC Methodologies<a class="headerlink" href="#sdlc-methodologies" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>Software development methodology is the basic framework that software developers can use to plan, structure and control the overall process of developing a software or information system.</dt><dd><p>In other words, software development methodologies are a formalized way of executing an SDLC. Software development methodologies are important, since they help in answering the following important questions, such as:</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Which tools do the developers want or need?</p></li>
+<li><p>Which development approach should be taken and why?</p></li>
+<li><p>What is the correct way to implement the development approach?</p></li>
+<li><p>What are the requirements and deadlines for the project?</p></li>
+<li><p>How can we refine the requirements in order to streamline the overall process?</p></li>
+</ul>
+<p>Project managers and developers often choose the methodology that will work best for the project at hand and help them maximize the value of the project. Moreover, all methodologies have different strengths and weaknesses and exist for different reasons.</p>
+<p><strong>Common SDLC Methodologies</strong>:</p>
+<ul class="simple">
+<li><p><strong>Waterfall Model</strong>: Sequential, phase-by-phase.</p></li>
+<li><p><strong>Agile</strong>: Iterative, adaptable, and collaborative.</p></li>
+<li><p><strong>Scrum</strong>: Agile framework with sprints and stand-ups.</p></li>
+<li><p><strong>Kanban</strong>: Visual task management.</p></li>
+<li><p><strong>Lean Development</strong>: Waste elimination.</p></li>
+<li><p><strong>DevOps</strong>: Integrated development and operations.</p></li>
+<li><p><strong>Extreme Programming (XP)</strong>: Focus on code quality.</p></li>
+<li><p><strong>Spiral Model</strong>: Iterative with risk analysis.</p></li>
+<li><p><strong>Iterative Development</strong>: Continuous improvement.</p></li>
+<li><p><strong>V-Model</strong>: Validation and verification aligned.</p></li>
+<li><p><strong>RAD</strong>: Rapid prototyping and feedback.</p></li>
+<li><p><strong>Incremental Model</strong>: Stepwise development.</p></li>
+<li><p><strong>Big Bang Model</strong>: All resources used upfront.</p></li>
+<li><p><strong>Feature-Driven Development (FDD)</strong>: Short iterations.</p></li>
+<li><p><strong>Agile-Waterfall Hybrid (Wagile)</strong>: Combines both.</p></li>
+</ul>
+<p>The choice of SDLC methodology directly impacts the entire project, from planning to delivery. Depending on the type of project—whether it requires flexibility, strict timelines, or rigorous quality control—the right methodology must be chosen. For stable projects with clear requirements, models like Waterfall work well, while Agile suits projects needing adaptability. Selecting the correct approach ensures efficient development, risk management, and successful project completion.</p>
+</section>
+<section id="v-model-sdlc-methodology">
+<h2><span class="section-number">4.1.5.1.4. </span>V-Model SDLC Methodology<a class="headerlink" href="#v-model-sdlc-methodology" title="Link to this heading"></a></h2>
+<p><strong>Definition</strong>:</p>
+<p>The V-Model (or Validation and Verification Model) is a software development lifecycle (SDLC) model that emphasizes a systematic and structured approach to testing and development. It is an extension of the traditional waterfall model, but instead of a linear process, it introduces a “V” shape to illustrate the relationship between each development phase and its corresponding testing phase.
+V-Model is mainly applied where hardware and software interact closely.</p>
+<p><strong>Structure</strong>:</p>
+<ul class="simple">
+<li><p><strong>Development Phases</strong>:
+- <strong>Requirements Analysis</strong>: User needs documentation.
+- <strong>System Design</strong>: High-level architecture.
+- <strong>Detailed Design</strong>: Component specifications.
+- <strong>Implementation</strong>: Code development.</p></li>
+<li><p><strong>Testing Phases</strong>:
+- <strong>Unit Testing</strong>: Component verification.
+- <strong>Integration Testing</strong>: Component interaction.
+- <strong>System Testing</strong>: System validation.
+- <strong>Acceptance Testing</strong>: User requirement verification.</p></li>
+</ul>
+<p>The V-Model ensures that testing activities are planned alongside development, promoting early defect detection and validation of each development phase against its objectives.</p>
+<p><strong>Why Use the V-Model</strong></p>
+<p>The V-Model is used when the project requirements are well-defined, stable, and unlikely to change. It is suitable for projects that require a high level of reliability where thorough testing is crucial.
+The V-Model is beneficial because it emphasizes early testing, ensuring issues are detected and resolved early, and it provides a structured approach to development and validation. It’s ideal when a systematic, disciplined approach is needed.</p>
+<p><strong>Advantages</strong>:</p>
+<ul class="simple">
+<li><p>Clear and structured</p></li>
+<li><p>Early issue detection</p></li>
+<li><p>High traceability</p></li>
+<li><p>Quality assurance</p></li>
+</ul>
+<p><strong>Limitations</strong>:</p>
+<ul class="simple">
+<li><p>Inflexibility for evolving projects</p></li>
+<li><p>Risk with changing requirements</p></li>
+<li><p>Late-stage issue detection</p></li>
+<li><p>No prototyping</p></li>
+</ul>
+</section>
+<section id="phases">
+<h2><span class="section-number">4.1.5.1.5. </span>Phases<a class="headerlink" href="#phases" title="Link to this heading"></a></h2>
+<p>V- Model process has nine steps divided into two main phases: Verification and Validation Phase.
+These steps include : Requirement Analysis, System Design, Architecture Design, Module Design, Coding, Unit Testing, Integration Testing, System Testing and User Acceptance Testing
+==========================
+Verification Phase
+==========================</p>
+<ol class="arabic simple">
+<li><p><strong>Requirement Analysis</strong>: Documenting user and system needs in the Requirement Specification Document (RSD).</p></li>
+<li><p><strong>System Design</strong>: Creating a detailed system blueprint outlining components, data flow, and architecture.</p></li>
+<li><p><strong>Architecture Design</strong>: Structuring the system with detailed diagrams.</p></li>
+<li><p><strong>Module Design</strong>: Designing individual modules, specifying logic, and preparing for coding.</p></li>
+</ol>
+</section>
+<section id="coding">
+<h2><span class="section-number">4.1.5.1.6. </span>Coding<a class="headerlink" href="#coding" title="Link to this heading"></a></h2>
+<p>In this phase, the actual development of the software begins. Before writing any code, it is crucial to thoroughly understand the system requirements and specifications to ensure that you are building what is needed.
+In the V-Model, this step follows strict guidelines based on the design and requirements created in earlier phases.</p>
+<p>Key practices for the Coding phase include:
+- Understanding Requirements: Ensure that every developer has a clear understanding of what needs to be implemented.
+- Coding Standards: Follow a common coding standard across the team to improve code readability and maintainability. This ensures consistency, especially in large teams, which is essential for debugging and future updates.
+- Version Control: Always use a version control system like Git. This allows developers to keep track of code changes, collaborate effectively, and easily revert to previous versions if needed.
+- Code Refactoring: Don’t hesitate to refactor your code. If you find a section of code that can be improved for efficiency or readability, make the necessary changes to enhance quality.</p>
+<ul class="simple">
+<li><p><strong>Requirement Understanding</strong></p></li>
+<li><p><strong>Coding Standards</strong></p></li>
+<li><p><strong>Version Control</strong></p></li>
+<li><p><strong>Refactoring</strong></p></li>
+</ul>
+<p><strong>Embedded Systems Considerations</strong>:</p>
+<ul class="simple">
+<li><p>Memory efficiency</p></li>
+<li><p>Real-time performance</p></li>
+<li><p>Hardware interaction</p></li>
+<li><p>Robust error handling</p></li>
+<li><p>Memory Management: Pay special attention to efficient memory usage, as embedded systems often have limited resources.</p></li>
+<li><p>Real-Time Constraints: Code must be optimized to meet real-time performance requirements, ensuring that the system responds within the necessary time frame.</p></li>
+<li><p>Hardware Interaction: Understand the hardware specifications and write code that effectively communicates with and controls the hardware components.</p></li>
+<li><p>Error Handling: Implement robust error-handling mechanisms to ensure the reliability and stability of the system, as embedded systems often operate in critical environments.</p></li>
+</ul>
+</section>
+<section id="validation-phase">
+<h2><span class="section-number">4.1.5.1.7. </span>Validation Phase<a class="headerlink" href="#validation-phase" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Unit Testing</strong>: Independent tests developed alongside code.</p></li>
+<li><p><strong>Integration Testing</strong>: Testing combined components incrementally.</p></li>
+<li><p><strong>System Testing</strong>: Validating the complete software.</p></li>
+<li><p><strong>User Acceptance Testing</strong>: Ensuring the system meets user expectations.</p></li>
+</ol>
+<p><strong>SIL, HIL, and MIL Testing</strong>:</p>
+<ul class="simple">
+<li><p><strong>SIL</strong>: Software simulation testing.</p></li>
+<li><p><strong>MIL</strong>: Testing with mathematical models.</p></li>
+<li><p><strong>HIL</strong>: Real-world hardware interaction testing.</p></li>
+</ul>
+</section>
+<section id="summary">
+<h2><span class="section-number">4.1.5.1.8. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<blockquote>
+<div><p>The Software Development Life Cycle (SDLC) is a structured process for developing high-quality software, involving stages like planning, analysis, design, implementation, testing, deployment, and maintenance. Various SDLC methodologies exist, including Waterfall, Agile, Scrum, DevOps, and the V-Model, each suited to different project needs.</p>
+</div></blockquote>
+<p>The V-Model aligns each development phase with a corresponding testing phase, ensuring systematic validation, making it ideal for high-reliability projects. This approach helps catch issues early but is less flexible for projects with changing requirements.</p>
+<p>Selecting the right methodology ensures efficient development, quality, and project success.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="lessons.html" class="btn btn-neutral float-left" title="4.1.5. Lessons by Lamija Fatić" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="STM32F411MCU.html" class="btn btn-neutral float-right" title="4.1.5.2. SMT32F411 Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

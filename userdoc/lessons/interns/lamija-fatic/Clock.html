@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1.5.4. STM32 Clock Initialization &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)" href="USART.html" />
+    <link rel="prev" title="4.1.5.3. GPIO for STM32F411 MCU" href="GPIO.html" />
+<link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.3. Lessons by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.5. Lessons by Lamija Fatić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="v-model.html">4.1.5.1. V-Model in Embedded Engineering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="STM32F411MCU.html">4.1.5.2. SMT32F411 Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.5.3. GPIO for STM32F411 MCU</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.5.4. STM32 Clock Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timer.html">4.1.5.6. STM32F411 Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.8. Lessons by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../requirements/requirements.html">5. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
+          <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.5. </span>Lessons by Lamija Fatić</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.5.4. </span>STM32 Clock Initialization</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/userdoc/lessons/interns/lamija-fatic/Clock.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="stm32-clock-initialization">
+<h1><span class="section-number">4.1.5.4. </span>STM32 Clock Initialization<a class="headerlink" href="#stm32-clock-initialization" title="Link to this heading"></a></h1>
+<p>STM32F411 provides various clock sources to ensure flexibility and optimal configuration according to application needs. The precision and stability of external sources (HSE and LSE) make them ideal for applications where timing accuracy is critical, while internal oscillators (HSI and LSI) offer fast startup and reduced dependency on external components, making them suitable for applications with lower requirements for precision and energy consumption.</p>
+<p>STM32F411 provides various clock sources to ensure flexibility and optimal configuration according to application needs. The precision and stability of external sources (HSE and LSE) make them ideal for applications where timing accuracy is critical, while internal oscillators (HSI and LSI) offer fast startup and reduced dependency on external components, making them suitable for applications with lower requirements for precision and energy consumption.</p>
+<section id="high-speed-clock-sources">
+<h2><span class="section-number">4.1.5.4.1. </span>High-Speed Clock Sources<a class="headerlink" href="#high-speed-clock-sources" title="Link to this heading"></a></h2>
+<p><strong>HSI (High-Speed Internal):</strong></p>
+<ul class="simple">
+<li><p><strong>Description:</strong> HSI is a high-frequency internal oscillator.</p></li>
+<li><p><strong>Frequency:</strong> 16 MHz.</p></li>
+<li><p><strong>Accuracy:</strong> As an RC oscillator, HSI is less precise compared to external oscillators like HSE. Nevertheless, its accuracy is sufficient for many applications.</p></li>
+<li><p><strong>Usage:</strong> HSI is often used as a startup or backup clock source because it doesn’t rely on external components and has a faster startup time. It is suitable for applications where clock precision is not critical.</p></li>
+</ul>
+<p><strong>HSE (High-Speed External):</strong></p>
+<ul class="simple">
+<li><p><strong>Description:</strong> HSE is a high-frequency external oscillator, typically an externally connected crystal or oscillator.</p></li>
+<li><p><strong>Frequency:</strong> Usually between 8 and 25 MHz (25 MHz for STM32F411 Black Pill).</p></li>
+<li><p><strong>Accuracy:</strong> Highly accurate compared to internal oscillators like HSI, providing a stable and precise frequency using an external crystal.</p></li>
+<li><p><strong>Usage:</strong> Ideal for applications where frequency accuracy is crucial. HSE is often used with the PLL to generate higher frequencies.</p></li>
+</ul>
+</section>
+<section id="low-speed-clock-sources">
+<h2><span class="section-number">4.1.5.4.2. </span>Low-Speed Clock Sources<a class="headerlink" href="#low-speed-clock-sources" title="Link to this heading"></a></h2>
+<p><strong>LSI (Low-Speed Internal):</strong></p>
+<ul class="simple">
+<li><p><strong>Description:</strong> LSI is a low-frequency internal oscillator.</p></li>
+<li><p><strong>Frequency:</strong> Approximately 32 kHz.</p></li>
+<li><p><strong>Accuracy:</strong> As an RC oscillator, LSI has lower accuracy and stability compared to external oscillators.</p></li>
+<li><p><strong>Usage:</strong> Mainly used as a backup clock source for the real-time clock (RTC) and for the watchdog timer, where high precision is not essential, but low power consumption is important.</p></li>
+</ul>
+<p><strong>LSE (Low-Speed External):</strong></p>
+<ul class="simple">
+<li><p><strong>Description:</strong> LSE is a low-frequency external oscillator, typically a 32.768 kHz crystal oscillator.</p></li>
+<li><p><strong>Frequency:</strong> 32.768 kHz (commonly used for RTC applications).</p></li>
+<li><p><strong>Accuracy:</strong> Very accurate and stable, thanks to the external crystal.</p></li>
+<li><p><strong>Usage:</strong> Used for RTC applications that require long-term stability and precise timekeeping, such as in clocks or time synchronization applications.</p></li>
+</ul>
+</section>
+<section id="rcc-register">
+<h2><span class="section-number">4.1.5.4.3. </span>RCC Register<a class="headerlink" href="#rcc-register" title="Link to this heading"></a></h2>
+<p>The RCC register is a crucial component of STM32 microcontrollers, responsible for configuring and managing the system clock and resetting peripheral devices. The RCC module allows users to:</p>
+<ul class="simple">
+<li><p><strong>Select Clock Source:</strong> Choose between internal (HSI) and external (HSE) oscillators.</p></li>
+<li><p><strong>Configure PLL:</strong> Generate higher frequencies from the selected clock source.</p></li>
+<li><p><strong>Use Prescalers:</strong> Divide frequencies for various buses (AHB, APB1, APB2).</p></li>
+<li><p><strong>Manage Peripheral Clocks:</strong> Enable or disable clock signals for peripherals to save power.</p></li>
+</ul>
+</section>
+<section id="rcc-cr-clock-control-register">
+<h2><span class="section-number">4.1.5.4.4. </span>RCC_CR (Clock Control Register)<a class="headerlink" href="#rcc-cr-clock-control-register" title="Link to this heading"></a></h2>
+<p>The RCC register is a crucial component of STM32 microcontrollers, responsible for configuring and managing the system clock and resetting peripheral devices. The RCC module allows users to:
+- Select Clock Source: Choose between internal (HSI) and external (HSE) oscillators.
+- Configure PLL: Generate higher frequencies from the selected clock source.
+- Use Prescalers: Divide frequencies for various buses (AHB, APB1, APB2).
+- Manage Peripheral Clocks: Enable or disable clock signals for peripherals to save power.</p>
+</section>
+<section id="rcc-pllcfgr-pll-configuration-register">
+<h2><span class="section-number">4.1.5.4.5. </span>RCC_PLLCFGR (PLL Configuration Register)<a class="headerlink" href="#rcc-pllcfgr-pll-configuration-register" title="Link to this heading"></a></h2>
+<p>The RCC register is a crucial component of STM32 microcontrollers, responsible for configuring and managing the system clock and resetting peripheral devices. The RCC module allows users to:
+- Select Clock Source: Choose between internal (HSI) and external (HSE) oscillators.
+- Configure PLL: Generate higher frequencies from the selected clock source.
+- Use Prescalers: Divide frequencies for various buses (AHB, APB1, APB2).
+- Manage Peripheral Clocks: Enable or disable clock signals for peripherals to save power.</p>
+</section>
+<section id="rcc-cfgr-clock-configuration-register">
+<h2><span class="section-number">4.1.5.4.6. </span>RCC_CFGR (Clock Configuration Register)<a class="headerlink" href="#rcc-cfgr-clock-configuration-register" title="Link to this heading"></a></h2>
+<p>Description: The RCC_CFGR register configures the system clock source and sets prescalers for the main buses (AHB, APB1, and APB2).
+Key Bits:
+- SW: Selects the system clock source (00 for HSI, 01 for HSE, 10 for PLL).
+- SWS: Displays the currently active system clock source.
+- HPRE: Prescaler for the AHB bus.
+- PPRE1: Prescaler for the APB1 bus (maximum 50 MHz).
+- PPRE2: Prescaler for the APB2 bus (maximum 100 MHz).</p>
+</section>
+<section id="rcc-ahb1enr-rcc-apb1enr-rcc-apb2enr-peripheral-clock-enable-registers">
+<h2><span class="section-number">4.1.5.4.7. </span>RCC_AHB1ENR, RCC_APB1ENR, RCC_APB2ENR (Peripheral Clock Enable Registers)<a class="headerlink" href="#rcc-ahb1enr-rcc-apb1enr-rcc-apb2enr-peripheral-clock-enable-registers" title="Link to this heading"></a></h2>
+<p>These registers enable or disable the clock for peripheral devices connected to various buses (AHB1, APB1, and APB2). Setting the appropriate bit activates the functionality of a specific peripheral.</p>
+<p><strong>Structure:</strong></p>
+<ul class="simple">
+<li><p><strong>RCC_AHB1ENR:</strong> Used to enable peripherals on the AHB1 bus, such as GPIO ports (A-H), CRC module, DMA controllers, etc.</p></li>
+<li><p><strong>RCC_APB1ENR:</strong> Enables peripheral devices on the APB1 bus (e.g., TIM2, TIM3, USART2, I2C1).</p></li>
+<li><p><strong>RCC_APB2ENR:</strong> Enables peripherals on the APB2 bus (e.g., ADC1, USART1, SPI1).</p></li>
+</ul>
+</section>
+<section id="systemcoreclockupdate-function">
+<h2><span class="section-number">4.1.5.4.8. </span>SystemCoreClockUpdate() Function<a class="headerlink" href="#systemcoreclockupdate-function" title="Link to this heading"></a></h2>
+<p>The <cite>SystemCoreClockUpdate()</cite> function is part of the CMSIS (Cortex Microcontroller Software Interface Standard) library used by STM32 devices for hardware abstraction.</p>
+<p><strong>Functionality:</strong></p>
+<ul class="simple">
+<li><p>Updates the global <cite>SystemCoreClock</cite> variable, representing the current system clock frequency.</p></li>
+<li><p>Calculates the system clock frequency based on the settings in the RCC registers.</p></li>
+<li><p>Ensures accurate timing information.</p></li>
+</ul>
+</section>
+<section id="configuration-of-the-pll">
+<h2><span class="section-number">4.1.5.4.9. </span>Configuration of the PLL<a class="headerlink" href="#configuration-of-the-pll" title="Link to this heading"></a></h2>
+<p>The PLL in the STM32F411 microcontroller is used to increase the input clock frequency to a desired higher output frequency, which drives the core, peripherals, and buses efficiently.</p>
+<p><strong>Steps to Configure the PLL for 100 MHz Output:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Enable the Clock Source:</strong>
+- Ensure the 25 MHz external oscillator (HSE) is operational.</p></li>
+<li><p><strong>Configure PLL Registers:</strong>
+- <strong>PLLM (Main Prescaler):</strong> Divides the input clock to a suitable lower frequency. For a 25 MHz input, set <cite>PLLM = 25</cite> to get 1 MHz.
+- <strong>PLLN (Multiplier):</strong> Multiplies the 1 MHz signal. To achieve 100 MHz, set <cite>PLLN = 400</cite>.
+- <strong>PLLP (Output Divider):</strong> Divides the multiplied frequency to reach the target clock. Here, set <cite>PLLP = 4</cite> to obtain 100 MHz.</p></li>
+<li><p><strong>Apply Configuration:</strong>
+- Set these values in the <cite>RCC_PLLCFGR</cite> register.
+- Enable the PLL using the <cite>RCC_CR</cite> register and wait for the PLL to lock by checking the PLL ready flag.</p></li>
+<li><p><strong>Switch the System Clock:</strong>
+- Once the PLL is stable, set it as the system clock source in the <cite>RCC_CFGR</cite> register.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="GPIO.html" class="btn btn-neutral float-left" title="4.1.5.3. GPIO for STM32F411 MCU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="USART.html" class="btn btn-neutral float-right" title="4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

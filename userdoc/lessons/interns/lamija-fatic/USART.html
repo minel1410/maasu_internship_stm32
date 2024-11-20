@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART) &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.1.5.6. STM32F411 Timer" href="timer.html" />
+    <link rel="prev" title="4.1.5.4. STM32 Clock Initialization" href="Clock.html" />
+<link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.3. Lessons by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.5. Lessons by Lamija Fatić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="v-model.html">4.1.5.1. V-Model in Embedded Engineering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="STM32F411MCU.html">4.1.5.2. SMT32F411 Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.5.3. GPIO for STM32F411 MCU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Clock.html">4.1.5.4. STM32 Clock Initialization</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timer.html">4.1.5.6. STM32F411 Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.8. Lessons by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../requirements/requirements.html">5. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
+          <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.5. </span>Lessons by Lamija Fatić</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.5.5. </span>Universal Synchronous Asynchronous Receiver Transmitter (USART)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/userdoc/lessons/interns/lamija-fatic/USART.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="universal-synchronous-asynchronous-receiver-transmitter-usart">
+<h1><span class="section-number">4.1.5.5. </span>Universal Synchronous Asynchronous Receiver Transmitter (USART)<a class="headerlink" href="#universal-synchronous-asynchronous-receiver-transmitter-usart" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">4.1.5.5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>USART (Universal Synchronous/Asynchronous Receiver Transmitter) is a crucial peripheral module on microcontrollers that facilitates data exchange using serial communication protocols. It is commonly used for transmitting and receiving data between devices like microcontrollers, computers, sensors, and various modules.
+The module supports both synchronous and asynchronous modes, making it highly versatile for reliable and continuous data transfer.
+USART enables efficient data communication through simple wiring and protocols, which are essential in applications ranging from debugging to interfacing with peripheral devices in embedded systems. Additionally, it features options for configuring data speed, parity, and flow control for optimized communication.</p>
+</section>
+<section id="usart-characteristics">
+<h2><span class="section-number">4.1.5.5.2. </span>USART Characteristics<a class="headerlink" href="#usart-characteristics" title="Link to this heading"></a></h2>
+<p>The functionality of USART encompasses several operating modes, such as data transmission and reception, baud rate control, and selection between synchronous or asynchronous modes.</p>
+<p><strong>Key Features:</strong></p>
+<ul class="simple">
+<li><p><strong>Transmitter:</strong> Handles data sending.</p></li>
+<li><p><strong>Receiver:</strong> Manages data reception.</p></li>
+<li><p><strong>Control Registers:</strong> Configure parameters like baud rate, mode, parity, and more.</p></li>
+</ul>
+<p><strong>Main Characteristics:</strong></p>
+<ul class="simple">
+<li><p><strong>Asynchronous and Synchronous Modes:</strong> Supports flexible communication needs.</p></li>
+<li><p><strong>Baud Rate Configuration:</strong> Adjusts data transfer speeds.</p></li>
+<li><p><strong>Data Size:</strong> Supports adjustable data frames (8-bit, 9-bit).</p></li>
+<li><p><strong>Parity Control:</strong> Options for even, odd, or no parity for error detection.</p></li>
+<li><p><strong>DMA Support:</strong> Enhances data transfer efficiency.</p></li>
+<li><p><strong>Single-wire Half-Duplex:</strong> Uses one pin for both transmitting and receiving data.</p></li>
+</ul>
+<p>These features enable reliable and efficient serial communication in various embedded system applications.</p>
+<p><strong>Supported USARTs in STM32F411:</strong></p>
+<ul class="simple">
+<li><p><strong>USART1:</strong> Connected to the APB2 bus, using pins PA9 (TX) and PA10 (RX).</p></li>
+<li><p><strong>USART2:</strong> Connected to the APB1 bus, using pins PA2 (TX) and PA3 (RX).</p></li>
+<li><p><strong>USART6:</strong> Connected to the APB2 bus, using pins PC6 (TX) and PC7 (RX).</p></li>
+</ul>
+<p>These USART interfaces enable flexible serial communication, each with dedicated pins for transmitting and receiving data.</p>
+</section>
+<section id="usart-modes">
+<h2><span class="section-number">4.1.5.5.3. </span>USART Modes<a class="headerlink" href="#usart-modes" title="Link to this heading"></a></h2>
+<p>Asynchronous Mode</p>
+<ul class="simple">
+<li><p>Clock Independence: In asynchronous mode, there is no shared clock signal between devices. Instead, communication relies on start and stop bits to delineate data packets, which introduces simplicity but may reduce efficiency.</p></li>
+<li><p>Lower Efficiency: The absence of a synchronized clock makes it relatively slower and potentially less efficient compared to synchronous communication.</p></li>
+<li><p>Practical Use: Often employed in scenarios where a simple, easy-to-set-up communication method is required, especially for lower-speed data exchanges, such as serial ports in basic microcontroller applications.</p></li>
+</ul>
+<p>Synchronous Mode</p>
+<ul class="simple">
+<li><p>Shared Clock: Synchronous communication uses a common clock signal, ensuring that data transmission is precisely timed between the communicating devices.</p></li>
+<li><p>Higher Efficiency: This shared timing enables a more continuous and efficient data flow, resulting in higher transmission speeds and more reliable communication.</p></li>
+<li><p>Applications: Ideal for scenarios where high-speed and stable communication are critical, such as data exchange in high-performance peripherals or when transferring data over short distances where timing precision is necessary.</p></li>
+</ul>
+</section>
+<section id="baud-rate">
+<h2><span class="section-number">4.1.5.5.4. </span>Baud Rate<a class="headerlink" href="#baud-rate" title="Link to this heading"></a></h2>
+<p>Baud Rate represents the data transfer speed between devices, measured in bits per second (bps). It is configured using the BRR (Baud Rate Register).</p>
+<p><strong>Formula:</strong></p>
+<p><strong>BAUD RATE= fpclk / (8*(2-OVER8)*USARTDIV)</strong></p>
+<ul class="simple">
+<li><p><strong>fPCLK:</strong> Clock frequency for the peripheral.</p></li>
+<li><p><strong>OVER8:</strong> Oversampling configuration (8x or 16x).</p></li>
+<li><p><strong>USARTDIV:</strong> Division value stored in the BRR register.</p></li>
+</ul>
+</section>
+<section id="oversampling">
+<h2><span class="section-number">4.1.5.5.5. </span>Oversampling<a class="headerlink" href="#oversampling" title="Link to this heading"></a></h2>
+<p>In USART communication, oversampling is used to enhance accuracy in asynchronous mode by sampling the incoming data multiple times per bit. It can be set to either 8x or 16x oversampling:
+- 16x Oversampling: The default and most common mode, which provides a more stable and reliable signal by sampling each bit 16 times. It offers higher precision and is ideal for environments where signal integrity is crucial.
+- 8x Oversampling: This mode allows for higher data transfer speeds but may reduce the precision of signal detection, making it more susceptible to noise.
+Configuration: Oversampling is configured in the CR1 (Control Register 1) by setting the OVER8 bit. If OVER8 is set to 1, the USART operates in 8x mode; if it’s set to 0, it defaults to 16x mode.</p>
+</section>
+<section id="registers">
+<h2><span class="section-number">4.1.5.5.6. </span>Registers<a class="headerlink" href="#registers" title="Link to this heading"></a></h2>
+<p><strong>CR1 Register</strong></p>
+<p>The CR1 register configures fundamental parameters for USART communication.</p>
+<ul class="simple">
+<li><p><strong>UE (USART Enable):</strong> Activates or deactivates the USART.</p></li>
+<li><p><strong>TE (Transmitter Enable):</strong> Enables data transmission (TX line).</p></li>
+<li><p><strong>RE (Receiver Enable):</strong> Enables data reception (RX line).</p></li>
+</ul>
+<p><strong>Other Key Bits:</strong></p>
+<ul class="simple">
+<li><p><strong>USART_CR1_OVER8:</strong> Manages oversampling (16x or 8x).</p></li>
+</ul>
+<p><strong>USART_CR1_UE, USART_CR1_TE, USART_CR1_RE</strong></p>
+<ul class="simple">
+<li><p><strong>USART_CR1_UE (USART Enable):</strong> Activates the USART peripheral.</p></li>
+<li><p><strong>USART_CR1_TE (Transmitter Enable):</strong> Enables data transmission on the TX pin.</p></li>
+<li><p><strong>USART_CR1_RE (Receiver Enable):</strong> Enables data reception on the RX pin.</p></li>
+</ul>
+<p>### USART Communication Process</p>
+<p>#### Data Reception:</p>
+<ul class="simple">
+<li><p>Data Ready Check: Before reading the received data, it is crucial to check if a byte of data is available in the USART Data Register (USART_DR). This is done using the RXNE (Read Data Register Not Empty) bit located in the USART_SR (Status Register). If RXNE is set to 1, it indicates that the data is ready to be read.</p></li>
+<li><p>Reading Data: Once RXNE is confirmed as 1, the value from the USART_DR register is read. This register holds the most recent received byte of data.</p></li>
+</ul>
+<p>#### Data Sending:</p>
+<p>For data to be transmitted efficiently and reliably, these steps are of big importance:
+1. Checking if the Transmit Data Register (TDR) is empty: The first step in sending data is to ensure that the Transmit Data Register is empty and can accept a new byte for transmission. This is verified by reading the TXE (Transmit Data Register Empty) bit in the USART_SR (Status Register). When the TXE bit is set to 1, it indicates that the register is empty and ready for the next byte. The TXE bit is automatically managed by the hardware and ensures that data is not lost or overwritten.
+2. Placing the data into the USART Data Register: Once it is confirmed that the TDR is empty, the byte of data to be transmitted is written into the USART_DR (Data Register). Writing to this register triggers the transmission of the data byte over the USART interface. The data in the USART_DR register is serialized and sent bit-by-bit over the TX pin based on the configured baud rate and protocol settings.
+3. Monitoring the transmission progress: After writing the data byte to the USART_DR, the transmission begins. During this process, it is essential to monitor the TC (Transmission Complete) bit in the USART_SR register. The TC bit indicates the completion of data transmission, not just when the data has been shifted out of the TDR but when the entire byte, including the stop bit, has been fully transmitted over the USART line. The TC bit is set to 1 when the transmission is complete, signaling that the USART is ready for the next transmission.</p>
+</section>
+<section id="usart-initialization-steps">
+<h2><span class="section-number">4.1.5.5.7. </span>USART Initialization Steps<a class="headerlink" href="#usart-initialization-steps" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Disable USART:</strong> Set USART_CR1_UE to <cite>0</cite> before configuration.</p></li>
+<li><p><strong>Pin Configuration:</strong> Assign TX and RX pins to GPIO ports in alternate function mode.</p></li>
+<li><p><strong>Set Baud Rate and Oversampling:</strong> Configure in BRR and CR1 registers, respectively.</p></li>
+<li><p><strong>Enable Communication Modes:</strong> Set RE and/or TE bits in CR1.</p></li>
+<li><p><strong>Enable USART:</strong> Set USART_CR1_UE to <cite>1</cite>.</p></li>
+</ol>
+</section>
+<section id="example">
+<h2><span class="section-number">4.1.5.5.8. </span>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p><strong>Connecting a Serial Monitor to STM32F411</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Hardware Setup:</strong>
+- Connect TX (MCU) to RX (monitor), RX (MCU) to TX (monitor), and ensure a shared ground connection.</p></li>
+<li><p><strong>Clock Configuration:</strong>
+- Use RCC_AHB1ENR to enable GPIO clocks and RCC_APB1ENR/RCC_APB2ENR for USART clocks.</p></li>
+<li><p><strong>GPIO Configuration:</strong>
+- Set TX and RX pins in alternate function mode (GPIOx_MODER).</p></li>
+<li><p><strong>USART Configuration:</strong>
+- Calculate baud rate using the formula and set word length, parity, and stop bits in CR1, CR2, and CR3.</p></li>
+<li><p><strong>Enable USART:</strong>
+- Set the UE bit in CR1.</p></li>
+<li><p><strong>Data Transmission:</strong>
+- Check TXE bit and write data to USART_DR.</p></li>
+<li><p><strong>Data Reception:</strong>
+- Monitor RXNE bit and read data from USART_DR.</p></li>
+<li><p><strong>Optional: Interrupts:</strong>
+- Configure interrupts for efficient data handling.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Clock.html" class="btn btn-neutral float-left" title="4.1.5.4. STM32 Clock Initialization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="timer.html" class="btn btn-neutral float-right" title="4.1.5.6. STM32F411 Timer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
