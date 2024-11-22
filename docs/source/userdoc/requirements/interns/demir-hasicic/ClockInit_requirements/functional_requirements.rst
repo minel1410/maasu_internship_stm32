@@ -1,7 +1,8 @@
 ==========================
 Functional Requirements
 ==========================
-.. req:: label
+
+.. req:: EnableHSEOscillator
    :id: REQ_INT3_1732140048
    :status: Draft
    :date-released:
@@ -12,60 +13,257 @@ Functional Requirements
    :safety-asil: 
    :references: 
    :verification-and-validation: 
-   
-1. **EnableHSEOscillator**
-   - EnableHSEOscillator must set the HSEON bit in the RCC_CR register to enable the HSE oscillator.
 
-2. **VerifyHSEStability**
-   - VerifyHSEStability must confirm that the HSERDY bit in the RCC_CR register is set, indicating that the HSE oscillator is stable and ready.
+   The HSEON bit in the RCC_CR register must be set to enable the HSE oscillator.
 
-3. **SetPLLM**
-   - SetPLLM must configure the PLLM field in the RCC_PLLCFGR register to 25, dividing the 25 MHz input clock by 25 to achieve a 1 MHz VCO input frequency.
+.. req:: VerifyHSEStability
+   :id: REQ_INT3_1732215721
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-4. **SetPLLN**
-   - SetPLLN must configure the PLLN field in the RCC_PLLCFGR register to 200, multiplying the 1 MHz VCO input frequency by 200 to achieve a 200 MHz VCO output frequency.
+   The HSERDY bit in the RCC_CR register must be checked to confirm the stability of the HSE oscillator.
 
-5. **SetPLLP**
-   - SetPLLP must configure the PLLP field in the RCC_PLLCFGR register to 2, dividing the 200 MHz VCO output frequency by 2 to achieve a 100 MHz system clock.
+.. req:: ConfigurePLLM
+   :id: REQ_INT3_1732216124
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-6. **VerifyPLLStability**
-   - VerifyPLLStability must confirm that the PLLRDY bit in the RCC_CR register is set, indicating that the PLL generates a stable clock signal with an output frequency of 100 MHz.
+   The PLLM field in the RCC_PLLCFGR register must be configured to divide the input clock frequency by 25 to achieve a 1 MHz VCO input frequency.
 
-7. **SetSystemClockSourceToPLL**
-   - SetSystemClockSourceToPLL must set the SW field in the RCC_CFGR register to select the PLL as the system clock source.
+.. req:: ConfigurePLLN
+   :id: REQ_INT3_1732216146
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-8. **VerifySystemClockSourceIsPLL**
-   - VerifySystemClockSourceIsPLL must confirm that the SWS field in the RCC_CFGR register indicates that the PLL is the active system clock source.
+   The PLLN field in the RCC_PLLCFGR register must be configured to multiply the VCO input frequency by 200 to achieve a 200 MHz VCO output frequency.
 
-9. **SetAHBPrescaler**
-   - SetAHBPrescaler must configure the HPRE field in the RCC_CFGR register to 0 (no division).
+.. req:: ConfigurePLLP
+   :id: REQ_INT3_1732216165
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-10. **VerifyAHBClockFrequency**
-    - VerifyAHBClockFrequency must confirm that the AHB clock operates at 100 MHz.
+   The PLLP field in the RCC_PLLCFGR register must be configured to divide the VCO output frequency by 2 to achieve a 100 MHz system clock.
 
-11. **SetAPB1Prescaler**
-    - SetAPB1Prescaler must configure the PPRE1 field in the RCC_CFGR register to 4 (divide by 2).
+.. req:: VerifyPLLStability
+   :id: REQ_INT3_1732216188
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-12. **VerifyAPB1ClockFrequency**
-    - VerifyAPB1ClockFrequency must confirm that the APB1 clock operates at 50 MHz.
+   The PLLRDY bit in the RCC_CR register must be checked to confirm that the PLL generates a stable clock signal, with an output frequency of 100 MHz.
 
-13. **SetAPB2Prescaler**
-    - SetAPB2Prescaler must configure the PPRE2 field in the RCC_CFGR register to 0 (no division).
+.. req:: SetSystemClockSource
+   :id: REQ_INT3_1732216207
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-14. **VerifyAPB2ClockFrequency**
-    - VerifyAPB2ClockFrequency must confirm that the APB2 clock operates at 100 MHz.
+   The SW field in the RCC_CFGR register must be set to select the PLL as the system clock source.
 
-15. **ValidateHSEConfiguration**
-    - ValidateHSEConfiguration must confirm that the HSERDY bit in the RCC_CR register is set, indicating the HSE oscillator is stable.
+.. req:: VerifySystemClockSource
+   :id: REQ_INT3_1732216226
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-16. **ValidatePLLConfiguration**
-    - ValidatePLLConfiguration must confirm that the PLLRDY bit in the RCC_CR register is set, ensuring that the PLL is stable.
+   The SWS field in the RCC_CFGR register must be checked to confirm that the PLL is the active system clock source.
 
-17. **ValidateSystemClockSource**
-    - ValidateSystemClockSource must confirm that the SWS field in the RCC_CFGR register indicates that the PLL is the system clock source.
+.. req:: ConfigureAHBPrescaler
+   :id: REQ_INT3_1732216248
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-18. **ValidateClockFrequencies**
-    - ValidateClockFrequencies must confirm that the AHB clock operates at 100 MHz, the APB1 clock operates at 50 MHz, and the APB2 clock operates at 100 MHz.
+   The HPRE field in the RCC_CFGR register must be set to 0 (no division).
 
-19. **SystemCoreClockUpdate**
-    - SystemCoreClockUpdate must ensure the variable reflects the actual system clock frequency of 100 MHz by reading the RCC register settings, including the SW, HPRE, PPRE1, and PPRE2 fields, and calculating the resulting clock frequency based on these configurations.
+.. req:: VerifyAHBClockFrequency
+   :id: REQ_INT3_1732216266
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The AHB clock frequency must be verified to operate at 100 MHz.
+
+.. req:: ConfigureAPB1Prescaler
+   :id: REQ_INT3_1732216282
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The PPRE1 field in the RCC_CFGR register must be configured to 4, to divide the clock by 2 for the APB1 prescaler.
+
+.. req:: VerifyAPB1Frequency
+   :id: REQ_INT3_1732216298
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The APB1 clock frequency must be verified to operate at 50 MHz.
+
+.. req:: ConfigureAPB2Prescaler
+   :id: REQ_INT3_1732216322
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The PPRE2 field in the RCC_CFGR register must be configured to 0 (no division) for the APB2 prescaler.
+
+.. req:: VerifyAPB2Frequency
+   :id: REQ_INT3_1732216337
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The APB2 clock frequency must be confirmed to operate at 100 MHz.
+
+.. req:: ValidateHSEConfiguration
+   :id: REQ_INT3_1732216352
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The HSERDY bit in the RCC_CR register must be set, indicating the HSE oscillator is stable.
+
+.. req:: ValidatePLLStability
+   :id: REQ_INT3_1732216368
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The PLLRDY bit in the RCC_CR register must be set, ensuring that the PLL is stable.
+
+.. req:: ValidateSystemClockSource
+   :id: REQ_INT3_1732216383
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The SWS field in the RCC_CFGR register must indicate that the PLL is selected as the active system clock source.
+
+.. req:: VerifyClockFrequencies
+   :id: REQ_INT3_1732216402
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The clock frequencies for the AHB, APB1, and APB2 buses must be verified to operate at 100 MHz, 50 MHz, and 100 MHz, respectively.
+
+.. req:: UpdateSystemCoreClock
+   :id: REQ_INT3_1732216416
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Demir Hasicic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The SystemCoreClock variable must reflect the system clock frequency of 100 MHz, by reading the RCC register settings and calculating the resulting frequency based on the configured SW, HPRE, PPRE1, and PPRE2 fields.
