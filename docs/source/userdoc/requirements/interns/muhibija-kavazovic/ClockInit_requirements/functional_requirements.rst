@@ -182,14 +182,14 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   The system shall enable clock signals for GPIO, USART, and TIM peripherals by configuring their corresponding registers (RCC_AHB1ENR, RCC_APB1ENR, and RCC_APB2ENR).  
+   The system must provide a mechanism to detect clock initialization failures, including PLL and HSE initialization issues, within 2 milliseconds.
 
 .. req:: label
    :id: REQ_INT3_1732217474
    :status: Draft
    :date-released:
    :priority: Medium
-   :submitted-by: IMuhibija Kavazovic
+   :submitted-by: Muhibija Kavazovic
    :modified-by:
    :category: Functional
    :safety-asil: 
