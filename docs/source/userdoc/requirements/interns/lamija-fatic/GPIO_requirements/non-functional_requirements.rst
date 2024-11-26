@@ -27,21 +27,8 @@ Non-functional Requirements
    :references:
    :verification-and-validation:
 
-   GPIO configurations must remain stable under normal operating conditions and during soft resets.
+   GPIO configurations must remain stable during typical operating conditions, such as normal temperature (−40°C to +85°C) and voltage ranges (3.0V to 3.6V), as well as during system soft resets, ensuring reliable functionality without unintended changes.
 
-.. req:: Safety
-   :id: REQ_INT3_1731028142
-   :status: Draft
-   :date-released:
-   :priority: High
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   Unused GPIO pins must be configured as inputs with pull-down resistors to avoid floating states and erratic behavior.
 
 .. req:: Interrupt Latency
    :id: REQ_INT3_1731028143
@@ -141,33 +128,6 @@ Non-functional Requirements
 
    Configurable debounce delays between 1ms and 20ms must stabilize input signals for mechanical switches or sensors.
 
-.. req:: Frequency Range of PWM
-   :id: REQ_INT3_1731028150
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   PWM signals must support a frequency range of 10Hz to 1kHz with a resolution of 0.1% in duty cycle adjustments.
-
-.. req:: Stability of PWM Signals
-   :id: REQ_INT3_1731028151
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   PWM signal jitter must remain below 1%, ensuring smooth operations.
 
 .. req:: Documentation Accuracy
    :id: REQ_INT3_1731028152
@@ -223,7 +183,7 @@ Non-functional Requirements
    :references:
    :verification-and-validation:
 
-   GPIO pins must allow dynamic reconfiguration of mode (e.g., input to output) without requiring a full system restart.
+   GPIO pins must allow dynamic reconfiguration of mode without requiring a full system restart.
 
 .. req:: Interrupt Prioritization
    :id: REQ_INT3_1731028156
@@ -281,20 +241,6 @@ Non-functional Requirements
 
    Rising and Falling edge interrupts must detect signal transitions accurately up to 500kHz.
 
-.. req:: Error Logging
-   :id: REQ_INT3_1731028160
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   Invalid GPIO configurations must be logged with clear error codes for debugging purposes.
-
 .. req:: Monitoring Interval
    :id: REQ_INT3_1731028161
    :status: Draft
@@ -323,49 +269,6 @@ Non-functional Requirements
 
    Switching between alternate functions on a GPIO pin must take no longer than 1 millisecond.
 
-
-.. req:: LED Brightness Control
-   :id: REQ_INT3_1731028163
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   PWM signals for LED control must support a minimum brightness adjustment resolution of 5%.
-
-.. req:: Fan Speed Stability
-   :id: REQ_INT3_1731028164
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   PWM signals for fan control must maintain a steady output to prevent speed fluctuations exceeding ±5%.
-
-.. req:: Servo Position Precision
-   :id: REQ_INT3_1731028165
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   PWM duty cycle for servo control must allow at least 1° precision in positional adjustments.
-
 .. req:: GPIO Locking
    :id: REQ_INT3_1731028166
    :status: Draft
@@ -392,34 +295,6 @@ Non-functional Requirements
    :references:
    :verification-and-validation:
 
-   GPIO must notify the application of significant state changes within 1 millisecond.
-
-.. req:: ADC Noise Filtering
-   :id: REQ_INT3_1731028168
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   Analog signals for ADC must pass through noise filtering, ensuring stable readings for real-time applications.
-
-.. req:: Physical Pin Mapping Display
-   :id: REQ_INT3_1731028169
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   The system must provide a clear interface to display the mapping between GPIO pins and physical MCU pins.
+    GPIO must notify the application of any state transitions, such as changes from HIGH to LOW or LOW to HIGH, within 1 millisecond, ensuring accurate and timely response to input or output events.
 
 
