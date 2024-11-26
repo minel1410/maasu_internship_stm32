@@ -41,129 +41,8 @@ Functional Requirements
    
    Expected Result: The pin functions as an output, sending signals to external components.
 
-.. req:: Analog Mode Configuration
-   :id: REQ_INT3_173102808611
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-   
-   The system must provide the ability to configure GPIO pins in analog mode.
-   
-   Precondition: GPIO pin must be available for configuration.
-   
-   Action: The system sets the GPIO pin mode to analog using the GPIOx_MODER register.
-   
-   Expected Result: The pin functions as an analog interface for ADC/DAC operations.
-
-
-.. req:: Output Mode Configuration
-   :id: REQ_INT3_17310280858
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-   
-   The system must provide the ability to configure GPIO pins in output mode.
-   
-   Precondition: GPIO pin must be available for configuration.
-   
-   Action: The system sets the GPIO pin mode to output using the GPIOx_MODER register.
-   
-   Expected Result: The pin functions as an output, sending signals to external components.
-
-.. req:: Analog Mode Configuration
-   :id: REQ_INT3_173102808612
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-   
-   The system must provide the ability to configure GPIO pins in analog mode.
-   
-   Precondition: GPIO pin must be available for configuration.
-   
-   Action: The system sets the GPIO pin mode to analog using the GPIOx_MODER register.
-   
-   Expected Result: The pin functions as an analog interface for ADC/DAC operations.
-
 .. req:: Alternate Function Mode Configuration
    :id: REQ_INT3_173102808713
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-   
-   The system must provide the ability to configure GPIO pins in alternate function mode.
-   
-   Precondition: GPIO pin must be available for configuration.
-   
-   Action: The system sets the GPIO pin mode to alternate function using the GPIOx_MODER and GPIOx_AFRL/GPIOx_AFRH registers.
-   
-   Expected Result: The pin operates in alternate function mode, supporting peripheral communication.
-
-.. req:: Output Mode Configuration
-   :id: REQ_INT3_17310280857
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-  
-   The system must provide the ability to configure GPIO pins in output mode.
-   
-   Precondition: GPIO pin must be available for configuration.
-   
-   Action: The system sets the GPIO pin mode to output using the GPIOx_MODER register.
-   
-   Expected Result: The pin functions as an output, sending signals to external components.
-
-.. req:: Analog Mode Configuration
-   :id: REQ_INT3_173102808613
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-   
-   The system must provide the ability to configure GPIO pins in analog mode.
-   
-   Precondition: GPIO pin must be available for configuration.
-   
-   Action: The system sets the GPIO pin mode to analog using the GPIOx_MODER register.
-   
-   Expected Result: The pin functions as an analog interface for ADC/DAC operations.
-
-.. req:: Alternate Function Mode Configuration
-   :id: REQ_INT3_173102808712
    :status: Draft
    :date-released:
    :priority: Low
@@ -242,26 +121,6 @@ Functional Requirements
 
    Expected Result: The GPIO pin operates at Low speed, minimizing power consumption and noise.  
 
-.. req:: Output Mode Configuration
-    :id: REQ_INT3_17310280856
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Lamija Fatić
-    :modified-by:
-    :category: Functional
-    :safety-asil:
-    :references:
-    :verification-and-validation:
-
-    The system must provide the ability to configure GPIO pins in output mode.
-
-    Precondition: GPIO pin must be available for configuration.
-
-    Action: The system sets the GPIO pin mode to output using the GPIOx_MODER register.
-
-    Expected Result: The pin functions as an output, sending signals to external components.
-
 .. req:: Analog Mode Configuration
     :id: REQ_INT3_173102808614
     :status: Draft
@@ -282,86 +141,6 @@ Functional Requirements
 
     Expected Result: The pin functions as an analog interface for ADC/DAC operations.
 
-.. req:: Alternate Function Mode Configuration
-    :id: REQ_INT3_173102808714
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Lamija Fatić
-    :modified-by:
-    :category: Functional
-    :safety-asil:
-    :references:
-    :verification-and-validation:
-
-    The system must provide the ability to configure GPIO pins in alternate function mode.
-
-    Precondition: GPIO pin must be available for configuration.
-
-    Action: The system sets the GPIO pin mode to alternate function using the GPIOx_MODER and GPIOx_AFRL/GPIOx_AFRH registers.
-
-    Expected Result: The pin operates in alternate function mode, supporting peripheral communication.
-
-.. req:: Push-Pull Output Configuration
-    :id: REQ_INT3_173102808811
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Lamija Fatić
-    :modified-by:
-    :category: Functional
-    :safety-asil:
-    :references:
-    :verification-and-validation:
-
-    The system must allow setting GPIO output type to Push-Pull.
-
-    Precondition: The GPIO pin is configured as an output.
-
-    Action: The system updates the GPIOx_OTYPER register to set the pin as Push-Pull.
-
-    Expected Result: The GPIO pin outputs signals using a Push-Pull configuration, enabling both high and low drive states.
-
-.. req:: Open-Drain Output Configuration
-    :id: REQ_INT3_173102808912
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Lamija Fatić
-    :modified-by:
-    :category: Functional
-    :safety-asil:
-    :references:
-    :verification-and-validation:
-
-    The system must allow setting GPIO output type to Open-Drain.
-
-    Precondition: The GPIO pin is configured as an output.
-
-    Action: The system updates the GPIOx_OTYPER register to set the pin as Open-Drain.
-
-    Expected Result: The GPIO pin outputs signals using an Open-Drain configuration, relying on an external pull-up resistor for the high state.
-
-
-.. req:: Low Speed Configuration  
-   :id: REQ_INT3_173102809014  
-   :status: Draft  
-   :date-released:  
-   :priority: Low  
-   :submitted-by: Lamija Fatić  
-   :modified-by:  
-   :category: Functional  
-   :safety-asil:  
-   :references:  
-   :verification-and-validation:  
-
-   The system must support configuration of GPIO pins to operate at Low speed.  
-
-   Precondition: User specifies Low speed for a GPIO pin.  
-
-   Action: The system writes the corresponding value for Low speed to the GPIOx_OSPEEDR register.  
-
-   Expected Result: The GPIO pin operates at Low speed, minimizing power consumption and noise.  
 
 .. req:: Medium Speed Configuration  
    :id: REQ_INT3_1731028091  
@@ -443,46 +222,6 @@ Functional Requirements
 
    Expected Result: The system correctly identifies and reports the HIGH state of the pin.  
 
-.. req:: Output Mode Configuration
-    :id: REQ_INT3_1731028086015
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Lamija Fatić
-    :modified-by:
-    :category: Functional
-    :safety-asil:
-    :references:
-    :verification-and-validation:
-
-    The system must provide the ability to configure GPIO pins in output mode.
-
-    Precondition: GPIO pin must be available for configuration.
-
-    Action: The system sets the GPIO pin mode to output using the GPIOx_MODER register.
-
-    Expected Result: The pin functions as an output, sending signals to external components.
-
-.. req:: Analog Mode Configuration
-    :id: REQ_INT3_173102808616
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Lamija Fatić
-    :modified-by:
-    :category: Functional
-    :safety-asil:
-    :references:
-    :verification-and-validation:
-
-    The system must provide the ability to configure GPIO pins in analog mode.
-
-    Precondition: GPIO pin must be available for configuration.
-
-    Action: The system sets the GPIO pin mode to analog using the GPIOx_MODER register.
-
-    Expected Result: The pin functions as an analog interface for ADC/DAC operations.
-
 .. req:: Alternate Function Mode Configuration
     :id: REQ_INT3_173102808711
     :status: Draft
@@ -501,151 +240,7 @@ Functional Requirements
 
     Action: The system sets the GPIO pin mode to alternate function using the GPIOx_MODER and GPIOx_AFRL/GPIOx_AFRH registers.
 
-    Expected Result: The pin operates in alternate function mode, supporting peripheral communication.
-
-.. req:: Push-Pull Output Configuration
-    :id: REQ_INT3_1731028088
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Lamija Fatić
-    :modified-by:
-    :category: Functional
-    :safety-asil:
-    :references:
-    :verification-and-validation:
-
-    The system must allow setting GPIO output type to Push-Pull.
-
-    Precondition: The GPIO pin is configured as an output.
-
-    Action: The system updates the GPIOx_OTYPER register to set the pin as Push-Pull.
-
-    Expected Result: The GPIO pin outputs signals using a Push-Pull configuration, enabling both high and low drive states.
-
-.. req:: Open-Drain Output Configuration
-    :id: REQ_INT3_173102808911
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Lamija Fatić
-    :modified-by:
-    :category: Functional
-    :safety-asil:
-    :references:
-    :verification-and-validation:
-
-    The system must allow setting GPIO output type to Open-Drain.
-
-    Precondition: The GPIO pin is configured as an output.
-
-    Action: The system updates the GPIOx_OTYPER register to set the pin as Open-Drain.
-
-    Expected Result: The GPIO pin outputs signals using an Open-Drain configuration, relying on an external pull-up resistor for the high state.
-
-.. req:: Low Speed Configuration  
-   :id: REQ_INT3_1731028090  
-   :status: Draft  
-   :date-released:  
-   :priority: Low  
-   :submitted-by: Lamija Fatić  
-   :modified-by:  
-   :category: Functional  
-   :safety-asil:  
-   :references:  
-   :verification-and-validation:  
-
-   The system must support configuration of GPIO pins to operate at Low speed.  
-
-   Precondition: User specifies Low speed for a GPIO pin.  
-
-   Action: The system writes the corresponding value for Low speed to the GPIOx_OSPEEDR register.  
-
-   Expected Result: The GPIO pin operates at Low speed, minimizing power consumption and noise.  
-
-
-.. req:: Medium Speed Configuration  
-   :id: REQ_INT3_173102809111
-   :status: Draft  
-   :date-released:  
-   :priority: Low  
-   :submitted-by: Lamija Fatić  
-   :modified-by:  
-   :category: Functional  
-   :safety-asil:  
-   :references:  
-   :verification-and-validation:  
-
-   The system must support configuration of GPIO pins to operate at Medium speed.  
-
-   Precondition: User specifies Medium speed for a GPIO pin.  
-
-   Action: The system writes the corresponding value for Medium speed to the GPIOx_OSPEEDR register.  
-
-   Expected Result: The GPIO pin operates at Medium speed, balancing performance and power consumption.  
-
-
-.. req:: High Speed Configuration  
-   :id: REQ_INT3_1731028092  
-   :status: Draft  
-   :date-released:  
-   :priority: Low  
-   :submitted-by: Lamija Fatić  
-   :modified-by:  
-   :category: Functional  
-   :safety-asil:  
-   :references:  
-   :verification-and-validation:  
-
-   The system must support configuration of GPIO pins to operate at High speed.  
-
-   Precondition: User specifies High speed for a GPIO pin.  
-
-   Action: The system writes the corresponding value for High speed to the GPIOx_OSPEEDR register.  
-
-   Expected Result: The GPIO pin operates at High speed, providing quick response for time-critical applications.  
-
-
-.. req:: Very High Speed Configuration  
-   :id: REQ_INT3_173102809311
-   :status: Draft  
-   :date-released:  
-   :priority: Low  
-   :submitted-by: Lamija Fatić  
-   :modified-by:  
-   :category: Functional  
-   :safety-asil:  
-   :references:  
-   :verification-and-validation:  
-
-   The system must support configuration of GPIO pins to operate at Very High speed.  
-
-   Precondition: User specifies Very High speed for a GPIO pin.  
-
-   Action: The system writes the corresponding value for Very High speed to the GPIOx_OSPEEDR register.  
-
-   Expected Result: The GPIO pin operates at Very High speed, ensuring the fastest signal transitions for high-performance applications.  
-
-
-.. req:: Detecting GPIO Pin HIGH State  
-   :id: REQ_INT3_1731028094  
-   :status: Draft  
-   :date-released:  
-   :priority: Low  
-   :submitted-by: Lamija Fatić  
-   :modified-by:  
-   :category: Functional  
-   :safety-asil:  
-   :references:  
-   :verification-and-validation:  
-
-   The system must detect when a GPIO pin is in the HIGH state.  
-
-   Precondition: The GPIO pin is configured in input mode.  
-
-   Action: The system reads the GPIOx_IDR register and checks if the corresponding bit is set to HIGH.  
-
-   Expected Result: The system correctly identifies and reports the HIGH state of the pin.  
+    Expected Result: The pin operates in alternate function mode, supporting peripheral communication
 
 
 .. req:: Detecting GPIO Pin LOW State  
@@ -969,45 +564,6 @@ Functional Requirements
 
    Expected Result: Unused GPIO pins are safely configured to avoid floating states. 
 
-.. req:: Configuring PWM
-   :id: REQ_INT3_1731028124
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   The system must allow generating PWM signals with adjustable duty cycle.
-
-   Precondition: GPIO pin is assigned to a PWM timer.
-
-   Action: The system configures the timer and outputs PWM signals on the GPIO pin.
-
-   Expected Result: The servo motor operates with precise control based on the PWM signal.
-
-.. req:: Controlling LED State
-   :id: REQ_INT3_1731028125
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   The system must allow toggling LED state using GPIO pins.
-
-   Precondition: GPIO pin is connected to an LED and configured as output.
-
-   Action: The system sets or resets the GPIO pin to control the LED state.
-
-   Expected Result: The LED turns ON or OFF based on the GPIO pin state.
 
 .. req:: Controlling Fan Speed
    :id: REQ_INT3_1731028126
@@ -1129,26 +685,6 @@ Functional Requirements
 
    Expected Result: GPIO pins maintain their configured state without loss of functionality.
 
-/*.. req:: Analog Mode Support
-   :id: REQ_INT3_17310281324
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   The system must allow GPIO pins to operate in analog mode for applications like ADC or DAC.
-
-   Precondition: GPIO pin is configured for analog mode.
-
-   Action: The system updates the MODER register to set the pin to analog mode.
-
-   Expected Result: The GPIO pin handles analog signals without interference.
-*
  .. req:: Real-Time ADC Readings
     :id: REQ_INT3_1731028133
     :status: Draft
