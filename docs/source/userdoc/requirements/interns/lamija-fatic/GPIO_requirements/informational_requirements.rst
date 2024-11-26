@@ -2,7 +2,7 @@ Informational Requirements
 ==========================
 
 .. req:: GPIO Registers
-   :id: REQ_INT3_1731028659
+   :id: REQ_INT3_17310286668
    :status: Draft
    :date-released:
    :priority: Low
@@ -13,26 +13,151 @@ Informational Requirements
    :references: 
    :verification-and-validation: 
 
-   GPIOx_MODER: Configures the mode of each pin (Input, Output, Analog, Alternate Function).
+   GPIO consists of the following registers: GPIOx_MODER, GPIOx_OTYPER, GPIOx_OSPEEDR, GPIOx_PUPDR, GPIOx_IDR, GPIOx_ODR, GPIOx_BSRR, GPIOx_LCKR, GPIOx_AFRL, and GPIOx_AFRH.
 
-   GPIOx_OTYPER: Determines the output type (Push-Pull or Open-Drain).
 
-   GPIOx_OSPEEDR: Sets the speed of GPIO pins (Low, Medium, High, Very High).
+.. req:: GPIO Pin Modes
+   :id: REQ_INT3_1731028699
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+   GPIO pins can be configured in given modes:Input floating, Input pull-up, Input pull-down, Analog, Output open-drain, Output push-pull, Alternate function push-pull, and Alternate function open-drain, with optional pull-up or pull-down capabilities.
 
-   GPIOx_PUPDR: Configures pull-up or pull-down resistors.
 
-   GPIOx_IDR: Reads the current state of input pins.
+.. req:: GPIOx_MODER
+   :id: REQ_INT3_17310286990
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-   GPIOx_ODR: Writes the output state of GPIO pins.
+   GPIOx_MODER configures the mode of each pin on one of the possible modes for GPIO.
 
-   GPIOx_BSRR: Provides atomic bitwise access to set/reset GPIO output.
+.. req:: GPIOx_OTYPER
+   :id: REQ_INT3_17310286991
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-   GPIOx_LCKR: Locks GPIO configurations to prevent accidental changes.
+   GPIOx_OTYPER register determines the output type (Push-Pull or Open-Drain).
 
-   GPIOx_AFRL/AFRH: Selects alternate functions for GPIO pins.
+.. req:: GPIOx_OSPEEDR
+   :id: REQ_INT3_17310286992
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-.. req:: GPIO Features
-   :id: REQ_INT3_1731028660
+   GPIOx_OSPEEDR register sets the speed of GPIO pins (Low, Medium, High, Very High).
+
+.. req:: GPIOx_PUPDR
+   :id: REQ_INT3_173102869924111
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   GPIOx_PUPDR register configures pull-up or pull-down resistors.
+
+.. req:: GPIOx_IDR
+   :id: REQ_INT3_17310286993
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   GPIOx_IDR register reads the current state of input pins.
+
+.. req:: GPIOx_ODR
+   :id: REQ_INT3_17310286994
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   GPIOx_ODR register writes the output state of GPIO pins.
+
+.. req:: GPIOx_BSRR
+   :id: REQ_INT3_17310286995
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   GPIOx_BSRR is a register which allows the application to set and reset each individual bit in the output data register.
+
+.. req:: GPIOx_LCKR
+   :id: REQ_INT3_17310286996
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+   The GPIOx_LCKR register is used to lock the configuration of GPIO control registers, preventing accidental changes.
+   
+
+.. req:: GPIOx_AFRL/AFRH
+   :id: REQ_INT3_17310286997
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   GPIOx_AFRL/AFRH register selects alternate functions for GPIO pins.
+
+.. req:: GPIO Pin Count
+   :id: REQ_INT3_173102866136
    :status: Draft
    :date-released:
    :priority: Medium
@@ -43,20 +168,10 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   16 Pins Per Port: Each port (e.g., GPIOA, GPIOB) can manage up to 16 pins.
+   Each GPIO port can manage up to 16 pins.
 
-   Pin Multiplexing: A single pin can perform multiple functions (e.g., GPIO, UART TX/RX).
-
-   Edge Detection: Pins can detect rising, falling, or both edges for interrupts.
-
-   Internal Pull-Up/Down Resistors: Avoid floating states by stabilizing pin voltage levels.
-
-   Debouncing: Removes noise from mechanical switches or unstable inputs.
-
-   Locking Mechanism: Freezes configurations to avoid unintended changes.
-
-.. req:: GPIO Initialization
-   :id: REQ_INT3_1731028661
+.. req:: GPIO Locking Mechanism
+   :id: REQ_INT3_1731028666
    :status: Draft
    :date-released:
    :priority: Medium
@@ -67,17 +182,35 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   GPIO initialization involves configuring mode, type, speed, pull resistors, and alternate functions.
+   GPIO locking mechanism freezes configurations to avoid unintended changes.
 
-   A typical initialization sequence includes:
+.. req:: GPIO Debouncing
+   :id: REQ_INT3_1731028665
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
 
-   Enabling the clock for the desired GPIO port using RCC.
+   Debouncing removes noise from mechanical switches or unstable inputs on GPIO pins.
 
-   Setting the mode (Input, Output, Alternate, Analog) via GPIOx_MODER.
+.. req:: GPIO Edge Detection
+   :id: REQ_INT3_1731028663
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
 
-   Configuring the pull resistors (None, Pull-Up, Pull-Down) via GPIOx_PUPDR.
-
-   If necessary, setting the alternate function using GPIOx_AFRL or GPIOx_AFRH.
+   GPIO pins can detect rising, falling, or both edges for interrupt generation.
 
 .. req:: GPIO Operating Modes
    :id: REQ_INT3_1731028662
@@ -91,16 +224,82 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   Input Mode: Reads external signals (buttons, sensors).
+   GPIO has following operating modes : Input Mode, Output Mode,Analog Mode and Alternate Function mode.
 
-   Output Mode: Drives external devices (LEDs, motors).
+.. req:: GPIO Input Mode
+   :id: REQ_INT3_1731028667
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
 
-   Analog Mode: Used for ADC/DAC operations.
+   GPIO input mode is used to read external signals, such as those from buttons or sensors.
 
-   Alternate Function Mode: Enables peripheral communication (UART, SPI, I2C).
+.. req:: GPIO Output Mode
+   :id: REQ_INT3_17310286685888
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+
+   GPIO output mode is used to drive external devices, such as LEDs or motors.
+
+.. req:: GPIO Analog Mode
+   :id: REQ_INT3_173102866956
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+
+   GPIO analog mode is used to process analog signals directly, bypassing the digital circuitry.
+
+.. req:: Communication Protocols
+   :id: REQ_INT3_1731028670119
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+
+   Communication Protocols used by GPIO pins for peripherals communication are UART,SPI and I2C.
+
+
+.. req:: GPIO Alternate Function Mode
+   :id: REQ_INT3_1731028670987
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+
+   GPIO alternate function mode enables communication with peripherals.
+
 
 .. req:: GPIO Safety Features
-   :id: REQ_INT3_1731028663
+   :id: REQ_INT3_1731028663457
    :status: Draft
    :date-released:
    :priority: Medium
@@ -111,14 +310,10 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   Unused Pins: Should be configured as inputs with pull-down resistors to avoid floating states.
+   GPIO safety features include handling unused pins, interrupt handling, and configuration retention in low-power modes.
 
-   Interrupt Handling: Pins can generate interrupts, ensuring event-driven programming.
-
-   Low-Power Retention: Configurations are retained in low-power modes, minimizing re-initialization.
-
-.. req:: Alternate Function Mapping
-   :id: REQ_INT3_1731028664
+.. req:: Unused Pins Configuration
+   :id: REQ_INT3_1731028664778
    :status: Draft
    :date-released:
    :priority: Medium
@@ -129,14 +324,10 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   Each pin supports up to 16 alternate functions (AF0 to AF15).
+   Unused GPIO pins should be configured as inputs with pull-down resistors to prevent floating states and erratic behavior.
 
-   The specific function for each pin depends on the microcontroller's datasheet.
-
-   Alternate functions are essential for connecting GPIO pins to peripherals like timers, communication interfaces, and ADC/DAC.
-
-.. req:: GPIO Bitwise Operations
-   :id: REQ_INT3_1731028665
+.. req:: Interrupt Handling
+   :id: REQ_INT3_1731028665447
    :status: Draft
    :date-released:
    :priority: Medium
@@ -147,16 +338,10 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   Atomic operations are supported via the GPIOx_BSRR register.
+   GPIO pins can generate interrupts to enable event-driven programming and ensure timely responses to state changes.
 
-   Lower half sets pins HIGH (1).
-
-   Upper half resets pins LOW (0).
-
-   This ensures no interruptions during critical state changes.
-
-.. req:: Oscillator Pin Usage
-   :id: REQ_INT3_1731028666
+.. req:: Low-Power Configuration Retention
+   :id: REQ_INT3_1731028666111
    :status: Draft
    :date-released:
    :priority: Medium
@@ -167,13 +352,66 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   Specific GPIO pins can serve as external oscillator inputs/outputs:
+   GPIO configurations must be retained in low-power modes, minimizing re-initialization and ensuring consistent operation.
 
-   PC14/PC15: Low-Speed External (LSE) oscillator.
+.. req:: Alternate Function Range
+   :id: REQ_INT3_1731028667787
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
 
-   PH0/PH1: High-Speed External (HSE) oscillator.
+   Each GPIO pin supports up to 16 alternate functions, ranging from AF0 to AF15.
 
-   When not used as oscillators, these pins can be configured as standard GPIO.
+.. req:: GPIO Bitwise Handling
+   :id: REQ_INT3_1731028675522
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+
+   The GPIOx_BSRR register allows setting or resetting individual bits of the GPIOx_ODR register in a single operation, ensuring efficient and safe bit-level modifications.
+
+.. req:: Oscillators
+   :id: REQ_INT3_1731028668125
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+
+   The available oscillators for the STM32F411 microcontroller are the Low-Speed External (LSE) oscillator and the High-Speed External (HSE) oscillator.
+
+
+
+.. req:: GPIO Oscillator Pins
+   :id: REQ_INT3_1731028666324
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+
+   GPIO pins associated with oscillator functionality are:  PC14/PC15: Low-Speed External (LSE) oscillator and PH0/PH1: High-Speed External (HSE) oscillator.
+
 
 .. req:: GPIO and Interrupt Handling
    :id: REQ_INT3_1731028667
@@ -189,12 +427,8 @@ Informational Requirements
 
    External interrupts can be configured for GPIO pins via the EXTI (External Interrupt) controller.
 
-   The interrupt priority and handler are configured using NVIC registers.
-
-   Interrupts are triggered based on edge detection (Rising, Falling, or Both).
-
-.. req:: GPIO Pin Mapping to Physical Pins
-   :id: REQ_INT3_1731028668
+.. req:: GPIO  Resistor Configuration
+   :id: REQ_INT3_1731028671147
    :status: Draft
    :date-released:
    :priority: Medium
@@ -205,45 +439,7 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   Each GPIO pin corresponds to a specific physical pin on the microcontroller package.
-
-   This mapping is detailed in the STM32F411 datasheet and is critical for hardware design.
-
-.. req:: Power Optimization with GPIO
-   :id: REQ_INT3_1731028669
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   GPIO configurations impact power consumption:
-
-   Unused pins should be pulled down.
-
-   Low-speed configurations reduce power usage.
-
-   GPIO pins can wake the system from low-power modes via wake-up interrupts.
-
-.. req:: Input Mode Configuration
-   :id: REQ_INT3_1731028670
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   GPIO pins can be set to input mode using the GPIOx_MODER register. In this mode, the pin captures external signals.
-
-   Input mode supports optional pull-up or pull-down resistors, configured via the GPIOx_PUPDR register.
+   Pull-up or pull-down resistors can be configured using the GPIOx_PUPDR register to stabilize signal levels and prevent floating states.
 
 .. req:: Output Mode Configuration
    :id: REQ_INT3_1731028671
@@ -259,9 +455,20 @@ Informational Requirements
 
    GPIO pins can be set to output mode via the GPIOx_MODER register to drive external components like LEDs or motors.
 
-   Output mode supports push-pull and open-drain configurations, configured via the GPIOx_OTYPER register.
+.. req:: Peripherals
+   :id: REQ_INT3_1731028672478
+   :status: Draft
+   :date-released:
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Informational
+   :safety-asil:
+   :references:
+   :verification-and-validation:
 
-   Drive strength and speed are controlled using the GPIOx_OSPEEDR register.
+   The available peripherals include Analog-to-Digital Converter (ADC), Digital-to-Analog Converter (DAC), Timers, Universal Asynchronous Receiver-Transmitter (UART), Serial Peripheral Interface (SPI), Inter-Integrated Circuit (I2C), and External Oscillators.
+
 
 .. req:: Analog Mode Configuration
    :id: REQ_INT3_1731028672
@@ -277,25 +484,6 @@ Informational Requirements
 
    Analog mode enables GPIO pins to interface with ADC/DAC peripherals by disabling the digital logic on the pin.
 
-   This mode is set using the GPIOx_MODER register and is used in applications requiring precise analog signal handling.
-
-.. req:: Alternate Function Mode Configuration
-   :id: REQ_INT3_1731028673
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   GPIO pins support alternate functions for peripherals like UART, SPI, and I2C.
-
-   Configuration involves setting the GPIOx_MODER register to alternate function mode and selecting the specific function via the GPIOx_AFRL or GPIOx_AFRH registers.
-
-   Each pin supports up to 16 alternate functions (AF0 to AF15).
 
 .. req:: Push-Pull Output Configuration
    :id: REQ_INT3_1731028674
@@ -311,9 +499,6 @@ Informational Requirements
 
    Push-pull configuration enables GPIO pins to actively drive both high and low states.
 
-   This is suitable for connecting directly to LEDs or other components requiring strong drive signals.
-
-   Configuration is performed using the GPIOx_OTYPER register.
 
 .. req:: Open-Drain Output Configuration
    :id: REQ_INT3_1731028675
@@ -329,10 +514,9 @@ Informational Requirements
 
    Open-drain configuration allows GPIO pins to pull the signal low while relying on an external pull-up resistor for the high state.
 
-   Configuration is performed using the GPIOx_OTYPER register.
 
-.. req:: Speed Configuration
-   :id: REQ_INT3_1731028676
+.. req:: GPIO pins Speed 
+   :id: REQ_INT3_173102867747888
    :status: Draft
    :date-released:
    :priority: Medium
@@ -343,11 +527,8 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   GPIO pin speed settings affect the rate of signal transitions and are configured using the GPIOx_OSPEEDR register.
+   GPIO pins support two main speed Low speed which minimizes power consumption and noise, and Very High speed, which ensures the fastest transitions for high-performance applications.
 
-   Low speed minimizes power consumption and noise, while Very High speed ensures the fastest transitions for high-performance applications.
-
-   Speed configuration is critical for timing-sensitive applications like high-speed communication protocols.
 
 .. req:: Detecting GPIO Pin State (HIGH/LOW)
    :id: REQ_INT3_1731028677
@@ -363,39 +544,6 @@ Informational Requirements
 
    The current state of a GPIO pin is captured in the GPIOx_IDR register, which reflects the voltage level at the pin.
 
-   This information is used in input mode to determine whether the signal is HIGH (logic 1) or LOW (logic 0).
-
-.. req:: Setting GPIO Pin State (HIGH/LOW)
-   :id: REQ_INT3_1731028678
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   The output state of a GPIO pin is controlled via the GPIOx_BSRR register, which allows atomic bit-level operations.
-
-   Writing a bit in the lower half of GPIOx_BSRR sets the pin HIGH, while writing in the upper half resets the pin to LOW.
-
-.. req:: Internal Resistor Configuration
-   :id: REQ_INT3_1731028679
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   Pull-up and pull-down resistors are controlled via the GPIOx_PUPDR register, providing flexibility for input modes.
-
-   Pull-up keeps the signal HIGH when unconnected, while pull-down forces it LOW, preventing floating states.
 
 .. req:: Edge-Triggered Interrupts
    :id: REQ_INT3_1731028680
@@ -411,41 +559,6 @@ Informational Requirements
 
    GPIO pins can generate interrupts on Rising, Falling, or Both edges, configured via the EXTI registers.
 
-   This feature is used for event-driven applications, such as detecting button presses or state changes in external devices.
-
-   Interrupt priorities are managed via the NVIC configuration.
-
-.. req:: Locking GPIO Settings
-   :id: REQ_INT3_1731028681
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   The GPIOx_LCKR register allows locking GPIO configurations, preventing accidental changes.
-
-   Once locked, pin configurations remain fixed until the next system reset.
-
-.. req:: Alternate Function Assignment for UART, SPI, I2C
-   :id: REQ_INT3_1731028682
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   Alternate functions enable GPIO pins to interface with peripherals like UART, SPI, and I2C.
-
-   Configuration involves setting the alternate function via the GPIOx_AFRL/GPIOx_AFRH registers and ensuring the appropriate peripheral is enabled in the RCC.
 
 .. req:: Real-Time Monitoring
    :id: REQ_INT3_1731028683
@@ -475,7 +588,6 @@ Informational Requirements
 
    GPIO interrupts can be timestamped to log when specific events occur, aiding in debugging and performance analysis.
 
-   Timestamps are typically stored in a dedicated log buffer.
 
 .. req:: Debouncing Signals
    :id: REQ_INT3_1731028685
@@ -491,7 +603,6 @@ Informational Requirements
 
    Signal debouncing filters out noise or fluctuations caused by mechanical switches or unstable inputs.
 
-   Implemented either in hardware or software, debouncing ensures stable and reliable state detection.
 
 .. req:: Safe Configuration of Unused Pins
    :id: REQ_INT3_1731028686
@@ -507,41 +618,6 @@ Informational Requirements
 
    Unused GPIO pins are typically configured as inputs with pull-down resistors to avoid floating states.
 
-   This reduces power consumption and prevents erratic behavior.
-
-.. req:: PWM Configuration
-   :id: REQ_INT3_1731028687
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   PWM signals are generated using timers and output on GPIO pins configured for alternate function mode.
-
-   Duty cycle adjustments control brightness, speed, or position.
-
-   GPIO pins must be mapped to a timer capable of generating PWM signals.
-
-.. req:: Generating Interrupts on Rising/Falling Edge
-   :id: REQ_INT3_1731028688
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   Rising and Falling edge interrupts allow precise detection of signal transitions.
-
-   Configured via the EXTI and NVIC registers, these interrupts enable event-driven GPIO usage.
 
 .. req:: Event Notifications for State Changes
    :id: REQ_INT3_1731028689
@@ -585,23 +661,6 @@ Informational Requirements
 
    GPIO pins retain their configuration and state in low-power modes, ensuring system stability during power-saving operations.
 
-   Special registers manage the retention of states.
-
-.. req:: Analog Mode Support
-   :id: REQ_INT3_1731028692
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   Analog mode is required for ADC/DAC operations, where the digital circuitry is bypassed to allow analog signal processing.
-
-   This is set via the GPIOx_MODER register.
 
 .. req:: Real-Time ADC Readings
    :id: REQ_INT3_1731028693
@@ -615,22 +674,6 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   ADC data from analog GPIO pins can be read continuously for real-time applications.
+   ADC data from analog GPIO pins can be read continuously for real-time applications and requires setting the pins to analog mode and enabling the ADC module for data conversion.
 
-   This requires proper setup of ADC peripherals and corresponding GPIO pins in analog mode.
 
-.. req:: Physical Pin Mapping
-   :id: REQ_INT3_1731028694
-   :status: Draft
-   :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Informational
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   Each GPIO pin is associated with a specific physical pin on the microcontroller package.
-
-   The mapping is detailed in the device datasheet and configured through internal registers.
