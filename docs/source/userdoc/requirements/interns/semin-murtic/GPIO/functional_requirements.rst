@@ -20,34 +20,36 @@ Functional requirements
 
 
 .. req:: label
-    :id: REQ_INT3_1732147094
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Semin Murtic
-    :modified-by:
-    :category: Functional
-    :safety-asil: 
-    :references: 
-    :verification-and-validation: 
+   :id: REQ_INT3_1732147094
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-     The system shall provide functionality to enable the clock for a specific GPIO port by setting the corresponding bit in the RCC->AHB1ENR register. 
+   The system shall provide functionality to enable the clock for a specific GPIO port by setting the corresponding bit in the RCC->AHB1ENR register. 
   
   
 
 .. req:: label
-    :id: REQ_INT3_1732226959
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Semin Murtic
-    :modified-by:
-    :category: Functional
-    :safety-asil: 
-    :references: 
-    :verification-and-validation: 
+   :id: REQ_INT3_1732226959
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-     System must support enabling clocks for all available GPIO ports
+   System must support enabling clocks for all available GPIO ports
+
+
 .. req:: label
    :id: REQ_INT3_1732314479
    :status: Draft
@@ -116,7 +118,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   Register shall support Push-pull Mode (0). 
+   The system shall support Push-pull Mode (0). 
      
 .. req:: label
    :id: REQ_INT3_1732314613
@@ -130,7 +132,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   It shall allow independent configuration of each pin on the port.
+   The system shall allow independent configuration of each pin on the port.
 
 .. req:: label
    :id: REQ_INT3_1732314650
@@ -158,7 +160,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   Ensure the speed settings match the timing requirements.
+   System shall ensure the speed settings match the timing requirements.
    
 .. req:: label
    :id: REQ_INT3_1732314705
@@ -186,7 +188,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-    The system must support the configuration of internal pull-down resistors by modifying the PUPDR register, 
+   The system must support the configuration of internal pull-down resistors by modifying the PUPDR register, 
    
 .. req:: label
    :id: REQ_INT3_1732314752
@@ -260,18 +262,20 @@ Functional requirements
 
   
 .. req:: label
-    :id: REQ_INT3_1732227467
-    :status: Draft
-    :date-released:
-    :priority: Low
-    :submitted-by: Semin Murtic
-    :modified-by:
-    :category: Functional
-    :safety-asil: 
-    :references: 
-    :verification-and-validation: 
+   :id: REQ_INT3_1732227467
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
     
-    The system shall use Bit Set/Reset Register (BSRR) to atomically set state of GPIO pins.
+   The system shall use Bit Set/Reset Register (BSRR) to atomically set state of GPIO pins.
+
+
 .. req:: label
    :id: REQ_INT3_1732315259
    :status: Draft

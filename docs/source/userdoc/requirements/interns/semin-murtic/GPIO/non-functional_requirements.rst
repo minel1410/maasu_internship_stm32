@@ -3,35 +3,34 @@
 Non-Functional requirements
 ===========================
  
+.. req:: label
+   :id: REQ_INT3_1732656534
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-
+   The GPIO configuration process should complete in less than 10 milliseconds.
 
 .. req:: label
- :id: REQ_INT3_1732147460
- :status: Draft
- :date-released:
- :priority: Low
- :submitted-by: Semin Murtic
- :modified-by:
- :category: Non-Functional
- :safety-asil: 
- :references: 
- :verification-and-validation: 
- The GPIO configuration process should complete in less than 10 milliseconds.
+   :id: REQ_INT3_1732656555
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-.. req:: label
- :id: REQ_INT3_1732227725
- :status: Draft
-     :date-released:
-     :priority: Low
-     :submitted-by: Semin Murtic
-     :modified-by:
-     :category: Non-Functional
-     :safety-asil: 
-     :references: 
-     :verification-and-validation: 
-  
-    Each GPIO function must use no more than 13KB of available memory to minimize the impact on system resources.
+   Each GPIO function must use no more than 13KB of available memory to minimize the impact on system resources.
+
 
 .. req:: label
    :id: REQ_INT3_1732315798

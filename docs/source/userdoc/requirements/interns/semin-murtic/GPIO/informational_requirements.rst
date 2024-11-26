@@ -17,7 +17,22 @@ Informational requirements
    :references: 
    :verification-and-validation:
 
-   GPIO system includes multiple ports; GPIOA(16pins(PA0 to PA15)), GPIOB (8 pins(PB0 to PB7)), GPIOC (10 pins(PC0 to PC15), GPIOD (5 pins(PD0 to PD5)), GPIOE (3 pins(PE0 to PE2)) 
+   STMF2F411 microcontroller has 6 ports: A, B, C, D, E, and H
+
+.. req:: label
+   :id: REQ_INT3_1732656386
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   Each port in STMF2F411 consists of 16 pins, altough some pins may not be available for use
+ 
  
 .. req:: label
    :id: REQ_INT3_1732225413
@@ -227,7 +242,7 @@ Informational requirements
    :references: 
    :verification-and-validation: 
 
-   For pins configured in alternate function mode, there is a need to use the AFRL register to assign the correct peripheral function.
+   For pins configured in alternate function mode, there is a need to use the AFR register to assign the correct peripheral function.
 
   
 .. req:: label
