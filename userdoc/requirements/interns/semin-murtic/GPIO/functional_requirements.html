@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.1.7.1.2. Functional requirements &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="5.1.7.1.3. Non-Functional requirements" href="non-functional_requirements.html" />
+    <link rel="prev" title="5.1.7.1.1. Informational requirements" href="informational_requirements.html" />
+<link href="../../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../lessons/lessons.html">4. Lessons</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../requirements.html">5. Requirements</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../requirements.html">5.1. Requirements written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../adna-njuhovic/requirements.html">5.1.1. Requirements by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../anesa-lakovic/requirements.html">5.1.2. Requirements by Anesa Laković</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../demir-hasicic/requirements.html">5.1.3. Requirements by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../emina-mesic/requirements.html">5.1.4. Requirements by Emina Mešić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lamija-fatic/requirements.html">5.1.5. Requirements by Lamija Fatić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../muhibija-kavazovic/requirements.html">5.1.6. Requirements by Muhibija Kavazović</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../requirements.html">5.1.7. Requirements by Semin Murtić</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="GPIO_requirements.html">5.1.7.1. GPIO Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tarik-sinanovic/requirements.html">5.1.8. Requirements by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../requirements.html"><span class="section-number">5. </span>Requirements</a></li>
+          <li class="breadcrumb-item"><a href="../../requirements.html"><span class="section-number">5.1. </span>Requirements written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="../requirements.html"><span class="section-number">5.1.7. </span>Requirements by Semin Murtić</a></li>
+          <li class="breadcrumb-item"><a href="GPIO_requirements.html"><span class="section-number">5.1.7.1. </span>GPIO Requirements</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5.1.7.1.2. </span>Functional requirements</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/userdoc/requirements/interns/semin-murtic/GPIO/functional_requirements.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="functional-requirements">
+<span id="id1"></span><h1><span class="section-number">5.1.7.1.2. </span>Functional requirements<a class="headerlink" href="#functional-requirements" title="Link to this heading"></a></h1>
+<div class="need_container docutils container" id="SNCB-3e6ac2e3">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732272300">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732272300" title="REQ_INT3_1732272300">REQ_INT3_1732272300</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><blockquote>
+<div><p>Each pin needs to be configured individually to operate in input, output, alternate function, or analog mode, depending on the application requirements.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-015207b5">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732147094">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732147094" title="REQ_INT3_1732147094">REQ_INT3_1732147094</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall provide functionality to enable the clock for a specific GPIO port by setting the corresponding bit in the RCC-&gt;AHB1ENR register.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-19c9228a">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732226959">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732226959" title="REQ_INT3_1732226959">REQ_INT3_1732226959</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>System must support enabling clocks for all available GPIO ports</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-eceb8fbe">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314479">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314479" title="REQ_INT3_1732314479">REQ_INT3_1732314479</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>System must ensure the clock enable process is completed before proceeding with any GPIO configuration</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-3b17d5e4">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314507">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314507" title="REQ_INT3_1732314507">REQ_INT3_1732314507</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall allow each GPIO pin to be configured in one of four modes by updating the MODER register</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-6918a863">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314540">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314540" title="REQ_INT3_1732314540">REQ_INT3_1732314540</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The pin mode configuration must validate the mode value and the pin number before applying changes.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-3b7ed643">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314562">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314562" title="REQ_INT3_1732314562">REQ_INT3_1732314562</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall allow configuration of the GPIO output type using the OTYPER register.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-270013a6">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314594">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314594" title="REQ_INT3_1732314594">REQ_INT3_1732314594</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall support Push-pull Mode (0).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-02fbeb1f">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314613">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314613" title="REQ_INT3_1732314613">REQ_INT3_1732314613</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall allow independent configuration of each pin on the port.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-66400a66">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314650">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314650" title="REQ_INT3_1732314650">REQ_INT3_1732314650</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall allow the user to define the output speed for each GPIO pin by updating the OSPEEDR register.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-68d6bd61">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314669">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314669" title="REQ_INT3_1732314669">REQ_INT3_1732314669</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>System shall ensure the speed settings match the timing requirements.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-b79e1e8d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314705">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314705" title="REQ_INT3_1732314705">REQ_INT3_1732314705</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system must support the configuration of internal pull-up by modifying the PUPDR register,</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-ce686203">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314739">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314739" title="REQ_INT3_1732314739">REQ_INT3_1732314739</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system must support the configuration of internal pull-down resistors by modifying the PUPDR register,</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-44a2f5d0">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314752">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314752" title="REQ_INT3_1732314752">REQ_INT3_1732314752</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The function shall allow independent resistor configuration for each pin.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-4ce6f775">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314780">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314780" title="REQ_INT3_1732314780">REQ_INT3_1732314780</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>For pins configured in alternate function mode, the system shall allow the alternate function to be set by updating the AFRL (for pins 0–7)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-cddcad9d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314800">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314800" title="REQ_INT3_1732314800">REQ_INT3_1732314800</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>System shall provide a way to assign an alternate function to a pin using its function number.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-346be9d9">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314824">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314824" title="REQ_INT3_1732314824">REQ_INT3_1732314824</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall allow direct control of the GPIO pin output state by modifying the Output Data Register (ODR) to directly set pin value</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-58d131e8">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732314854">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732314854" title="REQ_INT3_1732314854">REQ_INT3_1732314854</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall allow direct control of the GPIO pin output state by modifying the Output Data Register (ODR) to directly reset pin value</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-2d7fb4e9">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732227467">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732227467" title="REQ_INT3_1732227467">REQ_INT3_1732227467</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall use Bit Set/Reset Register (BSRR) to atomically set state of GPIO pins.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-9de0e14e">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732315259">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732315259" title="REQ_INT3_1732315259">REQ_INT3_1732315259</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall use Bit Set/Reset Register (BSRR) to atomically reset state of GPIO pins.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-31f824aa">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732315280">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732315280" title="REQ_INT3_1732315280">REQ_INT3_1732315280</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>A method for toggling the pin state shall also be provided.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-a585c0a1">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732315297">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732315297" title="REQ_INT3_1732315297">REQ_INT3_1732315297</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><blockquote>
+<div><p>The system shall encapsulate each configuration step (e.g., enabling the clock, setting the pin mode, configuring pull-up/pull-down) into separate reusable functions.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-8cc890f1">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732315323">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732315323" title="REQ_INT3_1732315323">REQ_INT3_1732315323</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Each function shall validate input parameters.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-1e1d3397">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732315350">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732315350" title="REQ_INT3_1732315350">REQ_INT3_1732315350</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Each function shall return an appropriate status code for error handling.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-40f58ef7">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732315372">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732315372" title="REQ_INT3_1732315372">REQ_INT3_1732315372</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The system shall include a delay function that pauses execution for a specified number of milliseconds.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-ffbf8a9d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732315389">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732315389" title="REQ_INT3_1732315389">REQ_INT3_1732315389</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Functional</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The delay function shall be implemented using a simple loop mechanism or a timer for better accuracy.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="informational_requirements.html" class="btn btn-neutral float-left" title="5.1.7.1.1. Informational requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="non-functional_requirements.html" class="btn btn-neutral float-right" title="5.1.7.1.3. Non-Functional requirements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
