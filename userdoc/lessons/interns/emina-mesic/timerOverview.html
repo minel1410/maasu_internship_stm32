@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.1.4.6. Timers in STM32 &mdash; Maasu Internship 4 1 documentation</title>
+  <title>4.1.3.6. Timers in STM32 &mdash; Maasu Internship 4 1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
@@ -32,8 +32,8 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="4.1.5. Lessons by Lamija Fatić" href="../lamija-fatic/lessons.html" />
-    <link rel="prev" title="4.1.4.5. USART Overview" href="USARToverview.html" />
+    <link rel="next" title="4.1.4. Lessons by Lamija Fatić" href="../lamija-fatic/lessons.html" />
+    <link rel="prev" title="4.1.3.5. USART Overview" href="USARToverview.html" />
 <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -65,21 +65,20 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.3. Lessons by Demir Hasičić</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.4. Lessons by Emina Mešić</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.4.1. V-Model Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.4.2. STM32F411 Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="GPIOoverview.html">4.1.4.3. GPIO Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ClockInitOverview.html">4.1.4.4. Clock Initialization Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="USARToverview.html">4.1.4.5. USART Overview</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.4.6. Timers in STM32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.2. Lessons by Demir Hasičić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.3. Lessons by Emina Mešić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.3.1. V-Model Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.3.2. STM32F411 Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GPIOoverview.html">4.1.3.3. GPIO Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ClockInitOverview.html">4.1.3.4. Clock Initialization Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="USARToverview.html">4.1.3.5. USART Overview</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.3.6. Timers in STM32</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../lamija-fatic/lessons.html">4.1.5. Lessons by Lamija Fatić</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.8. Lessons by Tarik Sinanović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamija-fatic/lessons.html">4.1.4. Lessons by Lamija Fatić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.5. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.6. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.7. Lessons by Tarik Sinanović</a></li>
 </ul>
 </li>
 </ul>
@@ -106,8 +105,8 @@
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
           <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
-          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.4. </span>Lessons by Emina Mešić</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.1.4.6. </span>Timers in STM32</li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.3. </span>Lessons by Emina Mešić</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.3.6. </span>Timers in STM32</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/userdoc/lessons/interns/emina-mesic/timerOverview.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -118,10 +117,10 @@
            <div itemprop="articleBody">
              
   <section id="timers-in-stm32">
-<h1><span class="section-number">4.1.4.6. </span>Timers in STM32<a class="headerlink" href="#timers-in-stm32" title="Link to this heading"></a></h1>
+<h1><span class="section-number">4.1.3.6. </span>Timers in STM32<a class="headerlink" href="#timers-in-stm32" title="Link to this heading"></a></h1>
 <p>Timers in the STM32F411 microcontroller are versatile components used for precise time-related tasks. They help with measuring elapsed time, generating pulses, and controlling time-based processes. The STM32F411 has several timers (e.g., TIM1, TIM2, TIM3), and each can be configured for different uses, such as PWM signal generation, managing interrupts, or creating precise delays.</p>
 <section id="key-timer-functions-and-applications">
-<h2><span class="section-number">4.1.4.6.1. </span>Key Timer Functions and Applications<a class="headerlink" href="#key-timer-functions-and-applications" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.3.6.1. </span>Key Timer Functions and Applications<a class="headerlink" href="#key-timer-functions-and-applications" title="Link to this heading"></a></h2>
 <dl class="simple">
 <dt>Timers in STM32F411 are primarily used for:</dt><dd><ol class="arabic simple">
 <li><p><strong>Measuring Time</strong>: Timers can count up or down based on a clock signal, either from the system clock or an external source. This is useful for tracking time intervals and generating events based on elapsed time</p></li>
@@ -137,7 +136,7 @@
 </dl>
 </section>
 <section id="introduction-to-pwm-pulse-width-modulation">
-<h2><span class="section-number">4.1.4.6.2. </span>Introduction to PWM (Pulse Width Modulation)<a class="headerlink" href="#introduction-to-pwm-pulse-width-modulation" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.3.6.2. </span>Introduction to PWM (Pulse Width Modulation)<a class="headerlink" href="#introduction-to-pwm-pulse-width-modulation" title="Link to this heading"></a></h2>
 <p><strong>Pulse Width Modulation (PWM)</strong> is a technique used to generate variable output signals by adjusting the duty cycle, which is the percentage of time the signal is high within one cycle. In STM32F411, PWM signals are created using timers, which control the output on specific GPIO pins.</p>
 <dl class="simple">
 <dt><strong>Key PWM Parameters</strong>:</dt><dd><ul class="simple">
@@ -196,8 +195,8 @@ Finally, start the timer by setting the TIM_CR1_CEN bit in the control register.
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="USARToverview.html" class="btn btn-neutral float-left" title="4.1.4.5. USART Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../lamija-fatic/lessons.html" class="btn btn-neutral float-right" title="4.1.5. Lessons by Lamija Fatić" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="USARToverview.html" class="btn btn-neutral float-left" title="4.1.3.5. USART Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../lamija-fatic/lessons.html" class="btn btn-neutral float-right" title="4.1.4. Lessons by Lamija Fatić" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

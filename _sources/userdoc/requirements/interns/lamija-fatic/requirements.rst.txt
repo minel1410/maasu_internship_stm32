@@ -3,6 +3,9 @@ Requirements by Lamija Fatić
 ============================
 
 .. toctree::
-    :maxdepth:1
+    :maxdepth:5
 
-    initial
+    GPIO_requirements/requirements
+
+
+    

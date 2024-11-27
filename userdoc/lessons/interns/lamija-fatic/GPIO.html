@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.1.5.3. GPIO for STM32F411 MCU &mdash; Maasu Internship 4 1 documentation</title>
+  <title>4.1.4.3. GPIO for STM32F411 MCU &mdash; Maasu Internship 4 1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
@@ -32,8 +32,8 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="4.1.5.4. STM32 Clock Initialization" href="Clock.html" />
-    <link rel="prev" title="4.1.5.2. SMT32F411 Overview" href="STM32F411MCU.html" />
+    <link rel="next" title="4.1.4.4. STM32 Clock Initialization" href="Clock.html" />
+    <link rel="prev" title="4.1.4.2. SMT32F411 Overview" href="STM32F411MCU.html" />
 <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -65,21 +65,20 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.3. Lessons by Demir Hasičić</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.5. Lessons by Lamija Fatić</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="v-model.html">4.1.5.1. V-Model in Embedded Engineering</a></li>
-<li class="toctree-l4"><a class="reference internal" href="STM32F411MCU.html">4.1.5.2. SMT32F411 Overview</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.5.3. GPIO for STM32F411 MCU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Clock.html">4.1.5.4. STM32 Clock Initialization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="timer.html">4.1.5.6. STM32F411 Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.2. Lessons by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.3. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.4. Lessons by Lamija Fatić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="v-model.html">4.1.4.1. V-Model in Embedded Engineering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="STM32F411MCU.html">4.1.4.2. SMT32F411 Overview</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.4.3. GPIO for STM32F411 MCU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Clock.html">4.1.4.4. STM32 Clock Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.4.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timer.html">4.1.4.6. STM32F411 Timer</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.8. Lessons by Tarik Sinanović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.5. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.6. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.7. Lessons by Tarik Sinanović</a></li>
 </ul>
 </li>
 </ul>
@@ -106,8 +105,8 @@
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
           <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
-          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.5. </span>Lessons by Lamija Fatić</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.1.5.3. </span>GPIO for STM32F411 MCU</li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.4. </span>Lessons by Lamija Fatić</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.4.3. </span>GPIO for STM32F411 MCU</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/userdoc/lessons/interns/lamija-fatic/GPIO.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -118,14 +117,14 @@
            <div itemprop="articleBody">
              
   <section id="gpio-for-stm32f411-mcu">
-<h1><span class="section-number">4.1.5.3. </span>GPIO for STM32F411 MCU<a class="headerlink" href="#gpio-for-stm32f411-mcu" title="Link to this heading"></a></h1>
+<h1><span class="section-number">4.1.4.3. </span>GPIO for STM32F411 MCU<a class="headerlink" href="#gpio-for-stm32f411-mcu" title="Link to this heading"></a></h1>
 <section id="introduction">
-<h2><span class="section-number">4.1.5.3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>General-Purpose Input/Output (GPIO) pins are critical in microcontroller applications for interacting with peripherals and external devices. GPIO pins in STM32F411 can be configured for various functions: input, output, alternate function, and analog.
 GPIO pins in STM32F411 are versatile interfaces that can function as digital inputs or outputs and support alternate functions and analog configurations. Correctly configuring these pins is critical for interfacing with other hardware components or systems.</p>
 </section>
 <section id="configurations">
-<h2><span class="section-number">4.1.5.3.2. </span>Configurations<a class="headerlink" href="#configurations" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.3.2. </span>Configurations<a class="headerlink" href="#configurations" title="Link to this heading"></a></h2>
 <p><strong>Pin Modes:</strong></p>
 <ul class="simple">
 <li><p><strong>Input Mode:</strong> Used to read digital signals from external devices like buttons or sensors.</p></li>
@@ -148,7 +147,7 @@ GPIO pins in STM32F411 are versatile interfaces that can function as digital inp
 </ul>
 </section>
 <section id="registers-for-gpio-control">
-<h2><span class="section-number">4.1.5.3.3. </span>Registers for GPIO Control<a class="headerlink" href="#registers-for-gpio-control" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.3.3. </span>Registers for GPIO Control<a class="headerlink" href="#registers-for-gpio-control" title="Link to this heading"></a></h2>
 <p>RCC_AHB1ENR Register
 The RCC_AHB1ENR register controls the clock enabling for peripherals connected to the AHB1 bus, including GPIO ports. By enabling the clock for a specific GPIO port, you activate its functionality and gain access to its pins.
 - Size: 32 bits, with each bit corresponding to a clock enable for a particular peripheral.
@@ -229,7 +228,7 @@ Practical Applications Using Registers
 </ol>
 </section>
 <section id="advanced-gpio-features">
-<h2><span class="section-number">4.1.5.3.4. </span>Advanced GPIO Features<a class="headerlink" href="#advanced-gpio-features" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.3.4. </span>Advanced GPIO Features<a class="headerlink" href="#advanced-gpio-features" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p><strong>Alternate Function Configuration</strong></p></li>
 <li><p><strong>Speed and Drive Strength</strong></p></li>
@@ -241,8 +240,8 @@ Practical Applications Using Registers
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="STM32F411MCU.html" class="btn btn-neutral float-left" title="4.1.5.2. SMT32F411 Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Clock.html" class="btn btn-neutral float-right" title="4.1.5.4. STM32 Clock Initialization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="STM32F411MCU.html" class="btn btn-neutral float-left" title="4.1.4.2. SMT32F411 Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Clock.html" class="btn btn-neutral float-right" title="4.1.4.4. STM32 Clock Initialization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

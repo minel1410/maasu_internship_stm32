@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.1.5.4. STM32 Clock Initialization &mdash; Maasu Internship 4 1 documentation</title>
+  <title>4.1.4.4. STM32 Clock Initialization &mdash; Maasu Internship 4 1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
@@ -32,8 +32,8 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)" href="USART.html" />
-    <link rel="prev" title="4.1.5.3. GPIO for STM32F411 MCU" href="GPIO.html" />
+    <link rel="next" title="4.1.4.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)" href="USART.html" />
+    <link rel="prev" title="4.1.4.3. GPIO for STM32F411 MCU" href="GPIO.html" />
 <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -65,21 +65,20 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../anesa-lakovic/lessons.html">4.1.2. Lessons by Anesa Laković</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.3. Lessons by Demir Hasičić</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.4. Lessons by Emina Mešić</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.5. Lessons by Lamija Fatić</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="v-model.html">4.1.5.1. V-Model in Embedded Engineering</a></li>
-<li class="toctree-l4"><a class="reference internal" href="STM32F411MCU.html">4.1.5.2. SMT32F411 Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.5.3. GPIO for STM32F411 MCU</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.5.4. STM32 Clock Initialization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="timer.html">4.1.5.6. STM32F411 Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.2. Lessons by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.3. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.4. Lessons by Lamija Fatić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="v-model.html">4.1.4.1. V-Model in Embedded Engineering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="STM32F411MCU.html">4.1.4.2. SMT32F411 Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GPIO.html">4.1.4.3. GPIO for STM32F411 MCU</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.4.4. STM32 Clock Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="USART.html">4.1.4.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timer.html">4.1.4.6. STM32F411 Timer</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.6. Lessons by Muhibija Kavazović</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.7. Lessons by Semin Murtić</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.8. Lessons by Tarik Sinanović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.5. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.6. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tarik-sinanovic/lessons.html">4.1.7. Lessons by Tarik Sinanović</a></li>
 </ul>
 </li>
 </ul>
@@ -106,8 +105,8 @@
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
           <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
-          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.5. </span>Lessons by Lamija Fatić</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.1.5.4. </span>STM32 Clock Initialization</li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.4. </span>Lessons by Lamija Fatić</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.4.4. </span>STM32 Clock Initialization</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/userdoc/lessons/interns/lamija-fatic/Clock.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -118,11 +117,11 @@
            <div itemprop="articleBody">
              
   <section id="stm32-clock-initialization">
-<h1><span class="section-number">4.1.5.4. </span>STM32 Clock Initialization<a class="headerlink" href="#stm32-clock-initialization" title="Link to this heading"></a></h1>
+<h1><span class="section-number">4.1.4.4. </span>STM32 Clock Initialization<a class="headerlink" href="#stm32-clock-initialization" title="Link to this heading"></a></h1>
 <p>STM32F411 provides various clock sources to ensure flexibility and optimal configuration according to application needs. The precision and stability of external sources (HSE and LSE) make them ideal for applications where timing accuracy is critical, while internal oscillators (HSI and LSI) offer fast startup and reduced dependency on external components, making them suitable for applications with lower requirements for precision and energy consumption.</p>
 <p>STM32F411 provides various clock sources to ensure flexibility and optimal configuration according to application needs. The precision and stability of external sources (HSE and LSE) make them ideal for applications where timing accuracy is critical, while internal oscillators (HSI and LSI) offer fast startup and reduced dependency on external components, making them suitable for applications with lower requirements for precision and energy consumption.</p>
 <section id="high-speed-clock-sources">
-<h2><span class="section-number">4.1.5.4.1. </span>High-Speed Clock Sources<a class="headerlink" href="#high-speed-clock-sources" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.4.1. </span>High-Speed Clock Sources<a class="headerlink" href="#high-speed-clock-sources" title="Link to this heading"></a></h2>
 <p><strong>HSI (High-Speed Internal):</strong></p>
 <ul class="simple">
 <li><p><strong>Description:</strong> HSI is a high-frequency internal oscillator.</p></li>
@@ -139,7 +138,7 @@
 </ul>
 </section>
 <section id="low-speed-clock-sources">
-<h2><span class="section-number">4.1.5.4.2. </span>Low-Speed Clock Sources<a class="headerlink" href="#low-speed-clock-sources" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.4.2. </span>Low-Speed Clock Sources<a class="headerlink" href="#low-speed-clock-sources" title="Link to this heading"></a></h2>
 <p><strong>LSI (Low-Speed Internal):</strong></p>
 <ul class="simple">
 <li><p><strong>Description:</strong> LSI is a low-frequency internal oscillator.</p></li>
@@ -156,7 +155,7 @@
 </ul>
 </section>
 <section id="rcc-register">
-<h2><span class="section-number">4.1.5.4.3. </span>RCC Register<a class="headerlink" href="#rcc-register" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.4.3. </span>RCC Register<a class="headerlink" href="#rcc-register" title="Link to this heading"></a></h2>
 <p>The RCC register is a crucial component of STM32 microcontrollers, responsible for configuring and managing the system clock and resetting peripheral devices. The RCC module allows users to:</p>
 <ul class="simple">
 <li><p><strong>Select Clock Source:</strong> Choose between internal (HSI) and external (HSE) oscillators.</p></li>
@@ -166,7 +165,7 @@
 </ul>
 </section>
 <section id="rcc-cr-clock-control-register">
-<h2><span class="section-number">4.1.5.4.4. </span>RCC_CR (Clock Control Register)<a class="headerlink" href="#rcc-cr-clock-control-register" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.4.4. </span>RCC_CR (Clock Control Register)<a class="headerlink" href="#rcc-cr-clock-control-register" title="Link to this heading"></a></h2>
 <p>The RCC register is a crucial component of STM32 microcontrollers, responsible for configuring and managing the system clock and resetting peripheral devices. The RCC module allows users to:
 - Select Clock Source: Choose between internal (HSI) and external (HSE) oscillators.
 - Configure PLL: Generate higher frequencies from the selected clock source.
@@ -174,7 +173,7 @@
 - Manage Peripheral Clocks: Enable or disable clock signals for peripherals to save power.</p>
 </section>
 <section id="rcc-pllcfgr-pll-configuration-register">
-<h2><span class="section-number">4.1.5.4.5. </span>RCC_PLLCFGR (PLL Configuration Register)<a class="headerlink" href="#rcc-pllcfgr-pll-configuration-register" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.4.5. </span>RCC_PLLCFGR (PLL Configuration Register)<a class="headerlink" href="#rcc-pllcfgr-pll-configuration-register" title="Link to this heading"></a></h2>
 <p>The RCC register is a crucial component of STM32 microcontrollers, responsible for configuring and managing the system clock and resetting peripheral devices. The RCC module allows users to:
 - Select Clock Source: Choose between internal (HSI) and external (HSE) oscillators.
 - Configure PLL: Generate higher frequencies from the selected clock source.
@@ -182,7 +181,7 @@
 - Manage Peripheral Clocks: Enable or disable clock signals for peripherals to save power.</p>
 </section>
 <section id="rcc-cfgr-clock-configuration-register">
-<h2><span class="section-number">4.1.5.4.6. </span>RCC_CFGR (Clock Configuration Register)<a class="headerlink" href="#rcc-cfgr-clock-configuration-register" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.4.6. </span>RCC_CFGR (Clock Configuration Register)<a class="headerlink" href="#rcc-cfgr-clock-configuration-register" title="Link to this heading"></a></h2>
 <p>Description: The RCC_CFGR register configures the system clock source and sets prescalers for the main buses (AHB, APB1, and APB2).
 Key Bits:
 - SW: Selects the system clock source (00 for HSI, 01 for HSE, 10 for PLL).
@@ -192,7 +191,7 @@ Key Bits:
 - PPRE2: Prescaler for the APB2 bus (maximum 100 MHz).</p>
 </section>
 <section id="rcc-ahb1enr-rcc-apb1enr-rcc-apb2enr-peripheral-clock-enable-registers">
-<h2><span class="section-number">4.1.5.4.7. </span>RCC_AHB1ENR, RCC_APB1ENR, RCC_APB2ENR (Peripheral Clock Enable Registers)<a class="headerlink" href="#rcc-ahb1enr-rcc-apb1enr-rcc-apb2enr-peripheral-clock-enable-registers" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.4.7. </span>RCC_AHB1ENR, RCC_APB1ENR, RCC_APB2ENR (Peripheral Clock Enable Registers)<a class="headerlink" href="#rcc-ahb1enr-rcc-apb1enr-rcc-apb2enr-peripheral-clock-enable-registers" title="Link to this heading"></a></h2>
 <p>These registers enable or disable the clock for peripheral devices connected to various buses (AHB1, APB1, and APB2). Setting the appropriate bit activates the functionality of a specific peripheral.</p>
 <p><strong>Structure:</strong></p>
 <ul class="simple">
@@ -202,7 +201,7 @@ Key Bits:
 </ul>
 </section>
 <section id="systemcoreclockupdate-function">
-<h2><span class="section-number">4.1.5.4.8. </span>SystemCoreClockUpdate() Function<a class="headerlink" href="#systemcoreclockupdate-function" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.4.8. </span>SystemCoreClockUpdate() Function<a class="headerlink" href="#systemcoreclockupdate-function" title="Link to this heading"></a></h2>
 <p>The <cite>SystemCoreClockUpdate()</cite> function is part of the CMSIS (Cortex Microcontroller Software Interface Standard) library used by STM32 devices for hardware abstraction.</p>
 <p><strong>Functionality:</strong></p>
 <ul class="simple">
@@ -212,7 +211,7 @@ Key Bits:
 </ul>
 </section>
 <section id="configuration-of-the-pll">
-<h2><span class="section-number">4.1.5.4.9. </span>Configuration of the PLL<a class="headerlink" href="#configuration-of-the-pll" title="Link to this heading"></a></h2>
+<h2><span class="section-number">4.1.4.4.9. </span>Configuration of the PLL<a class="headerlink" href="#configuration-of-the-pll" title="Link to this heading"></a></h2>
 <p>The PLL in the STM32F411 microcontroller is used to increase the input clock frequency to a desired higher output frequency, which drives the core, peripherals, and buses efficiently.</p>
 <p><strong>Steps to Configure the PLL for 100 MHz Output:</strong></p>
 <ol class="arabic simple">
@@ -235,8 +234,8 @@ Key Bits:
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="GPIO.html" class="btn btn-neutral float-left" title="4.1.5.3. GPIO for STM32F411 MCU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="USART.html" class="btn btn-neutral float-right" title="4.1.5.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GPIO.html" class="btn btn-neutral float-left" title="4.1.4.3. GPIO for STM32F411 MCU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="USART.html" class="btn btn-neutral float-right" title="4.1.4.5. Universal Synchronous Asynchronous Receiver Transmitter (USART)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
