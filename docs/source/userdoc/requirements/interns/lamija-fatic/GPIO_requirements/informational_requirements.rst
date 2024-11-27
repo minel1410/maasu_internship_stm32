@@ -154,7 +154,7 @@ Informational Requirements
    :references: 
    :verification-and-validation: 
 
-   GPIOx_AFRL/AFRH register selects alternate functions for GPIO pins.
+   GPIOx_AFRL and GPIOx_AFRH register selects alternate functions for GPIO pins.
 
 .. req:: GPIO Pin Count
    :id: REQ_INT3_173102866136
@@ -410,7 +410,7 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   GPIO pins associated with oscillator functionality are:  PC14/PC15: Low-Speed External (LSE) oscillator and PH0/PH1: High-Speed External (HSE) oscillator.
+   GPIO pins associated with oscillator functionality are:  PC14 and PC15: Low-Speed External (LSE) oscillator, PH0 andPH1: High-Speed External (HSE) oscillator.
 
 
 .. req:: GPIO and Interrupt Handling
@@ -482,7 +482,7 @@ Informational Requirements
    :references:
    :verification-and-validation:
 
-   Analog mode enables GPIO pins to interface with ADC/DAC peripherals by disabling the digital logic on the pin.
+   Analog mode enables GPIO pins to interface with ADC and DAC peripherals by disabling the digital logic on the pin.
 
 
 .. req:: Push-Pull Output Configuration
