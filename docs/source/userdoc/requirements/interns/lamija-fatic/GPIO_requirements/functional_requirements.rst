@@ -665,17 +665,17 @@ Functional Requirements
 
    Expected Result: Errors are detected and logged for debugging purposes.
 
-.. req:: Low Power Retention
-   :id: REQ_INT3_1731028131
+.. req:: label
+   :id: REQ_INT3_1732716116
    :status: Draft
    :date-released:
-   :priority: Medium
-   :submitted-by: Lamija Fatić
+   :priority: Low
+   :submitted-by: Lamija Fatic
    :modified-by:
    :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
    GPIO pins must retain their states in low-power modes.
 
@@ -685,37 +685,38 @@ Functional Requirements
 
    Expected Result: GPIO pins maintain their configured state without loss of functionality.
 
- .. req:: Real-Time ADC Readings
-    :id: REQ_INT3_1731028133
-    :status: Draft
-    :date-released:
-    :priority: Medium
-    :submitted-by: Lamija Fatić
-    :modified-by:
-    :category: Functional
-    :safety-asil:
-    :references:
-    :verification-and-validation:
 
-    The system must provide continuous ADC readings from analog GPIO pins.
-
-    Precondition: GPIO pin is configured for analog input and connected to an ADC module.
-
-    Action: The system fetches ADC data and updates the application in real-time.
-
-    Expected Result: Continuous ADC readings are available without delays.
-
-.. req:: Physical Pin Mapping
-   :id: REQ_INT3_1731028134
+.. req:: label
+   :id: REQ_INT3_1732716132
    :status: Draft
    :date-released:
    :priority: Low
-   :submitted-by: Lamija Fatić
+   :submitted-by: Lamija Fatic
    :modified-by:
    :category: Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The system must provide continuous ADC readings from analog GPIO pins.
+
+   Precondition: GPIO pin is configured for analog input and connected to an ADC module.
+
+   Action: The system fetches ADC data and updates the application in real-time.
+
+   Expected Result: Continuous ADC readings are available without delays.
+
+.. req:: label
+   :id: REQ_INT3_1732716165
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Lamija Fatic
+   :modified-by:
+   :category: Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
    The system must provide a mapping between physical pin numbers and their GPIO assignments.
 
@@ -724,4 +725,7 @@ Functional Requirements
    Action: The system retrieves and displays the pin-to-GPIO mapping from internal configuration.
 
    Expected Result: Accurate mapping information is displayed for each pin.
+
+
+
 
