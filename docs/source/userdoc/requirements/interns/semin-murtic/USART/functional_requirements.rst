@@ -3,20 +3,6 @@
 Functional requirements
 =======================
 
-.. req:: label
-   :id: REQ_INT3_1732789237
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Functional
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   System shall disable USART before configuration.
-
 
 .. req:: label
    :id: REQ_INT3_1732789271
@@ -30,7 +16,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System must set the USART_CR1_UE value to 0.
+   System must set the USART_CR1_UE value to 0 before configuration.
 
 
 
@@ -61,7 +47,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System must enable clock for USART1_CR1 by setting the USART1_CR1 register
+   System must enable clock for USART by setting the USART1_CR1 register
    
 .. req:: label
    :id: REQ_INT3_1732793965
@@ -135,7 +121,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System shall control word lenght by controlling USART_CR1 
+   System shall control word length by controlling USART_CR1 
 
 
 .. req:: label
