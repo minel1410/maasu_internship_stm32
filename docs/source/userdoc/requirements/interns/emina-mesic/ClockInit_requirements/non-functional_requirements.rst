@@ -1,8 +1,9 @@
 ==================================================================
 Non-Functional Requirements for the Clock Initialization Function
 ==================================================================
+
 .. req:: label
-   :id: REQ_INT3_1732228089
+   :id: REQ_INT3_1732751078
    :status: Draft
    :date-released:
    :priority: Low
@@ -13,33 +14,175 @@ Non-Functional Requirements for the Clock Initialization Function
    :references: 
    :verification-and-validation: 
 
-   The non-functional requirements address performance, scalability, and reliability of the clock initialization function. They define constraints for response times, error handling, precision, and resource usage, ensuring the system operates efficiently and robustly. 
+   The system must initialize the clock configuration within 2 ms under typical operating conditions.
+
+.. req:: label
+   :id: REQ_INT3_1732751108
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The stabilization waiting period for the HSE (HSERDY bit) must not exceed 1 ms.
+
+.. req:: label
+   :id: REQ_INT3_1732751118
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The stabilization waiting period for the PLL (PLLRDY bit) must not exceed 1 ms.
 
 
+.. req:: label
+   :id: REQ_INT3_1732751162
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-Performance and Response Time:
-  1. The system must initialize the clock configuration within 2 milliseconds under typical operating conditions.
-  2. The stabilization waiting period for the HSE (HSERDY bit) must not exceed 1 millisecond.
-  3. The stabilization waiting period for the PLL (PLLRDY bit) must not exceed 1 millisecond.
+   The clock initialization function must support reconfiguration for clock frequencies between 16 MHz to 100 MHz without requiring code changes, provided valid PLLM, PLLN, and PLLP values are supplied.
 
-Scalability:
-  4. The clock initialization function must support reconfiguration for clock frequencies between 16 MHz to 100 MHz without requiring code changes, provided valid PLLM, PLLN, and PLLP values are supplied.
-  5. The function must accommodate additional clock sources (e.g., MSI, HSI) with minimal adjustments, ensuring modularity.
+.. req:: label
+   :id: REQ_INT3_1732751173
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-Error Handling and Fault Tolerance:
-  6. If the HSERDY or PLLRDY bits are not set within the expected time frame (1 millisecond), the system must trigger an error-handling mechanism with a retry logic of up to 3 attempts before returning an error code.
+   The function must accommodate additional clock sources (e.g., MSI, HSI), ensuring modularity.
 
-Precision and Stability:
-  7. The clock frequency deviation after initialization must remain within ±0.01% of the configured 100 MHz value under standard operating conditions.
-  8. Prescalers must be configured to maintain output frequencies within their tolerance limits, ensuring reliable peripheral communication.
+.. req:: label
+   :id: REQ_INT3_1732751183
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-Resource Usage:
-  9. The clock initialization function must use no more than 5% of the system's available RAM for temporary variables and no more than 1 KB of program memory.
-  10. The function must consume less than 0.1% of the total execution time in a system running at 100 MHz.
+   The clock frequency deviation after initialization must remain within ±0.01% of the configured 100 MHz value under standard operating conditions.
 
-Reliability and Maintenance:
-  11. The function must maintain consistent behavior across at least 100,000 power cycles without degradation.
-  12. Configuration registers should be documented and accessible for debugging or maintenance purposes, with self-check mechanisms verifying values after initialization.
+.. req:: label
+   :id: REQ_INT3_1732794621
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-Portability:
-  13. The function should be compatible with other STM32 series microcontrollers that share the RCC register structure, requiring only minimal changes for reuse.
+   Prescalers must be configured to maintain output frequencies of maximum 100 MHz for APB2, to ensure reliable peripheral communication.
+
+.. req:: label
+   :id: REQ_INT3_1732751348
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   Prescalers must be configured to maintain output frequencies of maximum 50 MHz for APB1, to ensure reliable peripheral communication.
+
+.. req:: label
+   :id: REQ_INT3_1732751635
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The on function must use no more than 6 KB of the system's available RAM for temporary variables.
+
+.. req:: label
+   :id: REQ_INT3_1732794754
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The on function must use no more than 1 KB of program memory.
+
+
+.. req:: label
+   :id: REQ_INT3_1732752434
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The function must consume less than 1 ms of the total execution time.
+
+
+.. req:: label
+   :id: REQ_INT3_1732753490
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The function must maintain consistent behavior across at least 100,000 power cycles without degradation.
+
+.. req:: label
+   :id: REQ_INT3_1732753522
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The function should be compatible with other STM32 series microcontrollers that share the RCC register structure, requiring the adjustment of register addresses for reuse.
