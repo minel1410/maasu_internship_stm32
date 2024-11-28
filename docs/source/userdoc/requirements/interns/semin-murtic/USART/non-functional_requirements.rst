@@ -47,7 +47,7 @@ Non-Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System should maintain stable communication at high baud rates without data loss
+   System should maintain reliable and consistent transfer of data at high baud rates without data loss
 
 
 
@@ -78,7 +78,7 @@ Non-Functional requirements
    :references: 
    :verification-and-validation: 
 
-   Each USART function must use no more than 13KB of available memory to minimize the impact on system resources.
+   Each USART function must be optimized to use no more than 13 KB of available memory to ensure efficient operation within the constraints of the hardware.
 
 
 

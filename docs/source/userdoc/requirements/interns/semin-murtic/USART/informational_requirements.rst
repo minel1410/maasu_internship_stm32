@@ -188,7 +188,7 @@ Informational requirements
 
 
 .. req:: label
-   :id: REQ_INT3_1732786018
+   :id: REQ_INT3_1732797208
    :status: Draft
    :date-released:
    :priority: Low
@@ -199,22 +199,22 @@ Informational requirements
    :references: 
    :verification-and-validation: 
 
-   USART provides parity control even for error detection.
+   Odd parity means that the total number of 1s in the data should always be odd number, if bit is corrupted during transmission, the parity check will fail.
 
 
 .. req:: label
-   :id: REQ_INT3_1732794727
+   :id: REQ_INT3_1732797345
    :status: Draft
    :date-released:
    :priority: Low
    :submitted-by: Semin Murtic
    :modified-by:
-   :category: Non-Functional
+   :category: Informational
    :safety-asil: 
    :references: 
    :verification-and-validation: 
 
-   USART provides odd parity control for error detection.
+   Even parity means that the total number of 1s must always be an even number, if the data is recieved and the total number of 1s is not even, this indicates an error during transmission.
 
 
 .. req:: label
@@ -224,7 +224,7 @@ Informational requirements
    :priority: Low
    :submitted-by: Semin Murtic
    :modified-by:
-   :category: Non-Functional
+   :category: Informational
    :safety-asil: 
    :references: 
    :verification-and-validation: 
@@ -410,7 +410,7 @@ Informational requirements
    :references: 
    :verification-and-validation: 
 
-   With 16x oversampling the signal is more stable
+   16x oversampling provides more stable signal
 
 
 .. req:: label
@@ -425,8 +425,7 @@ Informational requirements
    :references: 
    :verification-and-validation: 
 
-   With 8x oversampling allows for faster data transmission, but with potential loss in accuracy.
-
+    8x oversampling provides faster data transmission, but with potential loss in accuracy.
 
 .. req:: label
    :id: REQ_INT3_1732788084
@@ -440,7 +439,7 @@ Informational requirements
    :references: 
    :verification-and-validation: 
 
-   The CR1 is a critical regiter used to configure basic parameters for USART communication.
+   The CR1 is a critical regiter used to configure Baud Rate, Data bits, Stop bits, Parity, Mode of communication for USART communication.
 
 
 .. req:: label
@@ -450,7 +449,7 @@ Informational requirements
    :priority: Low
    :submitted-by: Semin Murtic
    :modified-by:
-   :category: Non-Functional
+   :category: Informational
    :safety-asil: 
    :references: 
    :verification-and-validation: 
@@ -517,9 +516,48 @@ Informational requirements
    Oversampling refers to taking multiple samples of the data during a single bit cycle to improve the accuracy in data reception.
 
 
+.. req:: label
+   :id: REQ_INT3_1732796410
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   USART1 uses AF1, AF4 and AF7
+
+.. req:: label
+   :id: REQ_INT3_1732796534
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   USART2 uses AF1, AF4 and AF7
 
 
+.. req:: label
+   :id: REQ_INT3_1732796573
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
+   USART6 uses AF5, AF8 and AF11
 
 
 
