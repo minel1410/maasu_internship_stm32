@@ -18,33 +18,6 @@ Informational requirements
 
    USART is used for serial communication between two devices.
 
-.. req:: label
-   :id: REQ_INT3_1732785212
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   USART is used where reliable data exchange is required.
-
-.. req:: label
-   :id: REQ_INT3_1732785286
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   USART is used where continous data exchange is required.
 
 
 .. req:: label
@@ -226,7 +199,38 @@ Informational requirements
    :references: 
    :verification-and-validation: 
 
-   USART provides parity control (even, odd, no parity) for error detection.
+   USART provides parity control even for error detection.
+
+
+.. req:: label
+   :id: REQ_INT3_1732794727
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   USART provides odd parity control for error detection.
+
+
+.. req:: label
+   :id: REQ_INT3_1732794782
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   USART provides even parity control for error detection
+
 
 
 .. req:: label
@@ -256,7 +260,7 @@ Informational requirements
    :references: 
    :verification-and-validation: 
 
-   Single-wire Half-duplex used one pin for both data transmission and reception
+   Single-wire Half-duplex uses one pin for both data transmission and reception
 
 
 .. req:: label
@@ -320,21 +324,6 @@ Informational requirements
 
 
 .. req:: label
-   :id: REQ_INT3_1732786873
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   Asynchronous mode has no common clock
-
-
-.. req:: label
    :id: REQ_INT3_1732787036
    :status: Draft
    :date-released:
@@ -347,96 +336,6 @@ Informational requirements
    :verification-and-validation: 
 
    In asynchronous mode start and stop bits are used to mark the beginning and end of a data packet
-
-
-.. req:: label
-   :id: REQ_INT3_1732787129
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   In asynchronous mode is lower data rate since no common clock is required
-
-
-.. req:: label
-   :id: REQ_INT3_1732787189
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   Asynchronous mode may be slower and less efficient, but easirer to implement
-
-
-.. req:: label
-   :id: REQ_INT3_1732787251
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   Asynchronous mode is commonly used in situations where simple and flexible communication with lower data flow is needed.
-
-
-.. req:: label
-   :id: REQ_INT3_1732787317
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   Synchronous mode uses a common clock between devices.
-
-
-.. req:: label
-   :id: REQ_INT3_1732787370
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   Synchronous mode is used when both devices send and recieve data based on the same clock, enabling faster and more efficient communication
-
-
-.. req:: label
-   :id: REQ_INT3_1732787459
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   Synchronous mode is suitable for applications that require fast and stable communication
 
 
 .. req:: label
@@ -545,6 +444,20 @@ Informational requirements
 
 
 .. req:: label
+   :id: REQ_INT3_1732795059
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   Basic parameters for USART communication are: Baud Rate, Word lenght, Stop bits, Parity, Flow Control, Oversampling
+
+.. req:: label
    :id: REQ_INT3_1732788145
    :status: Draft
    :date-released:
@@ -556,7 +469,7 @@ Informational requirements
    :references: 
    :verification-and-validation: 
 
-   UE (Usart Enable) bit enable or disable the USART peripheral 
+   UE (Usart Enable) bit enables or disables the USART peripheral 
 
 
 .. req:: label

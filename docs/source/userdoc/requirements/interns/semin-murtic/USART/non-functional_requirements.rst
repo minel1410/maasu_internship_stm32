@@ -34,20 +34,6 @@ Non-Functional requirements
    System should support baudrates up to 115200 bps.
 
 
-.. req:: label
-   :id: REQ_INT3_1732790518
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Semin Murtic
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   System should provide future with DMA for higher throughput.
-
 
 .. req:: label
    :id: REQ_INT3_1732790734

@@ -46,7 +46,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System must enable clock for GPIOA.
+   System must enable clock for USART.
 
 
 .. req:: label
@@ -61,7 +61,21 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System must enable clock for USART1 on pins PA9(TX) and PA10 (RX) 
+   System must enable clock for USART1_CR1
+   
+.. req:: label
+   :id: REQ_INT3_1732793965
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   System must enable clock for pins PA9(TX) and PA10 (RX) 
 
 
 .. req:: label
@@ -76,7 +90,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System must set TX pin (PA9) as AF(Alternative Function)
+   System must set TX pin (PA9) as AF7 (Alternate Function 7)
 
 
 .. req:: label
@@ -91,7 +105,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System must set RX pin (PA10) as AF (Alternative Function)
+   System must set RX pin (PA10) as AF7 (Alternate Function 7)
 
 
 .. req:: label
@@ -106,7 +120,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System must set Baud Rate to 115200
+   System shall control Baud Rate by controlling specific register
 
 
 .. req:: label
@@ -121,7 +135,7 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   System shall set word lenght to 8bits
+   System shall control word lenght by controlling specific register
 
 
 .. req:: label
@@ -136,7 +150,36 @@ Functional requirements
    :references: 
    :verification-and-validation: 
 
-   Set the number of stop bit to 1 stop bit
+   System shall control the number of stop bit by controlling specific register.
+
+.. req:: label
+   :id: REQ_INT3_1732794522
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   System must enable transmission mode for USART
+
+
+.. req:: label
+   :id: REQ_INT3_1732794551
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Semin Murtic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   System must enable reciever mode for USART.
 
 
 .. req:: label
