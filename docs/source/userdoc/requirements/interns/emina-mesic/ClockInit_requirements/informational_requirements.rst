@@ -1,5 +1,6 @@
 Informational Requirements for Clock Initialization Function
 ================================================================
+
 .. req:: label
    :id: REQ_INT3_1732225359
    :status: Draft
@@ -11,107 +12,332 @@ Informational Requirements for Clock Initialization Function
    :safety-asil: 
    :references: 
    :verification-and-validation: 
-
-   The informational requirements outline key details about the operating conditions, clock and bus systems, and register configurations of the STM32F411 microcontroller. They include descriptions of system clocks (RCC, HSE, PLL), bus architectures (AHB, APB), and specific registers (RCC_CR, RCC_CFGR, RCC_PLLCFGR) for clock control and configuration.​
-
-
-1. The **typical operating conditions** of the system are 25°C with a 3.3V supply.
+   The **typical operating conditions** of the system are 25°C with a 3.3V supply.
 
 
-2. **RCC Register (Reset and Clock Control):**
-    - Controls clock sources and allows switching between them.
-    - Configures the PLL enableling generation of higher frequencies
-    - In charge of reset control for AHB (Advanced High Performance) and APB (Advanced Peripheral) bus domains. 
+.. req:: label
+   :id: REQ_INT3_1732702736
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-3. **AHB (Advanced High-Performance Bus):**
-    - A high-speed bus that connects the CPU to high-performance peripherals such as memory interfaces, DMA controllers, and core system peripherals.
-    - Operates at the same frequency as the system clock, enabling fast data transfers.
-    - Supports a single master (the processor) and multiple slaves (peripherals or memory controllers).
-    - Commonly used for high-bandwidth operations like memory access or peripheral interconnects.
+   **RCC Register** (Reset and Clock Control) controls clock sources and allows switching between them. It configures the PLL enableling generation of higher frequencies. The RCC Register is charge of reset control for AHB (Advanced High Performance) and APB (Advanced Peripheral) bus domains. 
 
-4. **APB (Advanced Peripheral Bus):**
-    - A low-speed bus designed for peripherals that do not require high bandwidth, such as UART, I2C, SPI, and GPIO.
-    - Operates at a divided frequency of the system clock (configurable via prescalers).
-    - Consumes less power than AHB, making it suitable for energy-efficient designs.
-    - APB1 and APB2 buses are available, where APB1 is clocked at a lower frequency for low-speed peripherals, and APB2 runs faster for higher-performance peripherals.
+.. req:: label
+   :id: REQ_INT3_1732702714
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-5. **HSE (High-Speed External):**
-    - An external crystal oscillator (up to 25 MHz for STM32F411), providing high precision and stability. 
-    - Often used in applications requiring accurate timing.
+   **AHB** (Advanced High-Performance Bus) is a high-speed bus that connects the CPU to peripherals such as memory interfaces, DMA controllers, and interrupt controllers. It operates at the same frequency as the system clock, enabling fast data transfers and supports a single master (the processor) and multiple slaves (peripherals or memory controllers).
 
-6. **RCC_CR Register (Clock Control Register)**
+.. req:: label
+   :id: REQ_INT3_1732743911
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-    The RCC_CR register is central to managing and controlling the activation and readiness of various clock sources in the STM32F411xC.
-  
-  a. **HSEON (High-Speed External Oscillator Enable):**
-    - The system must set the HSEON bit to 1 to enable the HSE (High-Speed External) clock source in order to use it.
-    - The HSE is typically driven by an external crystal oscillator (commonly 4–26 MHz) or an external clock signal, depending on the hardware design.
-    - When the HSEON bit is set, the hardware begins stabilizing the external clock source.
+   **APB** (Advanced Peripheral Bus) is a low-speed bus designed for peripherals that do not require high bandwidth, such as UART, I2C, SPI, and GPIO. It operates at a divided frequency of the system clock, which is configurable via prescalers. APB1 and APB2 buses are available, where APB1 is clocked at a lower frequency (up to 50 MHz), and APB2 has a maximum frequency of 100 MHz.
 
-  b. **HSERDY (High-Speed External Oscillator Ready):**
-    - This status bit indicates whether the HSE clock source has stabilized and is ready to be used.
-    - The system must wait for the HSERDY bit to be set to 1 before using the HSE clock as an input for the system clock or PLL.
-    - If the HSERDY bit does not set within the expected stabilization time, the external clock source may be faulty, requiring fallback to another clock source such as the HSI.
-  
-  c. **PLLON (PLL Enable):**
-    - This bit enables the PLL (Phase-Locked Loop), which multiplies and divides the input frequency to generate the desired clock frequency.  
+.. req:: label
+   :id: REQ_INT3_1732802082
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   Prescalers are used to divide the input clock frequency, providing appropriate clock speeds for different parts of the microcontroller, such as buses.
+   
+.. req:: label
+   :id: REQ_INT3_1732745166
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   **HSE** (High-Speed External) is an external crystal oscillator (up to 25 MHz for STM32F411), providing high precision and stability. It is often used in applications requiring accurate timing.
+
+
+.. req:: label
+   :id: REQ_INT3_1732745250
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   **RCC_CR Register** (Clock Control Register) is central to managing and controlling the activation and readiness of various clock sources in the STM32F411xC. This register contains the HSEON, HSERDY and PLL bit.
+   
+   
+.. req:: label
+   :id: REQ_INT3_1732799454
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   When the **RCC_CR_HSEON** (High-Speed External Oscillator Enable) bit is set, the hardware begins stabilizing the external clock source. 
+   
+.. req:: label
+   :id: REQ_INT3_1732799588
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_CR_HSERDY** (High-Speed External Oscillator Ready) bit indicates whether the HSE clock source has stabilized and is ready to be used. 
+   
+.. req:: label
+   :id: REQ_INT3_1732799696
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_CR_PLLON** (PLL Enable) bit enables the PLL, which multiplies and divides the input frequency to generate the desired clock frequency.  
  
-7. **PLL (Phase-Locked Loop):**
-    - Enables frequency multiplication to generate higher system clock speeds.
-    - Parameters include dividers and multipliers to fine-tune the output frequency.
+.. req:: label
+   :id: REQ_INT3_1732745947
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
+   **PLL** (Phase-Locked Loop) enables frequency multiplication to generate higher system clock speeds. It's key bits are PLLM, PLLN, PLLP. 
+   
+   
+.. req:: label
+   :id: REQ_INT3_1732799788
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-Key bits: 
-  a. **PLLM**: Division factor for the HSE frequency before multiplication (2–63). 
-  b. **PLLN**: Multiplication factor (50–432). 
-  c. **PLLP**: Division factor after the PLLN result (2, 4, 6, or 8).
+   **PLLM** is the division factor for the HSE frequency before multiplication. 
+   **PLLN** is the multiplication factor. 
+   **PLLP** is the division factor after the PLLN result.
 
-8. **RCC_PLLCFGR Register (PLL Configuration Register)**
+.. req:: label
+   :id: REQ_INT3_1732747113
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
 
-    This register configures the PLL, which generates the main system clock by applying multiplication and division to the input frequency.  
- 
-  a. **PLLSRC (PLL Clock Source):**  
-    - This bit selects the PLL input source:  
-      - 0: HSI (16 MHz internal clock)  
-      - 1: HSE (external clock or crystal oscillator)  
+   **RCC_PLLCFGR Register** (PLL Configuration Register) configures the PLL, which generates the main system clock by applying multiplication and division to the input frequency. 
    
-  b. **PLLM (Main PLL Divider):**  
-    - This field sets the division factor for the input clock to generate the PLL input frequency.  
-    - The input frequency must be between 1 and 2 MHz. For example, if using a 25 MHz HSE, setting PLLM to 25 ensures a 1 MHz input.
+.. req:: label
+   :id: REQ_INT3_1732799984
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_PLLCFGR_PLLSRC** (PLL Clock Source) bit selects the PLL input source.  
    
-  c. **PLLN (Main PLL Multiplier):**  
-    - This field sets the multiplication factor for the PLL input frequency, generating the VCO frequency.  
-    - For example, if the input is 1 MHz and PLLN is 200, the VCO frequency will be 200 MHz.  
+.. req:: label
+   :id: REQ_INT3_1732799851
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_PLLCFGR_PLLM** (Main PLL Divider) bit sets the division factor for the input clock to generate the PLL input frequency. 
    
-  d. **PLLP (Main PLL Output Divider):**  
-    - This field sets the division factor for the VCO output frequency to produce the main system clock.  
-    - Possible values include 2, 4, 6, or 8. For example, with a 200 MHz VCO and PLLP = 2, the system clock will be 100 MHz.  
- 
-9. **RCC_CFGR Register (Clock Configuration Register)**
-    This register selects the system clock source and configures prescalers for the AHB, APB1, and APB2 buses.  
- 
-  a. **SW (System Clock Switch):**  
-    - This field selects the system clock source:  
-      - 00: HSI  
-      - 01: HSE  
-      - 10: PLL  
-    - The system must set this field appropriately, depending on the chosen clock source.
+.. req:: label
+   :id: REQ_INT3_1732799876
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_PLLCFGR_PLLN** (Main PLL Multiplier) bit sets the multiplication factor for the PLL input frequency, generating the VCO frequency. 
    
-  b. **SWS (System Clock Switch Status):**  
-    - This field indicates the current system clock source, confirming the switch to the desired source.
+.. req:: label
+   :id: REQ_INT3_1732799894
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_PLLCFGR_PLLP** (Main PLL Output Divider) bit sets the division factor for the VCO output frequency to produce the main system clock.
+
+.. req:: label
+   :id: REQ_INT3_1732747483
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   **RCC_CFGR Register** (Clock Configuration Register) selects the system clock source and configures prescalers for the AHB, APB1, and APB2 buses.
    
-  c. **HPRE (AHB Prescaler):**  
-    - This field sets the prescaler for the AHB bus clock. Options include no division (full speed) and divisions by powers of 2, up to 512.  
-    - For example, setting HPRE to 0 means no division, and the AHB clock runs at the same frequency as the system clock.
+.. req:: label
+   :id: REQ_INT3_1732800081
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_CFGR_SW** (System Clock Switch) bit selects the system clock source.
    
-  d. **PPRE1 (APB1 Low-Speed Prescaler):**  
-    - This field sets the prescaler for the APB1 bus, which supports lower-speed peripherals. It can be configured to divide the clock frequency by 2, 4, 8, or 16.  
+.. req:: label
+   :id: REQ_INT3_1732800098
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_CFGR_SWS** (System Clock Switch Status) bit indicates the current system clock source.
    
-  e. **PPRE2 (APB2 High-Speed Prescaler):**  
-    - Similar to APB1, but for high-speed peripherals, allowing no division or division by 2, 4, 8, or 16.
+.. req:: label
+   :id: REQ_INT3_1732800389
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_CFGR_HPRE** (AHB Prescaler) bit sets the prescaler for the AHB bus clock.
    
-10. **SystemCoreClockUpdate() Function**
-  - Updates the SystemCoreClock variable to reflect the current system clock frequency.
-  - Reads clock configuration registers (e.g., RCC_CFGR, RCC_PLLCFGR) to recalculate the system clock.
-  - Should be called after modifying clock settings like clock source, PLL, or prescalers.
-  - Ensures accurate timing for peripherals and delays by keeping the clock value up to date.
+.. req:: label
+   :id: REQ_INT3_1732800404
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_CFGR_PPRE1** (APB1 Low-Speed Prescaler) bit sets the prescaler for the APB1 bus. The APB1 clock can go up to 50 MHz.
+   
+.. req:: label
+   :id: REQ_INT3_1732800424
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **RCC_CFGR_PPRE2** (APB2 High-Speed Prescaler) bit sets the prescaler for the APB2 bus. The APB2 clock can go up to 100 MHz.
+   
+.. req:: label
+   :id: REQ_INT3_1732748298
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The **SystemCoreClockUpdate() Function** updates the SystemCoreClock variable to reflect the current system clock frequency.
