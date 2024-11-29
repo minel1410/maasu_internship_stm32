@@ -6,7 +6,7 @@ Requirements by Semin Murtić
    :maxdepth: 2
    :caption: Contents:
 
-
+   GPIO/GPIO_requirements
    USART/USART_requirements
 
 
