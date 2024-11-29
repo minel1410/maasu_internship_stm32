@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.1.6.1.1. Informational requirements &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="5.1.6.1.2. Functional requirements" href="functional_requirements.html" />
+    <link rel="prev" title="5.1.6.1. USART Requirements" href="USART_requirements.html" />
+<link href="../../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../lessons/lessons.html">4. Lessons</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../requirements.html">5. Requirements</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../requirements.html">5.1. Requirements written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../adna-njuhovic/requirements.html">5.1.1. Requirements by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../demir-hasicic/requirements.html">5.1.2. Requirements by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../emina-mesic/requirements.html">5.1.3. Requirements by Emina Mešić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lamija-fatic/requirements.html">5.1.4. Requirements by Lamija Fatić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../muhibija-kavazovic/requirements.html">5.1.5. Requirements by Muhibija Kavazović</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../requirements.html">5.1.6. Requirements by Semin Murtić</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="USART_requirements.html">5.1.6.1. USART Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tarik-sinanovic/requirements.html">5.1.7. Requirements by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../requirements.html"><span class="section-number">5. </span>Requirements</a></li>
+          <li class="breadcrumb-item"><a href="../../requirements.html"><span class="section-number">5.1. </span>Requirements written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="../requirements.html"><span class="section-number">5.1.6. </span>Requirements by Semin Murtić</a></li>
+          <li class="breadcrumb-item"><a href="USART_requirements.html"><span class="section-number">5.1.6.1. </span>USART Requirements</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5.1.6.1.1. </span>Informational requirements</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/userdoc/requirements/interns/semin-murtic/USART/informational_requirements.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="informational-requirements">
+<span id="id1"></span><h1><span class="section-number">5.1.6.1.1. </span>Informational requirements<a class="headerlink" href="#informational-requirements" title="Link to this heading"></a></h1>
+<div class="need_container docutils container" id="SNCB-49d7314e">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732783938">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732783938" title="REQ_INT3_1732783938">REQ_INT3_1732783938</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART is used for serial communication between two devices.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-a67a2c7d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785337">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785337" title="REQ_INT3_1732785337">REQ_INT3_1732785337</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The functionality of the USART includes mode of operation such as data transmission and reception</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-1f4d3934">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785381">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785381" title="REQ_INT3_1732785381">REQ_INT3_1732785381</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The functionality of the USART includes mode of operation such as controlling transmission speed.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-dd6452eb">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785452">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785452" title="REQ_INT3_1732785452">REQ_INT3_1732785452</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The functionality of the USART includes mode of operation such as operating modes(synchronous and asynchronous).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-5fc4581e">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785522">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785522" title="REQ_INT3_1732785522">REQ_INT3_1732785522</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The functionality of the USART includes modes of operation such as additional flow control and error detection failures.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-c3f6874a">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785580">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785580" title="REQ_INT3_1732785580">REQ_INT3_1732785580</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Transmitter is sending data</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-9a7bd8db">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785686">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785686" title="REQ_INT3_1732785686">REQ_INT3_1732785686</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Receiever is recieving data</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-d7edab08">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785721">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785721" title="REQ_INT3_1732785721">REQ_INT3_1732785721</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Control register are used to configure parameters such as baud rate, operating mode and parity.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-802332a8">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785783">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785783" title="REQ_INT3_1732785783">REQ_INT3_1732785783</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART is used to support asynchronous and synchronous operation modes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-42f6e57a">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785864">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785864" title="REQ_INT3_1732785864">REQ_INT3_1732785864</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART has configurable baud rate for flexible communication speed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-9660f040">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732786316">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732786316" title="REQ_INT3_1732786316">REQ_INT3_1732786316</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Baud rate is the measure of the number of changes to the signal (per second) that propagate through a transmission medium.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-88c324c5">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732785935">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732785935" title="REQ_INT3_1732785935">REQ_INT3_1732785935</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART has configurable data size(8-bit, 9-bit).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-36d9dad6">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732797208">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732797208" title="REQ_INT3_1732797208">REQ_INT3_1732797208</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Odd parity means that the total number of 1s in the data should always be odd number, if bit is corrupted during transmission, the parity check will fail.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-0f164603">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732797345">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732797345" title="REQ_INT3_1732797345">REQ_INT3_1732797345</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Even parity means that the total number of 1s must always be an even number, if the data is recieved and the total number of 1s is not even, this indicates an error during transmission.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-eca82db2">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732794782">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732794782" title="REQ_INT3_1732794782">REQ_INT3_1732794782</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART provides even parity control for error detection</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-1cbc85b5">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732786086">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732786086" title="REQ_INT3_1732786086">REQ_INT3_1732786086</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART provides support for Direct Memory Access, speeding up data transmission.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-253dfb7f">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732786173">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732786173" title="REQ_INT3_1732786173">REQ_INT3_1732786173</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Single-wire Half-duplex uses one pin for both data transmission and reception</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-2b7f9572">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732786486">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732786486" title="REQ_INT3_1732786486">REQ_INT3_1732786486</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>STM32F411 supports USART1 which is connected to APB2 bus and uses pins PA9 (TX) and PA10 (RX)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-85840e3c">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732786595">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732786595" title="REQ_INT3_1732786595">REQ_INT3_1732786595</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>STM32F411 supports USART2 connected to the APB1 bus and uses pins PA2 (TX) and PA3 (RX).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-2edc0817">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732786700">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732786700" title="REQ_INT3_1732786700">REQ_INT3_1732786700</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>STM32F411 supports USART6 connected to APB2 bus and uses pins PC6 (TX) and PC7 (RX).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-12612c6b">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732786813">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732786813" title="REQ_INT3_1732786813">REQ_INT3_1732786813</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART has two modes: asynchronous mode and synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-ef21f15e">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732787036">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732787036" title="REQ_INT3_1732787036">REQ_INT3_1732787036</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>In asynchronous mode start and stop bits are used to mark the beginning and end of a data packet</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-d5f2d635">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732787558">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732787558" title="REQ_INT3_1732787558">REQ_INT3_1732787558</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Formula for Baud Rate = fPLCK / (8*(2 - OVER8) * USARTDIV) where FPLCK=Clock frequency, OVER8=Oversampling configuration, USARTDIV=Value in the BRR register.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-0cac0017">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732787756">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732787756" title="REQ_INT3_1732787756">REQ_INT3_1732787756</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>In USART the baud rate is controlled using the Baud Rate Register.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-9ae1ba67">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732787805">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732787805" title="REQ_INT3_1732787805">REQ_INT3_1732787805</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The baud rate depends on the peripheral clock frequency (fPCLK) and the configuration of the USART peripheral.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-6533389d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732787864">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732787864" title="REQ_INT3_1732787864">REQ_INT3_1732787864</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The oversampling factor (OVER8) can be adjusted to control the precision and speed of data transmission.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-15924cc5">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732787935">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732787935" title="REQ_INT3_1732787935">REQ_INT3_1732787935</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>16x oversampling provides more stable signal</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-0caa0d4d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732787989">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732787989" title="REQ_INT3_1732787989">REQ_INT3_1732787989</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><blockquote>
+<div><p>8x oversampling provides faster data transmission, but with potential loss in accuracy.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-96d9d818">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732788084">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732788084" title="REQ_INT3_1732788084">REQ_INT3_1732788084</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The CR1 is a critical regiter used to configure Baud Rate, Data bits, Stop bits, Parity, Mode of communication for USART communication.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-7563ec91">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732795059">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732795059" title="REQ_INT3_1732795059">REQ_INT3_1732795059</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Basic parameters for USART communication are: Baud Rate, Word lenght, Stop bits, Parity, Flow Control, Oversampling</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-4780509d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732788145">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732788145" title="REQ_INT3_1732788145">REQ_INT3_1732788145</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>UE (Usart Enable) bit enables or disables the USART peripheral</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-6ec0d171">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732788245">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732788245" title="REQ_INT3_1732788245">REQ_INT3_1732788245</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TE (Transmitter Enable) bit enables or disables data transmission through the USART</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-5797cbb8">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732788324">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732788324" title="REQ_INT3_1732788324">REQ_INT3_1732788324</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>RE (Reciever Enable) bit enables or disables data reception through the USART</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-1c67164d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732788446">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732788446" title="REQ_INT3_1732788446">REQ_INT3_1732788446</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Oversampling refers to taking multiple samples of the data during a single bit cycle to improve the accuracy in data reception.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-a0c553fd">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732796410">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732796410" title="REQ_INT3_1732796410">REQ_INT3_1732796410</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART1 uses AF1, AF4 and AF7</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-b33fe380">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732796534">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732796534" title="REQ_INT3_1732796534">REQ_INT3_1732796534</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART2 uses AF1, AF4 and AF7</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-e6f1d4af">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732796573">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732796573" title="REQ_INT3_1732796573">REQ_INT3_1732796573</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Semin Murtic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>USART6 uses AF5, AF8 and AF11</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="USART_requirements.html" class="btn btn-neutral float-left" title="5.1.6.1. USART Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="functional_requirements.html" class="btn btn-neutral float-right" title="5.1.6.1.2. Functional requirements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
