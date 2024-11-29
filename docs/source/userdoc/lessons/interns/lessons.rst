@@ -10,7 +10,6 @@ This section shall contain all of the software requirements relevant for the pro
 
    
    adna-njuhovic/lessons
-   anesa-lakovic/lessons
    demir-hasicic/lessons
    emina-mesic/lessons
    lamija-fatic/lessons
