@@ -168,3 +168,32 @@ Non-Functional Requirements for the Timer Module
    :verification-and-validation: 
 
    The timer module should use less than 12.8 KB of RAM for the timer configuration.
+
+.. req:: label
+   :id: REQ_INT3_1732902339
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The timer module must support PWM frequencies ranging from 1 Hz to 1,53 MHz.
+
+.. req:: label
+   :id: REQ_INT3_1732902372
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Non-Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The timer module must provide a 16-bit resolution for PWM signal generation, allowing for precise control over the duty cycle with a minimum step size of 0.0015% (1/65536).
+
