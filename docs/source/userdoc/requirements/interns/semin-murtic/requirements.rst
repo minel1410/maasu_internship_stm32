@@ -6,7 +6,6 @@ Requirements by Semin Murtić
    :maxdepth: 2
    :caption: Contents:
 
-   GPIO/functional_requirements
-   GPIO/informational_requirements
-   GPIO/non-functional_requirements
+   GPIO/GPIO_requirements
+   USART/USART_requirements
 
