@@ -982,6 +982,20 @@ Informational Requirements for the Timer Module
    The formula for calculating the prescaler: Prescaler = Timer Frequency / (Desired Frequency * Max ARR). Where Max ARR is 65535. 
 
 .. req:: label
+   :id: REQ_INT3_1732902472
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The prescaler can be set between 0 and 65535.
+
+.. req:: label
    :id: REQ_INT3_1732899344
    :status: Draft
    :date-released:
@@ -994,6 +1008,20 @@ Informational Requirements for the Timer Module
    :verification-and-validation: 
 
    The ARR value is calculated using the formula: ARR = [Timer Frequency / (Desired Frequency * Prescaler) ] − 1.
+
+.. req:: label
+   :id: REQ_INT3_1732902534
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Emina Mesic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The ARR value can be set between 0 and 65535 (for a 16-bit timer).
 
 .. req:: label
    :id: REQ_INT3_1732899371
