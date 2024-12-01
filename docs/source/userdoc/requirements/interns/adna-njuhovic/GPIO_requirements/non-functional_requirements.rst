@@ -9,12 +9,12 @@ Non-Functional Requirements
    :priority: Low
    :submitted-by: Adna Njuhovic
    :modified-by:
-   :category: Functional
+   :category: Non-Functional 
    :safety-asil: 
    :references: 
    :verification-and-validation: 
 
-   The GPIO pins shall change state with a latency of no more than 1 ms when transitioning between high and low states.
+The GPIO pins shall change state with a latency of no more than 1 ms when transitioning between high and low states.
 
 
 .. req:: label
@@ -24,12 +24,12 @@ Non-Functional Requirements
    :priority: Low
    :submitted-by: Adna Njuhovic
    :modified-by:
-   :category: Functional
+   :category: Non-Functional 
    :safety-asil: 
    :references: 
    :verification-and-validation: 
 
-   GPIO pins shall trigger interrupts within 5 ms when a state change (e.g., button press) is detected.
+GPIO pins shall trigger interrupts within 5 ms when a state change (e.g., button press) is detected.
 
 
 .. req:: label
@@ -39,12 +39,12 @@ Non-Functional Requirements
    :priority: Low
    :submitted-by: Adna Njuhovic
    :modified-by:
-   :category: Functional
+   :category: Non-functional 
    :safety-asil: 
    :references: 
    :verification-and-validation: 
 
-   GPIO pins shall operate within a temperature range of -40°C to +85°C.
+GPIO pins shall operate within a temperature range of -40°C to +85°C.
 
 
 .. req:: label
@@ -54,12 +54,12 @@ Non-Functional Requirements
    :priority: Low
    :submitted-by: Adna Njuhovic
    :modified-by:
-   :category: Functional
+   :category: Non-functional 
    :safety-asil: 
    :references: 
    :verification-and-validation: 
 
-   New GPIO pins shall support all existing functionalities (input, output, PWM, ADC) without requiring significant changes to the existing software logic.
+New GPIO pins shall support all existing functionalities (input, output, PWM, ADC) without requiring significant changes to the existing software logic.
 
 
 .. req:: label
@@ -69,12 +69,12 @@ Non-Functional Requirements
    :priority: Low
    :submitted-by: Adna Njuhovic
    :modified-by:
-   :category: Functional
+   :category: Non-functional 
    :safety-asil: 
    :references: 
    :verification-and-validation: 
 
-   The GPIO module shall be compatible with a range of microcontrollers and development platforms, including STM32, Arduino, and ESP32.
+The GPIO module shall be compatible with a range of microcontrollers and development platforms, including STM32, Arduino, and ESP32.
 
 
 .. req:: label
@@ -84,12 +84,12 @@ Non-Functional Requirements
    :priority: Low
    :submitted-by: Adna Njuhovic
    :modified-by:
-   :category: Functional
+   :category: Non-functional 
    :safety-asil: 
    :references: 
    :verification-and-validation: 
 
-   GPIO pins shall support low-power modes during inactive periods, minimizing power consumption in applications such as battery-powered sensor devices.
+GPIO pins shall support low-power modes during inactive periods, minimizing power consumption in applications such as battery-powered sensor devices.
 
 
 .. req:: label
@@ -99,12 +99,12 @@ Non-Functional Requirements
    :priority: Low
    :submitted-by: Adna Njuhovic
    :modified-by:
-   :category: Functional
+   :category: Non-functional 
    :safety-asil: 
    :references: 
    :verification-and-validation: 
 
-   The GPIO pins shall function reliably in environments with electromagnetic interference.
+The GPIO pins shall function reliably in environments with electromagnetic interference.
 
 
 .. req:: label
@@ -114,10 +114,10 @@ Non-Functional Requirements
    :priority: Low
    :submitted-by: Adna Njuhovic
    :modified-by:
-   :category: Functional
+   :category: Non-functional 
    :safety-asil: 
    :references: 
    :verification-and-validation: 
 
-   The latency between setting an output signal on a GPIO pin shall not exceed 1 ms.
+The latency between setting an output signal on a GPIO pin shall not exceed 1 ms.
 
