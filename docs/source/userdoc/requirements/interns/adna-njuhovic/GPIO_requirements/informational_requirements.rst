@@ -220,7 +220,7 @@ Low speed: Suitable for low-frequency tasks like driving LEDs.
 
 .. req:: label
    :id: REQ_INT3_1732824812
-   :status: Draft
+   :status: Draft  
    :date-released:
    :priority: Low
    :submitted-by: Adna Njuhovic

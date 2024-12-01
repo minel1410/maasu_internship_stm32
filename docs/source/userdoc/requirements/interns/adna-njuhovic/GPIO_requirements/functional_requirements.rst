@@ -160,7 +160,7 @@ The system shall allow the user to configure the output speed (low, medium, high
    :priority: Low
    :submitted-by: Adna Njuhovic
    :modified-by:
-   :category: Functional
+   :category: Functional   
    :safety-asil: 
    :references: 
    :verification-and-validation: 

@@ -4,7 +4,7 @@ Requirements for GPIO
 
 .. toctree::
    :maxdepth: 2
-   :caption: Requirements: 
+   :caption: Requirements:  
 
    informational_requirements
    functional_requirements

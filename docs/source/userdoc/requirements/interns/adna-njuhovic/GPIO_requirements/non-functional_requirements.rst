@@ -102,7 +102,7 @@ GPIO pins shall support low-power modes during inactive periods, minimizing powe
    :category: Non-functional 
    :safety-asil: 
    :references: 
-   :verification-and-validation: 
+   :verification-and-validation:  
 
 The GPIO pins shall function reliably in environments with electromagnetic interference.
 
