@@ -4,9 +4,8 @@ Requirements by Demir Hasičić
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
-   initial
    Clock Initialization - Informational Requirements <ClockInit_requirements/informational_requirements>
    Clock Initialization - Functional Requirements <ClockInit_requirements/functional_requirements>
    Clock Initialization - Non-Functional Requirements <ClockInit_requirements/non-functional_requirements>
