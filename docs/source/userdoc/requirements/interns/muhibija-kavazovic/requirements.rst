@@ -9,4 +9,5 @@ This section contains all the software requirements related to the project, writ
    :caption: Contents:
 
    ClockInit_requirements/requierments
+   TIMER_requirements/requirements
    
