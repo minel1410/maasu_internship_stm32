@@ -76,7 +76,7 @@ Informational Requirements
    :priority: Low
    :submitted-by: Demir Hasicic
    :modified-by:
-   :category: Functional
+   :category: Informational
    :safety-asil: 
    :references: 
    :verification-and-validation: 

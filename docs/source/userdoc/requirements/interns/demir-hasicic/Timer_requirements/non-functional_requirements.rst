@@ -37,7 +37,7 @@ Non-Functional Requirements
    :priority: Low
    :submitted-by: Demir Hasicic
    :modified-by:
-   :category: Functional
+   :category: Non-Functional
    :safety-asil: 
    :references: 
    :verification-and-validation: 
