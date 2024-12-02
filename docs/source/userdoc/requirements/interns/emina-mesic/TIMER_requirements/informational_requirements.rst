@@ -618,104 +618,6 @@ Informational Requirements for the Timer Module
    TIM11_CH1 is available on pin PB9.
 
 .. req:: label
-   :id: REQ_INT3_1732898872
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   The GPIOx_MODER register is used to configure the mode of the GPIO pin. The pin can be set to Input mode, General-purpose output mode, Alternate Function mode, or Analog mode. ( 'x' stands for the GPIO port, e.g., A, B, C...)
-
-.. req:: label
-   :id: REQ_INT3_1732898876
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   The alternate function configurations are separated into two parts: the Alternate Function Register Low (AFRL) and the Alternate Function Register High (AFRH). In the CMSIS library, they are represented as AFR[0] (low) and AFR[1] (high), respectively.
-
-.. req:: label
-   :id: REQ_INT3_1732898898
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   The GPIOx_AFRL register configures the alternate function for pins 0 to 7. ( 'x' stands for the GPIO port, e.g., A, B, C...)
-
-.. req:: label
-   :id: REQ_INT3_1732898913
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   The GPIOx_AFRH register configures the alternate function for pins 8 to 15. ( 'x' stands for the GPIO port, e.g., A, B, C...)
-
-.. req:: label
-   :id: REQ_INT3_1732898949
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   The GPIOx_OTYPER (Output Type Register) configures the output type of the GPIO pin. It can be set to either a push-pull or open-drain configuration. For most PWM use cases, a push-pull configuration is preferred. ( 'x' stands for the GPIO port, e.g., A, B, C...)
-
-.. req:: label
-   :id: REQ_INT3_1732898963
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   The GPIOx_OSPEEDR (Output Speed Register) defines the output speed for each GPIO pin. The pin can be set to low speed, medium speed, high speed, or very high speed. ( 'x' stands for the GPIO port, e.g., A, B, C...)
-
-.. req:: label
-   :id: REQ_INT3_1732898972
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   The GPIOx_PUPDR (Pull-up/Pull-down Register) configures the internal pull-up or pull-down resistors for each GPIO pin. ( 'x' stands for the GPIO port, e.g., A, B, C...)
-
-.. req:: label
    :id: REQ_INT3_1732899018
    :status: Draft
    :date-released:
@@ -938,20 +840,6 @@ Informational Requirements for the Timer Module
    :verification-and-validation: 
 
    The prescaler reduces the timer frequency to ensure the PWM signal period falls within the valid range of 0 to 65535 for a 16-bit timer. 
-
-.. req:: label
-   :id: REQ_INT3_1732899262
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Informational
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   If the calculated period exceeds 65535, the prescaler must be increased to bring the period within the 16-bit range.
 
 .. req:: label
    :id: REQ_INT3_1732899259
