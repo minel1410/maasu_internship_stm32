@@ -16,34 +16,6 @@ Non-Functional Requirements for the Timer Module
    The system must enable the timer clock in less than 1 ms.
 
 .. req:: label
-   :id: REQ_INT3_1732900256
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   The function must configure the GPIO pin in less than 2 ms.
-
-.. req:: label
-   :id: REQ_INT3_1732900252
-   :status: Draft
-   :date-released:
-   :priority: Low
-   :submitted-by: Emina Mesic
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil: 
-   :references: 
-   :verification-and-validation: 
-
-   The voltage on the pin should stay within 0 to 3.3V to ensure safe operation.
-
-.. req:: label
    :id: REQ_INT3_1732900249
    :status: Draft
    :date-released:
