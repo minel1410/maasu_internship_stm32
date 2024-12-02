@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.1.3.2.1. Informational Requirements for the Timer Module &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="5.1.3.2.2. Functional Requirements for the Timer Module" href="functional_requirements.html" />
+    <link rel="prev" title="5.1.3.2. Timer Module Requirements" href="requirements.html" />
+<link href="../../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../lessons/lessons.html">4. Lessons</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../requirements.html">5. Requirements</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../requirements.html">5.1. Requirements written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../adna-njuhovic/requirements.html">5.1.1. Requirements by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../demir-hasicic/requirements.html">5.1.2. Requirements by Demir Hasičić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../requirements.html">5.1.3. Requirements by Emina Mešić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../ClockInit_requirements/requirements.html">5.1.3.1. Clock Initialization Requirements</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="requirements.html">5.1.3.2. Timer Module Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../lamija-fatic/requirements.html">5.1.4. Requirements by Lamija Fatić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../muhibija-kavazovic/requirements.html">5.1.5. Requirements by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../semin-murtic/requirements.html">5.1.6. Requirements by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tarik-sinanovic/requirements.html">5.1.7. Requirements by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../requirements.html"><span class="section-number">5. </span>Requirements</a></li>
+          <li class="breadcrumb-item"><a href="../../requirements.html"><span class="section-number">5.1. </span>Requirements written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="../requirements.html"><span class="section-number">5.1.3. </span>Requirements by Emina Mešić</a></li>
+          <li class="breadcrumb-item"><a href="requirements.html"><span class="section-number">5.1.3.2. </span>Timer Module Requirements</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5.1.3.2.1. </span>Informational Requirements for the Timer Module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/userdoc/requirements/interns/emina-mesic/TIMER_requirements/informational_requirements.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="informational-requirements-for-the-timer-module">
+<h1><span class="section-number">5.1.3.2.1. </span>Informational Requirements for the Timer Module<a class="headerlink" href="#informational-requirements-for-the-timer-module" title="Link to this heading"></a></h1>
+<div class="need_container docutils container" id="SNCB-33a16c02">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897578">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897578" title="REQ_INT3_1732897578">REQ_INT3_1732897578</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Timers in the STM32F411 microcontroller are versatile components used for precise time-related tasks. They help with measuring elapsed time, generating pulses, and controlling time-based processes.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-75fd3ba1">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897596">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897596" title="REQ_INT3_1732897596">REQ_INT3_1732897596</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The STM32 microcontrollers include general-purpose timers, advanced-control timers (for PWM), and  dedicated timers.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-258622cb">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897628">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897628" title="REQ_INT3_1732897628">REQ_INT3_1732897628</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>General-purpose timers TIM2, TIM3, TIM4, and TIM5 are versatile and support PWM generation, input capture, output compare, and event counting.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-43885293">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897641">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897641" title="REQ_INT3_1732897641">REQ_INT3_1732897641</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The advanced-control timer TIM1 is designed for complex tasks like motor control and advanced PWM generation with features like complementary outputs and dead-time insertion.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-3040e92a">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897656">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897656" title="REQ_INT3_1732897656">REQ_INT3_1732897656</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Complementary outputs refer to two outputs that are opposite in polarity, typically used in applications like motor control or H-bridge circuits, where one output is high while the other is low.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-4e3f4df2">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897673">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897673" title="REQ_INT3_1732897673">REQ_INT3_1732897673</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Dead-time insertion introduces a small delay between switching the complementary outputs to prevent short circuits, ensuring that both outputs are never high simultaneously.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-f553d74d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897701">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897701" title="REQ_INT3_1732897701">REQ_INT3_1732897701</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Smaller dedicated timers TIM9, TIM10, and TIM11 are used for specific purposes, such as single-channel PWM or precise time-based operations.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-ac89c669">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897713">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897713" title="REQ_INT3_1732897713">REQ_INT3_1732897713</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>In the STM32F411, APB1 timers include TIM2, TIM3, TIM4, and TIM5, operating at a frequency of up to 50 MHz, while APB2 timers include TIM1, TIM9, TIM10, and TIM11, running at a frequency of up to 100 MHz.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-e4a6de47">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897727">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897727" title="REQ_INT3_1732897727">REQ_INT3_1732897727</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Each timer has dedicated output pins that support alternate functions for tasks like PWM or input capture.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-0f48d496">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897741">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897741" title="REQ_INT3_1732897741">REQ_INT3_1732897741</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Timer pins are configured for alternate functions using the AF settings in the GPIO registers.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-0dd313c9">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897783">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897783" title="REQ_INT3_1732897783">REQ_INT3_1732897783</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Enabling the timer clock for TIM2, TIM3, TIM4, and TIM5 can be done by setting the TIMxEN bit in the RCC_APB1ENR register (‘x’ represents the timer number).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-de29c1be">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897798">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897798" title="REQ_INT3_1732897798">REQ_INT3_1732897798</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Enabling the timer clock for TIM1, TIM9, TIM10, and TIM11 can be done by setting the TIMxEN bit in the RCC_APB2ENR register (‘x’ represents the timer number).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-881bb21b">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897825">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897825" title="REQ_INT3_1732897825">REQ_INT3_1732897825</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM1 has four channels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-9db7bbd5">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897832">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897832" title="REQ_INT3_1732897832">REQ_INT3_1732897832</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM1_CH1 is available on pins PA8 and PE9.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-75780cc2">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897858">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897858" title="REQ_INT3_1732897858">REQ_INT3_1732897858</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM1_CH2 is available on pins PA9 and PE11.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-f4d64894">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732897998">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732897998" title="REQ_INT3_1732897998">REQ_INT3_1732897998</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM1_CH3 is available on pins PA10 and PE13.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-f7bddbea">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898008">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898008" title="REQ_INT3_1732898008">REQ_INT3_1732898008</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM1_CH4 is available on pins PA11 and PE14.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-94ffa723">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898041">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898041" title="REQ_INT3_1732898041">REQ_INT3_1732898041</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM2 has four channels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-784e78b4">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898061">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898061" title="REQ_INT3_1732898061">REQ_INT3_1732898061</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM2_CH1 is available on pins PA0, PA5, and PA15.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-3c6b3ae0">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898232">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898232" title="REQ_INT3_1732898232">REQ_INT3_1732898232</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM2_CH2 is available on pins PA1 and PB3.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-1c81beca">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898242">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898242" title="REQ_INT3_1732898242">REQ_INT3_1732898242</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM2_CH3 is available on pins PA2 and PB10.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-f9d7876d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898269">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898269" title="REQ_INT3_1732898269">REQ_INT3_1732898269</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM2_CH4 is available on pins PA3 and PB11.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-f5351dc0">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898293">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898293" title="REQ_INT3_1732898293">REQ_INT3_1732898293</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM3 has four channels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-62192c34">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898318">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898318" title="REQ_INT3_1732898318">REQ_INT3_1732898318</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM3_CH1 is available on pins PA6, PB4, and PC6.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-aae769c9">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898407">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898407" title="REQ_INT3_1732898407">REQ_INT3_1732898407</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM3_CH2 is available on pins PA7, PB5, and PC7.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-390b3b9d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898417">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898417" title="REQ_INT3_1732898417">REQ_INT3_1732898417</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM3_CH3 is available on pins PB0 and PC8.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-a595bcbe">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898436">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898436" title="REQ_INT3_1732898436">REQ_INT3_1732898436</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM3_CH4 is available on pins PB1 and PC9.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-cc2de611">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898513">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898513" title="REQ_INT3_1732898513">REQ_INT3_1732898513</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM4 has four channels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-bd6383a5">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898525">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898525" title="REQ_INT3_1732898525">REQ_INT3_1732898525</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM4_CH1 is available on pins PB6 and PD12.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-4b421e1c">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898536">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898536" title="REQ_INT3_1732898536">REQ_INT3_1732898536</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM4_CH2 is available on pins PB7 and PD13.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-4316f0e4">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898550">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898550" title="REQ_INT3_1732898550">REQ_INT3_1732898550</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM4_CH3 is available on pins PB8 and PD14.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-17928b20">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898597">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898597" title="REQ_INT3_1732898597">REQ_INT3_1732898597</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM4_CH4 is available on pins PB9 and PD15.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-dc03cfd1">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898631">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898631" title="REQ_INT3_1732898631">REQ_INT3_1732898631</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM5 has four channels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-7ce12c89">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898653">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898653" title="REQ_INT3_1732898653">REQ_INT3_1732898653</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM5_CH1 is available on pin PA0.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-9f96c218">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898686">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898686" title="REQ_INT3_1732898686">REQ_INT3_1732898686</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM5_CH2 is available on pin PA1.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-10911957">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898690">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898690" title="REQ_INT3_1732898690">REQ_INT3_1732898690</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM5_CH3 is available on pin PA2.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-2741ec49">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898715">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898715" title="REQ_INT3_1732898715">REQ_INT3_1732898715</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM5_CH4 is available on pin PA3.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-cce7fa66">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898740">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898740" title="REQ_INT3_1732898740">REQ_INT3_1732898740</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM9 has two channels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-25ff81d5">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898755">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898755" title="REQ_INT3_1732898755">REQ_INT3_1732898755</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM9_CH1 is available on pins PA2 and PE5.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-5ec21e03">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898773">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898773" title="REQ_INT3_1732898773">REQ_INT3_1732898773</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM9_CH2 is available on pins PA3 and PE6.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-43b2f80f">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898806">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898806" title="REQ_INT3_1732898806">REQ_INT3_1732898806</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM10 has one channel.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-912cc3ea">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898818">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898818" title="REQ_INT3_1732898818">REQ_INT3_1732898818</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM10_CH1 is available on pin PB8.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-abee7550">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898832">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898832" title="REQ_INT3_1732898832">REQ_INT3_1732898832</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM11 has one channel.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-07f52f99">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732898842">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732898842" title="REQ_INT3_1732898842">REQ_INT3_1732898842</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM11_CH1 is available on pin PB9.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-23b859da">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899018">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899018" title="REQ_INT3_1732899018">REQ_INT3_1732899018</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Each timer in the STM32F411 can have up to two Capture/Compare Mode Registers (CCMRs), depending on how many channels the timer supports.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-a3b798a9">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899027">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899027" title="REQ_INT3_1732899027">REQ_INT3_1732899027</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The TIMx_CCMR1 register is used to configure channels 1 and 2. (‘x’ represents the timer number)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-89efb647">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899023">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899023" title="REQ_INT3_1732899023">REQ_INT3_1732899023</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The TIMx_CCMR2 register is responsible for configuring channels 3 and 4. (‘x’ represents the timer number)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-921ec61b">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899087">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899087" title="REQ_INT3_1732899087">REQ_INT3_1732899087</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The CCMR register configures the timer channels, including PWM mode, output compare settings, and capture/compare functionality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-3b840ab3">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899073">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899073" title="REQ_INT3_1732899073">REQ_INT3_1732899073</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The TIMx_CCMRy register bits include OCxM (output compare mode) and OCxPE (preload enable).(‘x’ represents the timer number, ‘y’ depends on the channel)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-5565a2dd">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899068">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899068" title="REQ_INT3_1732899068">REQ_INT3_1732899068</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Pulse Width Modulation (PWM) is a technique for generating variable output signals by modifying the duty cycle. In STM32F411, PWM signals are created using timers, which control the output on specific GPIO pins.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-fe03de1d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899062">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899062" title="REQ_INT3_1732899062">REQ_INT3_1732899062</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Duty Cycle is the percentage of time the signal remains high during one cycle. For instance, a 50% duty cycle means the signal is high for half of its period.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-6b735ef4">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899058">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899058" title="REQ_INT3_1732899058">REQ_INT3_1732899058</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Frequency defines how many times the PWM signal cycles from high to low per second.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-ecf6715d">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899054">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899054" title="REQ_INT3_1732899054">REQ_INT3_1732899054</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Period defines the length of time for one full cycle of the signal — from the start of one pulse to the start of the next pulse.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-d152afe2">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899218">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899218" title="REQ_INT3_1732899218">REQ_INT3_1732899218</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>PWM generation can use different modes, such as edge-aligned or center-aligned mode, typically configured using advanced-control timers like TIM1.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-260f31f7">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899229">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899229" title="REQ_INT3_1732899229">REQ_INT3_1732899229</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The center-aligned mode is a timer mode used to generate a symmetric PWM signal. In this mode, the timer counts up to a specified value and then counts back down, completing a full cycle within the PWM period.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-20cbfdc8">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899244">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899244" title="REQ_INT3_1732899244">REQ_INT3_1732899244</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The edge-aligned mode is a timer mode used to generate a standard PWM signal. In this mode, the timer counts in a single direction (either up or down) during the PWM period.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-8a25d841">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899288">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899288" title="REQ_INT3_1732899288">REQ_INT3_1732899288</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>To set the PWM frequency, the prescaler and ARR registers need to be configured. These two parameters together define the period and frequency of the PWM signal.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-ce9cfc21">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899281">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899281" title="REQ_INT3_1732899281">REQ_INT3_1732899281</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The timer frequency depends on the APB bus the timer is on (either 50 MHz or 100 MHz).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-57e16c33">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899273">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899273" title="REQ_INT3_1732899273">REQ_INT3_1732899273</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The period of the PWM signal is calculated by dividing the timer frequency by the desired PWM signal frequency. Period = Timer Frequency / Desired Frequency.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-aaf6675a">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899266">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899266" title="REQ_INT3_1732899266">REQ_INT3_1732899266</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The prescaler reduces the timer frequency to ensure the PWM signal period falls within the valid range of 0 to 65535 for a 16-bit timer.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-0a44d0bf">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899259">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899259" title="REQ_INT3_1732899259">REQ_INT3_1732899259</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>ARR is the Auto-Reload Register value that determines the timer period.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-5d06853f">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899328">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899328" title="REQ_INT3_1732899328">REQ_INT3_1732899328</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The formula for calculating the prescaler: Prescaler = Timer Frequency / (Desired Frequency * Max ARR). Where Max ARR is 65535.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-c5e07493">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732902472">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732902472" title="REQ_INT3_1732902472">REQ_INT3_1732902472</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The prescaler can be set between 0 and 65535.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-5029de90">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899344">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899344" title="REQ_INT3_1732899344">REQ_INT3_1732899344</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The ARR value is calculated using the formula: ARR = [Timer Frequency / (Desired Frequency * Prescaler) ] − 1.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-6d9d699f">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732902534">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732902534" title="REQ_INT3_1732902534">REQ_INT3_1732902534</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The ARR value can be set between 0 and 65535 (for a 16-bit timer).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-b59f3b68">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899371">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899371" title="REQ_INT3_1732899371">REQ_INT3_1732899371</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Prescaler Register (TIMx_PSC) stores the calculated prescaler value. (‘x’ represents the timer number)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-824979ae">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899364">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899364" title="REQ_INT3_1732899364">REQ_INT3_1732899364</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Auto-Reload Register (TIMx_ARR) stores the calculated ARR value. (‘x’ represents the timer number)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-f194db5a">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899356">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899356" title="REQ_INT3_1732899356">REQ_INT3_1732899356</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The CCR (Capture/Compare Register) determines the duty cycle of the PWM signal.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-2a2d9947">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899353">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899353" title="REQ_INT3_1732899353">REQ_INT3_1732899353</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The CCR (Capture/Compare Register) value is calculated as: CCR = [Duty Cycle * (ARR+1)] / 100.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-b3bf0186">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899348">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899348" title="REQ_INT3_1732899348">REQ_INT3_1732899348</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The calculated CCR value is written into the corresponding TIMx_CCRy register. ( ‘x’ represents the timer number, ‘y’ is the channel number)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-15608fb5">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899403">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899403" title="REQ_INT3_1732899403">REQ_INT3_1732899403</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The TIMx_CR1 register is the main control register for configuring and controlling the timer’s behavior. (‘x’ represents the timer number)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-b29a37c0">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899412">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899412" title="REQ_INT3_1732899412">REQ_INT3_1732899412</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIMx_CR1_CEN (Counter Enable) bit controls whether the timer is running or stopped. (‘x’ represents the timer number)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-32694dc0">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899426">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899426" title="REQ_INT3_1732899426">REQ_INT3_1732899426</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>CCER (Capture/Compare Enable Register) register enables the activation of channels for output functionality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-3b726cc8">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899438">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899438" title="REQ_INT3_1732899438">REQ_INT3_1732899438</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The CCER register determines the operating mode of the channel, such as PWM, input capture, or output signal for time measurement.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-f9fcb8c6">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1732899398">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">label</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_INT3_1732899398" title="REQ_INT3_1732899398">REQ_INT3_1732899398</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="../../../../../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../../../../../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../../../../../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">Draft</span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_bar</span></span></div>
+<div class="line"><span class="needs_category"><span class="needs_label">category: </span><span class="needs_data">Informational</span></span></div>
+<div class="line"><span class="needs_priority"><span class="needs_label">priority: </span><span class="needs_data">Low</span></span></div>
+<div class="line"><span class="needs_submitted-by"><span class="needs_label">submitted-by: </span><span class="needs_data">Emina Mesic</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>TIM_CCER_CCyE bit is used to enable the timer channels for output. (‘y’ represents the channel number)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="requirements.html" class="btn btn-neutral float-left" title="5.1.3.2. Timer Module Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="functional_requirements.html" class="btn btn-neutral float-right" title="5.1.3.2.2. Functional Requirements for the Timer Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
