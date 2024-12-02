@@ -31,6 +31,137 @@ Informational requirements
    Timer modules depend on the **system clock** for their operation. Proper configuration of the system clock is crucial to ensure accurate timing, particularly in applications requiring precise control, such as motor speed regulation and signal generation.
 
 .. req:: label
+   :id: REQ_INT3_1733096231
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   TIM1, TIM9, TIM10, and TIM11 are located on the APB2 bus.
+
+.. req:: label
+   :id: REQ_INT3_1733096491
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   TIM2, TIM3, TIM4, and TIM5 are located on the APB1 bus.
+
+.. req:: label
+   :id: REQ_INT3_1733096547
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   Each Timer module supports up to four independent channels for PWM signal generation.
+
+
+.. req:: label
+     :id: REQ_INT3_1733144970
+     :status: Draft
+     :date-released:
+     :priority: Low
+     :submitted-by: Muhibija Kavazovic
+     :modified-by:
+     :category: Informational
+     :safety-asil: 
+     :references: 
+     :verification-and-validation: 
+  
+     **TIM1 Pin Mapping (AF1)**
+      - Channel 1: PA8 (AF1)
+
+      - Channel 2: PA9 (AF1)
+
+      - Channel 3: PA10 (AF1)
+
+      - Channel 4: PA11 (AF1)
+  
+.. req:: label
+   :id: REQ_INT3_1733145222
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   **TIM2 Pin Mapping (AF1)**
+
+      - Channel 1: A0 (AF1), PA5 (AF1)
+
+      - Channel 2: PA1 (AF1)
+
+      - Channel 3: PA2 (AF1)
+
+      - Channel 4: PA3 (AF1)
+
+.. req:: label
+   :id: REQ_INT3_1733145302
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   **TIM3 Pin Mapping (AF2)**
+
+   - Channel 1: PA6, PB4 (AF2)
+
+   - Channel 2: PA7, PB5 (AF2)
+
+   - Channel 3: PB0, PC8 (AF2)
+
+   - Channel 4: PB1, PC9 (AF2)
+
+.. req:: label
+   :id: REQ_INT3_1733145369
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   **TIM4 Pin Mapping (AF2)**
+
+    - Channel 1: PB6, PD12 (AF2)
+
+    - Channel 2: PB7, PD13 (AF2)
+
+    - Channel 3: PB8, PD14 (AF2)
+
+    - Channel 4: PB9, PD15 (AF2)
+
+
+.. req:: label
    :id: REQ_INT3_1732967451
    :status: Draft
    :date-released:
@@ -41,6 +172,80 @@ Informational requirements
    :safety-asil: 
    :references: 
    :verification-and-validation: 
+
+   **TIM5 Pin Mapping (AF2)**
+
+    - Channel 1: PA0 (AF2)
+
+    - Channel 2: PA1 (AF2)
+
+    - Channel 3: PA2 (AF2)
+
+    - Channel 4: PA3 (AF2)
+
+.. req:: label
+   :id: REQ_INT3_1733146550
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   **TIM9 Pin Mapping (AF3)**
+
+    - Channel 1: PA2 (AF3)
+
+    - Channel 2: PA3 (AF3)
+
+.. req:: label
+   :id: REQ_INT3_1733146661
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   **TIM10 Pin Mapping (AF3)**
+
+    - Channel 1: PB8 (AF3)
+
+.. req:: label
+   :id: REQ_INT3_1733146753
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   **TIM11 Pin Mapping (AF3)**
+
+    - Channel 1: PB9 (AF3)
+
+
+.. req:: label
+   :id: REQ_INT3_1733146409
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Muhibija Kavazovic
+   :modified-by:
+   :category: Informational
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
 
    Registers that are key to configuring and operating the Timer Module for generating PWM signals:
 
