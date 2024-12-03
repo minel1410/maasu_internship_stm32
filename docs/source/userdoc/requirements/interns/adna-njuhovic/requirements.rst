@@ -6,4 +6,5 @@ Requirements by Adna Njuhović
    :maxdepth: 2
    :caption: Contents:
 
-   initial 
+   GPIO_requirements/requirements 
+   USART_requirements/requirements
