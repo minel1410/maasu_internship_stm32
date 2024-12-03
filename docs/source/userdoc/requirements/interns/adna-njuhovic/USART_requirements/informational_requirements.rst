@@ -16,16 +16,16 @@ Informational requirements
    The USART module must provide information about its supported communication modes .  
 
 .. req:: label
-     :id: REQ_INT3_1732998760
-     :status: Draft
-     :date-released:
-     :priority: Low
-     :submitted-by: Adna Njuhovic
-     :modified-by:
-     :category: Informational 
-     :safety-asil: 
-     :references: 
-     :verification-and-validation: 
+   :id: REQ_INT3_1732998760
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Adna Njuhovic
+   :modified-by:
+   :category: Informational 
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
   
    The USART module must provide information about the full-duplex mode. 
 
@@ -57,7 +57,7 @@ Informational requirements
    :references: 
    :verification-and-validation: 
 
-    Parity checking is configured using the PCE (Parity Control Enable) and PS (Parity Selection) bits.
+   Parity checking is configured using the PCE (Parity Control Enable) and PS (Parity Selection) bits.
 
 
 .. req:: label
