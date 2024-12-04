@@ -6,7 +6,9 @@ Requirements by Tarik Sinanović
     :maxdepth: 2
     :caption: Contents:
 
-    initial.rst
-    informational_requirements.rst
-    functional_requirements.rst
-    non-functional_requirements.rst
+    GPIO_requirements/informational_requirements.rst
+    GPIO_requirements/functional_requirements.rst
+    GPIO_requirements/non-functional_requirements.rst
+    USART_requirements/informational_requirements.rst
+    USART_requirements/functional_requirements.rst
+    USART_requirements/non-functional_requirements.rst

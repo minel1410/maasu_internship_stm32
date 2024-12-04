@@ -14,7 +14,7 @@ Functional Requirements
    :references: 
    :verification-and-validation: 
 
-   The system must be able to enable the clock in the RCC register.
+   The system must enable the clock using the RCC register.
 
 
 .. req:: label
@@ -210,3 +210,63 @@ Functional Requirements
    :verification-and-validation: 
 
    The system must check if the byte of data is available on the data register.
+
+
+.. req:: label
+   :id: REQ_INT3_1733082605
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Tarik Sinanovic
+   :modified-by:
+   :category: Non Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The system must ensure that the transmitted and received data remains uncorrupted.
+
+
+.. req:: label
+   :id: REQ_INT3_1733082629
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Tarik Sinanovic
+   :modified-by:
+   :category: Non Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The USART must synchronize with the system clock or external clock source.
+
+
+.. req:: label
+   :id: REQ_INT3_1733082685
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Tarik Sinanovic
+   :modified-by:
+   :category: Non Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The system should allow simultaneous communication with multiple external devices.
+
+
+.. req:: label
+   :id: REQ_INT3_1733082711
+   :status: Draft
+   :date-released:
+   :priority: Low
+   :submitted-by: Tarik Sinanovic
+   :modified-by:
+   :category: Non Functional
+   :safety-asil: 
+   :references: 
+   :verification-and-validation: 
+
+   The USART configuration must be configurable through software.
