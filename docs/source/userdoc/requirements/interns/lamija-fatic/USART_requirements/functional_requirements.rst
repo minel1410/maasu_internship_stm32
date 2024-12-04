@@ -261,4 +261,32 @@ Functional Requirements
 
    The system must handle framing errors by checking the `USART_SR_FE` bit and generating an error condition if a framing error occurs.
 
+.. req:: Usability
+   :id: REQ_INT3_17310281820880
+   :status: Draft
+   :date-released: 2024-12-02
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Functional
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+
+   The system must provide a user-friendly interface for configuration and management of USART communication parameters, including baud rate and pin mappings.
+
+.. req:: Maintainability
+   :id: REQ_INT3_17310281820881
+   :status: Draft
+   :date-released: 2024-12-02
+   :priority: Medium
+   :submitted-by: Lamija Fatić
+   :modified-by:
+   :category: Functional
+   :safety-asil:
+   :references:
+   :verification-and-validation:
+
+   The system must support easy maintenance, with well-documented configuration parameters and clear error logs for debugging USART communication.
+
 	

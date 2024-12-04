@@ -41,7 +41,7 @@ Non-functional Requirements
    :references:
    :verification-and-validation:
 
-   The system must ensure reliable USART communication with minimal data loss.
+   The system must ensure reliable USART communication with reliable data loss.
 
 .. req:: Security
    :id: REQ_INT3_17310281820879
@@ -57,34 +57,6 @@ Non-functional Requirements
 
    The system must encrypt sensitive data transmitted over USART to prevent unauthorized interception and data breaches.
 
-.. req:: Usability
-   :id: REQ_INT3_17310281820880
-   :status: Draft
-   :date-released: 2024-12-02
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   The system must provide a user-friendly interface for configuration and management of USART communication parameters, including baud rate and pin mappings.
-
-.. req:: Maintainability
-   :id: REQ_INT3_17310281820881
-   :status: Draft
-   :date-released: 2024-12-02
-   :priority: Medium
-   :submitted-by: Lamija Fatić
-   :modified-by:
-   :category: Non-Functional
-   :safety-asil:
-   :references:
-   :verification-and-validation:
-
-   The system must support easy maintenance, with well-documented configuration parameters and clear error logs for debugging USART communication.
-
 .. req:: Portability
    :id: REQ_INT3_17310281820882
    :status: Draft
@@ -97,7 +69,7 @@ Non-functional Requirements
    :references:
    :verification-and-validation:
 
-   The system must be portable to different microcontroller models that support USART communication with minimal configuration.
+   The system must be portable to different microcontroller models that support USART communication with reliable configuration.
 
 .. req:: Compatibility
    :id: REQ_INT3_17310281820883
@@ -153,7 +125,7 @@ Non-functional Requirements
    :references:
    :verification-and-validation:
 
-   The system must meet the timing constraints for USART data transmission and reception, ensuring that each operation completes within specified time windows.
+   The system must meet the timing constraints for USART data transmission and reception, ensuring each operation completes within 1 ms for byte transmission, 5 ms for data processing, 50 µs for interrupt response, and a timeout for inactivity after 100 ms.
 
 .. req:: Real-time Communication
    :id: REQ_INT3_17310281820887
