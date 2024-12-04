@@ -41,7 +41,7 @@ Non-functional Requirements
    :references:
    :verification-and-validation:
 
-   The system must ensure reliable USART communication with reliable data loss.
+   The system must ensure reliable USART communication with a data loss not exceeding 0.1%, ensuring data integrity and protection.
 
 .. req:: Security
    :id: REQ_INT3_17310281820879
@@ -69,7 +69,7 @@ Non-functional Requirements
    :references:
    :verification-and-validation:
 
-   The system must be portable to different microcontroller models that support USART communication with reliable configuration.
+   The system must be portable to different microcontroller models that support USART communication, supporting baud rates up to 115200 bps, with a maximum communication latency of 100ms.
 
 .. req:: Compatibility
    :id: REQ_INT3_17310281820883
