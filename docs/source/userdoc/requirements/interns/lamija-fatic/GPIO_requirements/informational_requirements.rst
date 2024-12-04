@@ -414,7 +414,7 @@ Informational Requirements
 
 
 .. req:: GPIO and Interrupt Handling
-   :id: REQ_INT3_1731028667
+   :id: REQ_INT3_17310286677
    :status: Draft
    :date-released:
    :priority: Medium
