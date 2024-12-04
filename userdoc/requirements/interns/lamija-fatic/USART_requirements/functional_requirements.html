@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Functional Requirements &mdash; Maasu Internship 4 1 documentation</title>
+  <title>5.1.4.2.1. Functional Requirements &mdash; Maasu Internship 4 1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
@@ -32,6 +32,8 @@
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="5.1.4.2.2. Non-functional Requirements" href="non-functional_requirements.html" />
+    <link rel="prev" title="5.1.4.2. USART requirements" href="requirements.html" />
 <link href="../../../../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -56,12 +58,28 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../../introduction/introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../lessons/lessons.html">4. Lessons</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../requirements.html">5. Requirements</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../requirements.html">5. Requirements</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../requirements.html">5.1. Requirements written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../adna-njuhovic/requirements.html">5.1.1. Requirements by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../demir-hasicic/requirements.html">5.1.2. Requirements by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../emina-mesic/requirements.html">5.1.3. Requirements by Emina Mešić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../requirements.html">5.1.4. Requirements by Lamija Fatić</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../GPIO_requirements/requirements.html">5.1.4.1. GPIO Requirements</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="requirements.html">5.1.4.2. USART requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../muhibija-kavazovic/requirements.html">5.1.5. Requirements by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../semin-murtic/requirements.html">5.1.6. Requirements by Semin Murtić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tarik-sinanovic/requirements.html">5.1.7. Requirements by Tarik Sinanović</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/glossary.html">7. Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../resources/resources.html">8. Resources</a></li>
@@ -81,7 +99,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Functional Requirements</li>
+          <li class="breadcrumb-item"><a href="../../../requirements.html"><span class="section-number">5. </span>Requirements</a></li>
+          <li class="breadcrumb-item"><a href="../../requirements.html"><span class="section-number">5.1. </span>Requirements written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="../requirements.html"><span class="section-number">5.1.4. </span>Requirements by Lamija Fatić</a></li>
+          <li class="breadcrumb-item"><a href="requirements.html"><span class="section-number">5.1.4.2. </span>USART requirements</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5.1.4.2.1. </span>Functional Requirements</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../../_sources/userdoc/requirements/interns/lamija-fatic/USART_requirements/functional_requirements.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -92,8 +114,8 @@
            <div itemprop="articleBody">
              
   <section id="functional-requirements">
-<h1>Functional Requirements<a class="headerlink" href="#functional-requirements" title="Link to this heading"></a></h1>
-<div class="need_container docutils container" id="SNCB-770f1142">
+<h1><span class="section-number">5.1.4.2.1. </span>Functional Requirements<a class="headerlink" href="#functional-requirements" title="Link to this heading"></a></h1>
+<div class="need_container docutils container" id="SNCB-2ef5c61b">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818189">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -117,7 +139,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-42d7359b">
+<div class="need_container docutils container" id="SNCB-2e320950">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818190">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -141,7 +163,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-c6a413b6">
+<div class="need_container docutils container" id="SNCB-2b11f024">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818191">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -165,7 +187,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-28a07788">
+<div class="need_container docutils container" id="SNCB-6bd61a10">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818192">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -189,7 +211,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-b705ce97">
+<div class="need_container docutils container" id="SNCB-62ca8222">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818193">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -213,7 +235,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-3bbcde4a">
+<div class="need_container docutils container" id="SNCB-fa4d14a2">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818194">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -237,7 +259,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-5976a90a">
+<div class="need_container docutils container" id="SNCB-a4b805cb">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818195">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -261,7 +283,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-17aaf5e1">
+<div class="need_container docutils container" id="SNCB-f919d4eb">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818196">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -285,7 +307,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-3cfb2480">
+<div class="need_container docutils container" id="SNCB-3316256b">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818197">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -309,7 +331,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-7d9decbc">
+<div class="need_container docutils container" id="SNCB-f4b0d5e8">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818198">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -333,7 +355,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-c6efa8c3">
+<div class="need_container docutils container" id="SNCB-94a64fab">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818199">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -357,7 +379,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-20be2e3a">
+<div class="need_container docutils container" id="SNCB-84503f17">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_1731028182098">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -381,7 +403,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-6805bc8b">
+<div class="need_container docutils container" id="SNCB-47f5b4f2">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818201">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -405,7 +427,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-61e7d0fb">
+<div class="need_container docutils container" id="SNCB-f718108c">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818202">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -429,7 +451,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-17227427">
+<div class="need_container docutils container" id="SNCB-d2d51252">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818203">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -453,7 +475,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-af72c193">
+<div class="need_container docutils container" id="SNCB-b3c9825f">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818204">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -477,7 +499,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-d71b8fd5">
+<div class="need_container docutils container" id="SNCB-db6a7a8f">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818205">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -501,7 +523,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-f303c978">
+<div class="need_container docutils container" id="SNCB-11151f4c">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818206">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -525,7 +547,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-15827b99">
+<div class="need_container docutils container" id="SNCB-7a837804">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818207">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -549,7 +571,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-0d8a19f2">
+<div class="need_container docutils container" id="SNCB-630fc746">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_173102818208">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -573,7 +595,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-95351627">
+<div class="need_container docutils container" id="SNCB-86ebf058">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_17310281820880">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -598,7 +620,7 @@
 </tbody>
 </table>
 </div>
-<div class="need_container docutils container" id="SNCB-25cebc2c">
+<div class="need_container docutils container" id="SNCB-1d42f576">
 <table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_bar needs_type_req docutils align-default" id="REQ_INT3_17310281820881">
 <tbody>
 <tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
@@ -628,7 +650,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="requirements.html" class="btn btn-neutral float-left" title="5.1.4.2. USART requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="non-functional_requirements.html" class="btn btn-neutral float-right" title="5.1.4.2.2. Non-functional Requirements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

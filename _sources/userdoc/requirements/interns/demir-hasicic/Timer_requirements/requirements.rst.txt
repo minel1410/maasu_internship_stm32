@@ -1,5 +1,5 @@
 =================================
-Clock Initialization Requirements
+Timer Module Requirements
 =================================
 
 .. toctree::
