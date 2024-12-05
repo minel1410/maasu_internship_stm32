@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1.7.3. GPIO &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.1.7.4. Clock initialization" href="clockinitialization.html" />
+    <link rel="prev" title="4.1.7.2. STM32 Overview" href="stm32overview.html" />
+<link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.2. Lessons by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.3. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamija-fatic/lessons.html">4.1.4. Lessons by Lamija Fatić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.5. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.6. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.7. Lessons by Tarik Sinanović</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.7.1. V Model Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.7.2. STM32 Overview</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.7.3. GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clockinitialization.html">4.1.7.4. Clock initialization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../requirements/requirements.html">5. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
+          <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.7. </span>Lessons by Tarik Sinanović</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.7.3. </span>GPIO</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/userdoc/lessons/interns/tarik-sinanovic/gpio.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gpio">
+<h1><span class="section-number">4.1.7.3. </span>GPIO<a class="headerlink" href="#gpio" title="Link to this heading"></a></h1>
+<section id="introduction-to-gpio">
+<h2><span class="section-number">4.1.7.3.1. </span>Introduction to GPIO<a class="headerlink" href="#introduction-to-gpio" title="Link to this heading"></a></h2>
+<p>General Purpose Input/Output (GPIO) pins are integral to microcontrollers like the STM32F411. These pins allow the microcontroller to interface with external devices such as LEDs, sensors, switches, and other peripherals. The STM32F411 has a rich set of GPIO pins that can be configured as inputs or outputs, each with various modes and functionalities, making it a versatile platform for embedded applications.</p>
+</section>
+<section id="gpio-modes-and-configuration">
+<h2><span class="section-number">4.1.7.3.2. </span>GPIO Modes and Configuration<a class="headerlink" href="#gpio-modes-and-configuration" title="Link to this heading"></a></h2>
+<p>The STM32F411 GPIO pins are highly configurable. Each pin can be set to different modes such as:</p>
+<section id="input-mode">
+<h3><span class="section-number">4.1.7.3.2.1. </span>Input Mode:<a class="headerlink" href="#input-mode" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Analog: The pin is used as an analog input. No digital functionality is provided.</p></li>
+<li><p>Floating: The pin is in a high-impedance state with no internal pull-up or pull-down resistors.</p></li>
+<li><p>Pull-up/Pull-down: The pin is configured with an internal pull-up or pull-down resistor.</p></li>
+</ul>
+</section>
+<section id="output-mode">
+<h3><span class="section-number">4.1.7.3.2.2. </span>Output Mode:<a class="headerlink" href="#output-mode" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Push-pull: Both high and low states can be driven by the pin. This is the most common configuration for driving LEDs and other output devices.</p></li>
+<li><p>Open-drain: The pin can only pull low or remain in a high-impedance state. When set to open-drain, the pin must be externally pulled up if a high state is needed.</p></li>
+</ul>
+</section>
+<section id="alternate-function-mode">
+<h3><span class="section-number">4.1.7.3.2.3. </span>Alternate Function Mode:<a class="headerlink" href="#alternate-function-mode" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>This mode is used when the pin needs to perform a specific function such as UART communication, SPI, or I2C.</p></li>
+</ul>
+</section>
+<section id="analog-mode">
+<h3><span class="section-number">4.1.7.3.2.4. </span>Analog Mode:<a class="headerlink" href="#analog-mode" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Used for ADC input or DAC output.</p></li>
+</ul>
+<p>Each of these modes can be configured through registers like MODER, PUPDR, and OTYPER.</p>
+</section>
+</section>
+<section id="gpio-registers-overview">
+<h2><span class="section-number">4.1.7.3.3. </span>GPIO Registers Overview<a class="headerlink" href="#gpio-registers-overview" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>MODER (GPIO Mode Register): Configures the mode of each pin.</p></li>
+<li><p>OTYPER (GPIO Output Type Register): Sets the output type (push-pull or open-drain).</p></li>
+<li><p>PUPDR (GPIO Pull-up/Pull-down Register): Configures pull-up or pull-down resistors for input pins.</p></li>
+<li><p>IDR (GPIO Input Data Register): Reads the current value of input pins.</p></li>
+<li><p>ODR (GPIO Output Data Register): Controls the output state of GPIO pins.</p></li>
+<li><p>BSRR (Bit Set/Reset Register): Used for setting or resetting GPIO pins in a more efficient manner compared to directly modifying the ODR.</p></li>
+</ul>
+</section>
+<section id="detailed-explanation-of-odr-output-data-register">
+<h2><span class="section-number">4.1.7.3.4. </span>Detailed Explanation of ODR (Output Data Register)<a class="headerlink" href="#detailed-explanation-of-odr-output-data-register" title="Link to this heading"></a></h2>
+<p>The ODR (Output Data Register) is used to control the output state of GPIO pins. It is a 32-bit register, where each bit corresponds to a GPIO pin’s output value.
+ODR Behavior:
+- Writing to the ODR: Writing a 1 to a bit in the ODR sets the corresponding GPIO pin to high (3.3V in most STM32F4 cases), while writing a 0 sets the pin to low (0V).
+- Read Operation: Reading from the ODR register gives the current state of all output pins. However, it does not reflect the state of the pin as set by the other GPIO configuration registers (e.g., pull-up/down resistors).
+For example, if you want to set GPIO pin 0 to high, you write 1 to bit 0 of the ODR register. Similarly, to set it to low, you write 0.</p>
+</section>
+<section id="detailed-explanation-of-bsrr-bit-set-reset-register">
+<h2><span class="section-number">4.1.7.3.5. </span>Detailed Explanation of BSRR (Bit Set/Reset Register)<a class="headerlink" href="#detailed-explanation-of-bsrr-bit-set-reset-register" title="Link to this heading"></a></h2>
+<p>The BSRR (Bit Set/Reset Register) provides an optimized way to set or reset individual GPIO pins. It is composed of two 16-bit halves:
+- Bits 0-15: These bits are used to set the corresponding GPIO pins (write a 1 to set the pin high).
+- Bits 16-31: These bits are used to reset the corresponding GPIO pins (write a 1 to set the pin low).
+BSRR Behavior:
+- Setting a Pin: Writing a 1 to the corresponding bit in the lower 16 bits (bits 0-15) will set the GPIO pin to high.
+- Resetting a Pin: Writing a 1 to the corresponding bit in the upper 16 bits (bits 16-31) will reset the GPIO pin to low.
+This mechanism is more efficient than writing directly to the ODR register, especially when you need to modify only one pin, because writing to the BSRR register can set or reset a pin atomically in a single operation, while the ODR requires two separate operations.</p>
+</section>
+<section id="odr-vs-bsrr-key-differences">
+<h2><span class="section-number">4.1.7.3.6. </span>ODR vs. BSRR: Key Differences<a class="headerlink" href="#odr-vs-bsrr-key-differences" title="Link to this heading"></a></h2>
+<section id="efficiency">
+<h3><span class="section-number">4.1.7.3.6.1. </span>Efficiency:<a class="headerlink" href="#efficiency" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>ODR requires separate operations to set and reset pins.</p></li>
+<li><p>BSRR allows for atomic setting and resetting of pins, making it more efficient for applications requiring frequent pin state changes.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="atomic-operation">
+<h3><span class="section-number">4.1.7.3.6.2. </span>Atomic Operation:<a class="headerlink" href="#atomic-operation" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>The BSRR provides a more atomic operation when setting or resetting individual pins because it avoids the need to first read the ODR and then write back to it.</p></li>
+<li><p>The ODR can lead to race conditions or issues in multi-threaded applications where pin states are read-modified-write.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="bit-level-control">
+<h3><span class="section-number">4.1.7.3.6.3. </span>Bit-level Control:<a class="headerlink" href="#bit-level-control" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>ODR directly controls the output state of each pin.</p></li>
+<li><p>BSRR has the unique ability to both set and reset pins in a single operation, providing better control over individual GPIO states.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="register-access">
+<h3><span class="section-number">4.1.7.3.6.4. </span>Register Access:<a class="headerlink" href="#register-access" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>ODR is a 32-bit register used for directly controlling the output of all pins.</p></li>
+<li><p>BSRR is a 32-bit register split into two halves, where one half sets the pins and the other resets them.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="examples">
+<h2><span class="section-number">4.1.7.3.7. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="configuring-gpio-pin-for-an-led-on-pa9">
+<h3><span class="section-number">4.1.7.3.7.1. </span>Configuring GPIO pin for an LED on PA9:<a class="headerlink" href="#configuring-gpio-pin-for-an-led-on-pa9" title="Link to this heading"></a></h3>
+<p>-Enable the clock for GPIOA by setting the appropriate bit in the RCC_AHB1ENR register.
+-Set PA9 as an output by modifying the GPIOA_MODER register.
+-Ensure PA9 is in push-pull mode by clearing the bit in GPIOA_OTYPER.
+-Optionally, set the output speed of PA9 to medium.
+-Optionally, configure PA9 with no pull-up or pull-down.
+-Use ODR or BSRR to set PA9 high or low to control the LED.</p>
+</section>
+<section id="configuring-gpio-pin-for-a-button-on-pa0">
+<h3><span class="section-number">4.1.7.3.7.2. </span>Configuring GPIO pin for a button on PA0:<a class="headerlink" href="#configuring-gpio-pin-for-a-button-on-pa0" title="Link to this heading"></a></h3>
+<p>-Enable the clock for GPIOA.
+-Set PA0 as an input.
+-Enable a pull-up resistor for PA0 (optional).
+-Read PA0 to check if the button is pressed.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2><span class="section-number">4.1.7.3.8. </span>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>Understanding the GPIO functionality of the STM32F411 is crucial for efficient hardware interfacing. The ODR and BSRR registers offer different methods for controlling GPIO pin states, with BSRR being the more efficient choice for setting or resetting individual pins atomically. By mastering these registers and configuring GPIOs properly, you can create reliable, low-power embedded systems.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stm32overview.html" class="btn btn-neutral float-left" title="4.1.7.2. STM32 Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="clockinitialization.html" class="btn btn-neutral float-right" title="4.1.7.4. Clock initialization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

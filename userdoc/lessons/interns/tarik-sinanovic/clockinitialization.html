@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1.7.4. Clock initialization &mdash; Maasu Internship 4 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common.css?v=bd9ab754" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/layouts.css?v=448c382f" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/styles.css?v=6c8eb985" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=ffa536d2" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+        <script src="../../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+        <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="5. Requirements" href="../../../requirements/requirements.html" />
+    <link rel="prev" title="4.1.7.3. GPIO" href="gpio.html" />
+<link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Maasu Internship 4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fundamentals/fundamentals.html">2. Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../environment_setup/environment_setup.html">3. Development Environment Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../lessons.html">4. Lessons</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../lessons.html">4.1. Lessons written by each intern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../adna-njuhovic/lessons.html">4.1.1. Lessons by Adna Njuhović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../demir-hasicic/lessons.html">4.1.2. Lessons by Demir Hasičić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emina-mesic/lessons.html">4.1.3. Lessons by Emina Mešić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamija-fatic/lessons.html">4.1.4. Lessons by Lamija Fatić</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.5. Lessons by Muhibija Kavazović</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.6. Lessons by Semin Murtić</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lessons.html">4.1.7. Lessons by Tarik Sinanović</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.7.1. V Model Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.7.2. STM32 Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gpio.html">4.1.7.3. GPIO</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.1.7.4. Clock initialization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../requirements/requirements.html">5. Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/faqs.html">6. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">7. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/resources.html">8. Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Maasu Internship 4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../lessons.html"><span class="section-number">4. </span>Lessons</a></li>
+          <li class="breadcrumb-item"><a href="../lessons.html"><span class="section-number">4.1. </span>Lessons written by each intern</a></li>
+          <li class="breadcrumb-item"><a href="lessons.html"><span class="section-number">4.1.7. </span>Lessons by Tarik Sinanović</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1.7.4. </span>Clock initialization</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/userdoc/lessons/interns/tarik-sinanovic/clockinitialization.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="clock-initialization">
+<h1><span class="section-number">4.1.7.4. </span>Clock initialization<a class="headerlink" href="#clock-initialization" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">4.1.7.4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Clock initialization is essential for configuring STM32 microcontrollers for accurate and efficient operation. It involves selecting appropriate clock sources, configuring voltage scaling, and optimizing performance while minimizing power consumption. Proper clock setup ensures the microcontroller functions effectively for time-sensitive tasks.</p>
+</section>
+<section id="key-terms-and-abbreviations">
+<h2><span class="section-number">4.1.7.4.2. </span>Key Terms and Abbreviations<a class="headerlink" href="#key-terms-and-abbreviations" title="Link to this heading"></a></h2>
+<section id="rcc-reset-and-clock-control">
+<h3><span class="section-number">4.1.7.4.2.1. </span>RCC (Reset and Clock Control)<a class="headerlink" href="#rcc-reset-and-clock-control" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The RCC manages the clock sources and reset functionalities within the microcontroller.</p></li>
+</ul>
+</section>
+<section id="registers">
+<h3><span class="section-number">4.1.7.4.2.2. </span>Registers<a class="headerlink" href="#registers" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>CR (Control Register): Controls clock sources and oscillators.</p></li>
+<li><p>APB1ENR: Enables clocks for peripherals connected to the APB1 bus.</p></li>
+</ul>
+</section>
+<section id="clock-sources">
+<h3><span class="section-number">4.1.7.4.2.3. </span>Clock Sources<a class="headerlink" href="#clock-sources" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>HSI (High-Speed Internal): Internal clock, typically 8 MHz.</p></li>
+<li><p>HSE (High-Speed External): External clock source, used for more accuracy.</p></li>
+<li><p>LSI (Low-Speed Internal): Internal clock for low-power applications.</p></li>
+<li><p>LSE (Low-Speed External): External clock, used for the RTC.</p></li>
+</ul>
+</section>
+<section id="pll-phase-locked-loop">
+<h3><span class="section-number">4.1.7.4.2.4. </span>PLL (Phase-Locked Loop)<a class="headerlink" href="#pll-phase-locked-loop" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Used to multiply the clock frequency for higher performance. Configured via RCC_PLLCFGR register, adjusting multipliers and dividers (PLLM, PLLN, PLLP).</p></li>
+</ul>
+</section>
+</section>
+<section id="clock-configuration-process">
+<h2><span class="section-number">4.1.7.4.3. </span>Clock Configuration Process<a class="headerlink" href="#clock-configuration-process" title="Link to this heading"></a></h2>
+<section id="pll-configuration-example">
+<h3><span class="section-number">4.1.7.4.3.1. </span>PLL Configuration Example<a class="headerlink" href="#pll-configuration-example" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>The PLL multiplies the input clock frequency to generate a higher system clock. The general formula is:</dt><dd><ul class="simple">
+<li><p>CO Clock = PLL Input × (PLLN / PLLM)</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>PLL Output = VCO Clock / PLLP</p></li>
+</ul>
+</section>
+<section id="key-bits-in-pll-configuration">
+<h3><span class="section-number">4.1.7.4.3.2. </span>Key Bits in PLL Configuration<a class="headerlink" href="#key-bits-in-pll-configuration" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>PLLM: Main clock multiplier.</p></li>
+<li><p>PLLN: PLL multiplier.</p></li>
+<li><p>PLLP: Divider for the output clock.</p></li>
+</ul>
+</section>
+</section>
+<section id="importance-of-clock-initialization">
+<h2><span class="section-number">4.1.7.4.4. </span>Importance of Clock Initialization<a class="headerlink" href="#importance-of-clock-initialization" title="Link to this heading"></a></h2>
+<p>Accuracy: Ensures precise timing for time-sensitive applications.
+Performance: Optimizes the microcontroller’s processing speed and response time.
+Power Efficiency: Proper clock setup can help reduce power consumption, especially in low-power modes.</p>
+</section>
+<section id="steps-to-configure-the-frequency-of-100mhz-from-a-25mhz-oscillator-frequency">
+<h2><span class="section-number">4.1.7.4.5. </span>Steps to configure the frequency of 100MHz from a 25MHz oscillator frequency<a class="headerlink" href="#steps-to-configure-the-frequency-of-100mhz-from-a-25mhz-oscillator-frequency" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>We need to set up the PLL with specific values for PLLM, PLLN, PLLP.</p></li>
+<li><p>We need to divide the HSE oscillator frequency in order to get the frequency to 1MHz so we set PLLM=25MHz.</p></li>
+<li><p>Then we set PLLN=200MHz in order to multiply the VCO input. The result is 200MHz.</p></li>
+<li><p>Then we need to divide it in order to get 100MHz, so we set PLLP=2MHz.</p></li>
+</ul>
+</section>
+<section id="conclusion">
+<h2><span class="section-number">4.1.7.4.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>Clock initialization is a critical step in setting up STM32 microcontrollers for effective operation. By configuring the clock sources, PLL, voltage scaling, and flash memory wait states, the microcontroller can be optimized for both performance and power efficiency. Proper clock setup ensures the microcontroller operates reliably and efficiently across various applications.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gpio.html" class="btn btn-neutral float-left" title="4.1.7.3. GPIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../requirements/requirements.html" class="btn btn-neutral float-right" title="5. Requirements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maasu BH d.o.o..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

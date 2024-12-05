@@ -32,7 +32,7 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="5. Requirements" href="../../../requirements/requirements.html" />
+    <link rel="next" title="4.1.7.1. V Model Overview" href="vmodel.html" />
     <link rel="prev" title="4.1.6.6. Timer" href="../semin-murtic/Timer.html" />
 <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -70,7 +70,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../lamija-fatic/lessons.html">4.1.4. Lessons by Lamija Fatić</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../muhibija-kavazovic/lessons.html">4.1.5. Lessons by Muhibija Kavazović</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../semin-murtic/lessons.html">4.1.6. Lessons by Semin Murtić</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">4.1.7. Lessons by Tarik Sinanović</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4.1.7. Lessons by Tarik Sinanović</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vmodel.html">4.1.7.1. V Model Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stm32overview.html">4.1.7.2. STM32 Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gpio.html">4.1.7.3. GPIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clockinitialization.html">4.1.7.4. Clock initialization</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -109,6 +115,52 @@
              
   <section id="lessons-by-tarik-sinanovic">
 <h1><span class="section-number">4.1.7. </span>Lessons by Tarik Sinanović<a class="headerlink" href="#lessons-by-tarik-sinanovic" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vmodel.html">4.1.7.1. V Model Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vmodel.html#verification-phases-left-side-of-the-v">4.1.7.1.1. Verification Phases (Left Side of the V)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vmodel.html#coding-bridge-between-verification-and-validation">4.1.7.1.2. Coding (Bridge between Verification and Validation)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vmodel.html#validation-phases-right-side-of-the-v">4.1.7.1.3. Validation Phases (Right Side of the V)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vmodel.html#benefits-of-the-v-model">4.1.7.1.4. Benefits of the V-Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vmodel.html#drawbacks">4.1.7.1.5. Drawbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vmodel.html#conclusion">4.1.7.1.6. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stm32overview.html">4.1.7.2. STM32 Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#core-and-performance">4.1.7.2.1. Core and Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#power-efficiency">4.1.7.2.2. Power Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#memory">4.1.7.2.3. Memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#timers-and-peripherals">4.1.7.2.4. Timers and Peripherals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#i-o-and-communication">4.1.7.2.5. I/O and Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#analog-features">4.1.7.2.6. Analog Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#debugging-and-tracing">4.1.7.2.7. Debugging and Tracing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#compliance">4.1.7.2.8. Compliance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stm32overview.html#applications">4.1.7.2.9. Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gpio.html">4.1.7.3. GPIO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#introduction-to-gpio">4.1.7.3.1. Introduction to GPIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#gpio-modes-and-configuration">4.1.7.3.2. GPIO Modes and Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#gpio-registers-overview">4.1.7.3.3. GPIO Registers Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#detailed-explanation-of-odr-output-data-register">4.1.7.3.4. Detailed Explanation of ODR (Output Data Register)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#detailed-explanation-of-bsrr-bit-set-reset-register">4.1.7.3.5. Detailed Explanation of BSRR (Bit Set/Reset Register)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#odr-vs-bsrr-key-differences">4.1.7.3.6. ODR vs. BSRR: Key Differences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#examples">4.1.7.3.7. Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#conclusion">4.1.7.3.8. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="clockinitialization.html">4.1.7.4. Clock initialization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="clockinitialization.html#introduction">4.1.7.4.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clockinitialization.html#key-terms-and-abbreviations">4.1.7.4.2. Key Terms and Abbreviations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clockinitialization.html#clock-configuration-process">4.1.7.4.3. Clock Configuration Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clockinitialization.html#importance-of-clock-initialization">4.1.7.4.4. Importance of Clock Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clockinitialization.html#steps-to-configure-the-frequency-of-100mhz-from-a-25mhz-oscillator-frequency">4.1.7.4.5. Steps to configure the frequency of 100MHz from a 25MHz oscillator frequency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clockinitialization.html#conclusion">4.1.7.4.6. Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
 
 
@@ -116,7 +168,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../semin-murtic/Timer.html" class="btn btn-neutral float-left" title="4.1.6.6. Timer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../../requirements/requirements.html" class="btn btn-neutral float-right" title="5. Requirements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="vmodel.html" class="btn btn-neutral float-right" title="4.1.7.1. V Model Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
