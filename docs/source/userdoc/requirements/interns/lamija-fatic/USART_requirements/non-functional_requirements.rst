@@ -41,7 +41,7 @@ Non-functional Requirements
    :references:
    :verification-and-validation:
 
-   The system must ensure reliable USART communication with a data loss not exceeding 0.1%, ensuring data integrity and protection.
+   The system must ensure reliable USART communication with reliable data loss.
 
 .. req:: Security
    :id: REQ_INT3_17310281820879
