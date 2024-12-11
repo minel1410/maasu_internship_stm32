@@ -19,6 +19,5 @@ void gpio_output_type(GPIO_TypeDef* port, PIN pin, OTYPE type);
 void gpio_speed(GPIO_TypeDef* port, PIN pin, SPEED speed);
 void gpio_pull(GPIO_TypeDef* port, PIN pin, PULL pull);
 PIN_STATE gpio_read(GPIO_TypeDef* port, PIN pin);
-void gpio_write(GPIO_TypeDef* port, PIN pin);
-void gpio_reset(GPIO_TypeDef* port, PIN pin);
+void gpio_set_state(GPIO_TypeDef* port, PIN pin, PIN_STATE state)
 void gpio_AF(GPIO_TypeDef* port, PIN pin, ALT_FUNCTION alt_function);

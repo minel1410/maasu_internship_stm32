@@ -67,16 +67,13 @@ return PIN_STATE::LOW;
 }
 
 
-//Funkcija za postavljanje pina na HIGH //objediniti
-void gpio_write(GPIO_TypeDef* port, PIN pin)  //Brr je write-only,Koristenje &=, |=, nema smisla
-{
-port->BSRR  = (1<<(static_cast<uint8_t>(pin)));
-}
-
-//Funkcija za postavljanje pina na LOW
-void gpio_reset(GPIO_TypeDef* port, PIN pin)
-{
-port->BSRR  = (1<<(static_cast<uint8_t>(pin) + 16));
+// Funkcija za postavljanje stanja GPIO pina (HIGH ili LOW)
+void gpio_set_state(GPIO_TypeDef* port, PIN pin, PIN_STATE state) {
+    if (state == PIN_STATE::HIGH) {
+        port->BSRR = (1 << static_cast<uint8_t>(pin)); // Postavlja pin na HIGH
+    } else {
+        port->BSRR = (1 << (static_cast<uint8_t>(pin) + 16)); // Postavlja pin na LOW
+    }
 }
 
 void gpio_AF(GPIO_TypeDef* port, PIN pin, ALT_FUNCTION alt_function)
