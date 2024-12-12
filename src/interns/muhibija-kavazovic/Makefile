@@ -26,6 +26,9 @@ startup.o: ../../startup.cpp
 system_stm32f4xx.o: ../../vendor/CMSIS/Device/ST/STM32F4/Source/Templates/system_stm32f4xx.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) ../../vendor/CMSIS/Device/ST/STM32F4/Source/Templates/system_stm32f4xx.c -c
 
+gpio.o: gpio.cpp gpio.h
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c gpio.cpp -o gpio.o
+	
 .PHONY: clean
 clean:
 ifeq ($(OS),Windows_NT)
