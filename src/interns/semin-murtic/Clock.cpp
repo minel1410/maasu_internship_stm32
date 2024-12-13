@@ -1,32 +1,68 @@
 #include "Clock.h"
 
 bool Clock::configure() {
-    if (!calculateParameters(pllm, plln, pllp, vcoInputFreq, vcoOutputFreq)) {
+    // Initialize the selected clock source
+    if (!initializeClockSource()) {
         return false;
     }
 
-    // Enable HSE (High-Speed External) clock
+    // If PLL is selected, configure PLL
     if (sourceType == SourceType::Oscillator) {
-        RCC->CR |= RCC_CR_HSEON;
-        while (!(RCC->CR & RCC_CR_HSERDY));
+        // Calculate PLL parameters
+        if (!calculateParameters(pllm, plln, pllp, vcoInputFreq, vcoOutputFreq)) {
+            return false;
+        }
+
+        // Configure PLL
+        RCC->PLLCFGR = (pllm << RCC_PLLCFGR_PLLM_Pos) |
+                       (plln << RCC_PLLCFGR_PLLN_Pos) |
+                       (((pllp / 2) - 1) << RCC_PLLCFGR_PLLP_Pos) |
+                       RCC_PLLCFGR_PLLSRC_HSE;
+
+        // Enable PLL
+        RCC->CR |= RCC_CR_PLLON;
+        while (!(RCC->CR & RCC_CR_PLLRDY));
+
+        // Select PLL as system clock source
+        RCC->CFGR |= RCC_CFGR_SW_PLL;
+        while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_PLL);
+
+        // Update SystemCoreClock variable
+        SystemCoreClockUpdate();
+    } else {
+        // If not using PLL, set system clock source directly
+        if (sourceType == SourceType::Oscillator) {
+            RCC->CFGR &= ~RCC_CFGR_SW;
+            RCC->CFGR |= RCC_CFGR_SW_HSE;
+
+            // Wait until HSE is used as system clock
+            int timeout = 1000000;
+            while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_HSE) {
+                if (--timeout == 0) {
+                    return false; // System clock switch timeout
+                }
+            }
+
+            // Update SystemCoreClock variable
+            SystemCoreClock = sourceFreq;
+        } else if (sourceType == SourceType::Other) {
+            RCC->CFGR &= ~RCC_CFGR_SW;
+            RCC->CFGR |= RCC_CFGR_SW_HSI;
+
+            // Wait until HSI is used as system clock
+            int timeout = 1000000;
+            while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_HSI) {
+                if (--timeout == 0) {
+                    return false; // System clock switch timeout
+                }
+            }
+
+            // Update SystemCoreClock variable
+            SystemCoreClock = 16000000; // Default HSI frequency for STM32F411
+        } else {
+            return false; // Unsupported clock source
+        }
     }
-
-    // Configure PLL
-    RCC->PLLCFGR = (pllm << RCC_PLLCFGR_PLLM_Pos) |
-                   (plln << RCC_PLLCFGR_PLLN_Pos) |
-                   (((pllp / 2) - 1) << RCC_PLLCFGR_PLLP_Pos) |
-                   RCC_PLLCFGR_PLLSRC_HSE;
-
-    // Enable PLL
-    RCC->CR |= RCC_CR_PLLON;
-    while (!(RCC->CR & RCC_CR_PLLRDY));
-
-    // Select PLL as system clock source
-    RCC->CFGR |= RCC_CFGR_SW_PLL;
-    while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_PLL);
-
-    // Update SystemCoreClock variable
-    SystemCoreClockUpdate();
 
     return true;
 }
@@ -62,4 +98,52 @@ bool Clock::calculateParameters(uint32_t &pllm, uint32_t &plln, uint32_t &pllp, 
     }
 
     return true;
+}
+
+bool Clock::initializeHSE() {
+    // Enable HSE
+    RCC->CR |= RCC_CR_HSEON;
+
+    // Configure HSE bypass if enabled
+    if (bypassMode == HSEBypassMode::Enabled) {
+        RCC->CR |= RCC_CR_HSEBYP;
+    } else {
+        RCC->CR &= ~RCC_CR_HSEBYP;
+    }
+
+    // Wait until HSE is ready
+    int timeout = 1000000;
+    while (!(RCC->CR & RCC_CR_HSERDY)) {
+        if (--timeout == 0) {
+            return false; // HSE failed to start
+        }
+    }
+
+    return true;
+}
+
+bool Clock::initializeHSI() {
+    // Enable HSI
+    RCC->CR |= RCC_CR_HSION;
+
+    // Wait until HSI is ready
+    int timeout = 1000000;
+    while (!(RCC->CR & RCC_CR_HSIRDY)) {
+        if (--timeout == 0) {
+            return false; // HSI failed to start
+        }
+    }
+
+    return true;
+}
+
+bool Clock::initializeClockSource() {
+    switch (sourceType) {
+        case SourceType::Oscillator:
+            return initializeHSE();
+        case SourceType::Other:
+            return initializeHSI();
+        default:
+            return false; // Unsupported clock source
+    }
 }

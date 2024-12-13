@@ -30,11 +30,11 @@ startup.o: ../../startup.cpp
 system_stm32f4xx.o: ../../vendor/CMSIS/Device/ST/STM32F4/Source/Templates/system_stm32f4xx.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) ../../vendor/CMSIS/Device/ST/STM32F4/Source/Templates/system_stm32f4xx.c -c
 
-Clock.o: Clock.cpp Clock.h
+Clock.o: Clock.cpp
 	$(CC) $(CFLAGS) $(CPPFLAGS) Clock.cpp -c
 
-Timer.o: Timer.cpp Timer.h
-    $(CC) $(CFLAGS) $(CPPFLAGS) Timer.cpp -c
+Timer.o: Timer.cpp
+	$(CC) $(CFLAGS) $(CPPFLAGS) Timer.cpp -c
 
 
 .PHONY: clean

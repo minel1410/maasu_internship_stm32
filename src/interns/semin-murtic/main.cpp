@@ -25,13 +25,19 @@ void delay_ms(const uint32_t &ms) {
 
 int main() {
     // Create a Clock object and configure the system clock
-    Clock clock(8000000, TargetFrequency::Freq84MHz, SourceType::Oscillator, Microcontroller::STM32F411);
-    if (!clock.configure()) {
+    uint32_t externalClockFreq = 8000000; // 8 MHz external clock
+    TargetFrequency targetFreq = TargetFrequency::Freq84MHz;
+    SourceType sourceType = SourceType::Oscillator;
+    Microcontroller mcuType = Microcontroller::STM32F411;
+    HSEBypassMode bypassMode = HSEBypassMode::Enabled; // Enable bypass if using external clock signal
+
+    Clock systemClock(externalClockFreq, targetFreq, sourceType, mcuType, bypassMode);
+    if (!systemClock.configure()) {
         // Handle clock configuration failure
         while (1);
     }
 
-    // Config SysTick at 1kHz = 1ms, our HSI (high speed internal oscillator = 8MHz/8kHz = 1kHz)
+    // Config SysTick at 1kHz = 1ms
     SysTick_Config(SystemCoreClock / 1000);
 
     // Enable interrupts
