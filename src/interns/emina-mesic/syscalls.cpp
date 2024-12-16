@@ -4,17 +4,32 @@
 //#include "usart.h"
 #include "stm32f4xx.h"
 
+// extern "C" int _write(int file, char *ptr, int len) {
+//   (void) file;
+//   (void) ptr;
+//   (void) len;
+// for (int i=0; i<len; ++i)
+// {
+//   while (!(USART2->SR & USART_SR_TXE));
+//   USART2->DR = ptr[i];
+// }
+  
+//   return len;
+// }
+static USART_TypeDef* activeUSART = USART2; // Default to USART2
+
+// Function to set the active USART
+void setActiveUSART(USART_TypeDef* usartBase) {
+    activeUSART = usartBase;
+}
+
 extern "C" int _write(int file, char *ptr, int len) {
-  (void) file;
-  (void) ptr;
-  (void) len;
-//  for (int i=0; i<len; ++i)
-//  {
-//    while (!(USART2->SR & USART_SR_TXE));
-//    USART2->DR = ptr[i];
-//  }
-//    
-  return len;
+    (void) file;
+    for (int i = 0; i < len; ++i) {
+        while (!(activeUSART->SR & USART_SR_TXE)); 
+        activeUSART->DR = ptr[i];                 // Transmit the byte
+    }
+    return len;
 }
 
 extern "C" int _fstat(int fd, struct stat *st) {

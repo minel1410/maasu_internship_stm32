@@ -4,16 +4,6 @@
 #include "stm32f411xe.h"
 
 namespace GPIO {
-
-    enum class Port {
-        A = 0,
-        B = 1,
-        C = 2,
-        D = 3,
-        E = 4,
-        H = 5
-    };
-
     enum class Pin {
         Pin0 = 0,
         Pin1 = 1,
@@ -78,20 +68,21 @@ namespace GPIO {
     };
 
 
-    class GPIOHandler {
-        public:
-            static void enableClock(Port port);
-            static void configurePin(Port port, Pin pin, Mode mode, Pull pull, Speed speed = Speed::Low, OutputType type = OutputType::PushPull, AlternateFunction alternate = AlternateFunction::AF0);
-            static void setPin(Port port, Pin pin);
-            static void resetPin(Port port, Pin pin);
-            static bool readPin(Port port, Pin pin);
+//Function declarations:
+    void enableClock(GPIO_TypeDef* port);
+    void configureMode (GPIO_TypeDef* port, Pin pin, Mode mode);
+    void configurePull(GPIO_TypeDef* port, Pin pin, Pull pull);
+    void configureOutputType(GPIO_TypeDef* port, Pin pin, OutputType type);
+    void configureSpeed(GPIO_TypeDef* port, Pin pin, Speed speed);
+    void configureAlternateFunction(GPIO_TypeDef* port, Pin pin, AlternateFunction alternate);
+    void configurePin_Input(GPIO_TypeDef* port, Pin pin, Mode mode, Pull pull);
+    void configurePin_Output(GPIO_TypeDef* port, Pin pin, Mode mode, Pull pull, Speed speed, OutputType type);
+    void configurePin_Alternate(GPIO_TypeDef* port, Pin pin, Mode mode, Pull pull, Speed speed, OutputType type, AlternateFunction alternate);
+    void configurePin(GPIO_TypeDef* port, Pin pin, Mode mode, Pull pull, Speed speed = Speed::Low, OutputType type = OutputType::PushPull, AlternateFunction alternate = AlternateFunction::AF0);
+    void setPin(GPIO_TypeDef* port, Pin pin);
+    void resetPin(GPIO_TypeDef* port, Pin pin);
+    bool readPin(GPIO_TypeDef* port, Pin pin);
         
-        private:
-            static void configurePin_Input(GPIO_TypeDef* portBase, uint8_t pinNumber, Pull pull);
-            static void configurePin_Output(GPIO_TypeDef* portBase, uint8_t pinNumber, Pull pull, Speed speed, OutputType type);
-            static void configurePin_Alternate(GPIO_TypeDef* portBase, uint8_t pinNumber, Pull pull, Speed speed, OutputType type, AlternateFunction alternate);
-
-    };
 } // namespace GPIO
 
 #endif // GPIO_H
