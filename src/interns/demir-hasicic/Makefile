@@ -14,14 +14,20 @@ PROGRAMMER_FLAGS = -f interface/stlink.cfg -f target/stm32f4x.cfg
 
 all: $(BINARY)
 
-$(BINARY): main.o GPIO.o startup.o system_stm32f4xx.o
+$(BINARY): main.o syscalls.o USART.o GPIO.o startup.o system_stm32f4xx.o
 	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $^ -o $(BINARY)
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) $(CPPFLAGS) main.cpp -c
 
+syscalls.o: syscalls.cpp
+	$(CC) $(CFLAGS) $(CPPFLAGS) syscalls.cpp -c
+
 GPIO.o: GPIO.cpp
 	$(CC) $(CFLAGS) $(CPPFLAGS) GPIO.cpp -c
+
+USART.o: USART.cpp
+	$(CC) $(CFLAGS) $(CPPFLAGS) USART.cpp -c
 
 startup.o: ../../startup.cpp
 	$(CC) $(CFLAGS) $(CPPFLAGS) ../../startup.cpp -c
