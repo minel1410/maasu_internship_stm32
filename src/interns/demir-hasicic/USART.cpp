@@ -56,7 +56,7 @@ void usart_set_baudrate(USART_TypeDef* usart, uint32_t baudrate)
     if(usart==USART2){
     
     //Ekstrakcija prescaler vrijednosti za APB1 bus
-    uint32_t ppre1 = (RCC->CFGR & RCC_CFGR_PPRE1_Msk);
+    uint32_t ppre1 = (RCC->CFGR & RCC_CFGR_PPRE1_Msk) >> RCC_CFGR_PPRE1_Pos;
     
     // Izračunavanje prescalera za APB1 na osnovu vrijednosti ppre1
     uint32_t apb1_prescaler = get_prescaler(static_cast<PPRE>(ppre1));    
@@ -67,7 +67,7 @@ void usart_set_baudrate(USART_TypeDef* usart, uint32_t baudrate)
     else if(usart==USART1 || usart == USART6){
     
     //Ekstrakcija prescaler vrijednosti za APB2 bus
-    uint32_t ppre2 = (RCC->CFGR & RCC_CFGR_PPRE2_Msk); 
+    uint32_t ppre2 = (RCC->CFGR & RCC_CFGR_PPRE2_Msk)>> RCC_CFGR_PPRE2_Pos;
     
     // Izračunavanje prescalera za APB2 na osnovu vrijednosti ppre2 
     uint32_t apb2_prescaler = get_prescaler(static_cast<PPRE>(ppre2));
