@@ -1,5 +1,5 @@
 #include "GPIO.h"
-//Funkcija za aktiviranje clocka specificiranog GPIO porta // 
+//Funkcija za aktiviranje clocka specificiranog GPIO porta 
 void gpio_clock_init(GPIO_TypeDef* port) {
     if (port == GPIOA) {
         RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;       //Aktivira se clock za GPIOA port
@@ -94,3 +94,15 @@ void gpio_AF(GPIO_TypeDef* port, PIN pin, ALT_FUNCTION alt_function)
     }
 }
 
+void gpio_init(GPIO_TypeDef* port, PIN pin, GPIOMODE mode, OTYPE type, SPEED speed, PULL pull, ALT_FUNCTION alt_function) {
+    gpio_clock_init(port);
+    gpio_mode(port, pin, mode);
+    gpio_output_type(port, pin, type);
+    gpio_speed(port, pin, speed);
+    gpio_pull(port, pin, pull);
+
+    // Konfigurisanje alternativne funkcije ako je odabran taj mode
+    if (mode == GPIOMODE::AFC) {
+        gpio_AF(port, pin, alt_function);
+    }
+}
