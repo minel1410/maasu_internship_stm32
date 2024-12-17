@@ -14,7 +14,7 @@ PROGRAMMER_FLAGS = -f interface/stlink.cfg -f target/stm32f4x.cfg
 
 all: $(BINARY)
 
-$(BINARY): main.o startup.o system_stm32f4xx.o clockinit.o syscalls.o
+$(BINARY): main.o startup.o system_stm32f4xx.o clockinit.o syscalls.o timer.o
 	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $^ -o $(BINARY)
 
 main.o: main.cpp
@@ -32,6 +32,9 @@ system_stm32f4xx.o: ../../vendor/CMSIS/Device/ST/STM32F4/Source/Templates/system
 
 syscalls.o: ../../syscalls.cpp
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c ../../syscalls.cpp
+
+timer.o: timer.cpp
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c timer.cpp
 
 .PHONY: clean
 clean:
