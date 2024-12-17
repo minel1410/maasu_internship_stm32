@@ -12,6 +12,7 @@ namespace USART {
     void enableUSART(USART_TypeDef* usartBase);
     void disableUSART(USART_TypeDef* usartBase);
     void write_byte(USART_TypeDef* usartBase, uint8_t byte);
+    void write_bytes(USART_TypeDef* usartBase, const uint8_t* word, unsigned int len);
     void enableTransmitter(USART_TypeDef* usartBase, bool enable = true);
     void enableReceiver(USART_TypeDef* usartBase, bool enable = true);
     void initUSART(USART_TypeDef* usartBase, uint32_t clockFreq, uint32_t baudRate, bool enableTx = true, bool enableRx = false, bool oversample8 = false);

@@ -41,6 +41,11 @@ namespace USART {
         usartBase->DR = byte;   
     }
 
+    void write_bytes(USART_TypeDef* usartBase, const uint8_t *word, unsigned int len) {
+        for (unsigned int i = 0; i < len; ++i) {
+            write_byte(usartBase, word[i]);
+        }
+    }
 
     void enableTransmitter(USART_TypeDef* usartBase, bool enable) {
         if (enable) 
