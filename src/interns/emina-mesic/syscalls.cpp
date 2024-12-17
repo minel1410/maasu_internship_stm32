@@ -16,7 +16,8 @@
   
 //   return len;
 // }
-static USART_TypeDef* activeUSART = USART2; // Default to USART2
+
+USART_TypeDef* activeUSART = USART2; // Default to USART2
 
 // Function to set the active USART
 void setActiveUSART(USART_TypeDef* usartBase) {
