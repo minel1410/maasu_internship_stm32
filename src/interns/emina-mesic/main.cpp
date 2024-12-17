@@ -73,13 +73,13 @@ int main() {
  // Initialize USART2
     USART::initUSART(USART2, 50000000, 115200, true, false);
 
-    // Send a string via USART using _write
-    const char* message = "Hello, USART2!\n";
+    const uint8_t message[] = "Hello, USART!\r\n";
 
-    while (1) {
-        //_write(0, (char*)message, strlen(message));
-        printf("Hello World");
-        
+    // Transmit the message
+    USART::write_bytes(USART2, message, sizeof(message) - 1);
+
+
+    while (1) {       
         //Toggle GPIO pins
         GPIO::resetPin(GPIOA, GPIO::Pin::Pin5);
         delay_ms(1000);
