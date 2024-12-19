@@ -18,34 +18,14 @@ void delay_ms(const uint32_t &ms)
     uint32_t start = ticks;
     uint32_t end = start + ms;
 
-   
+    // Check overflow
     if (end < start)
         while (ticks > start);
 
-    
+    // Wait for ticks to wrap around to zero
     while (ticks < end);
 }
 
-<<<<<<< HEAD
-
-void clock_init()
-{
-  
-    RCC->CR |= RCC_CR_HSEON;
-    while (!(RCC->CR & RCC_CR_HSERDY));
-   
-    RCC->APB1ENR |= RCC_APB1ENR_PWREN;
-    
-    PWR->CR &= ~PWR_CR_VOS;
-    PWR->CR |= PWR_CR_VOS_0;
-    
-    FLASH->ACR |= FLASH_ACR_LATENCY_3WS;
-   
-    RCC->PLLCFGR &= ~(RCC_PLLCFGR_PLLM_Msk |
-                  RCC_PLLCFGR_PLLN_Msk |
-                  RCC_PLLCFGR_PLLP_Msk);
-  
-=======
 // Configure system clock to 100mhz
 void clock_init()
 {
@@ -64,27 +44,10 @@ void clock_init()
                   RCC_PLLCFGR_PLLN_Msk |
                   RCC_PLLCFGR_PLLP_Msk);
     // Set PLLM, PLLN and PLLP, and select HSE as PLL source
->>>>>>> 75f85784f97fe673a595dea373771825eaca263a
     RCC->PLLCFGR |= ((25 << RCC_PLLCFGR_PLLM_Pos) |
                  (400 << RCC_PLLCFGR_PLLN_Pos) |
                  (1 << RCC_PLLCFGR_PLLP_Pos) |
                  RCC_PLLCFGR_PLLSRC_HSE);
-<<<<<<< HEAD
-    
-    RCC->CFGR &= ~RCC_CFGR_PPRE1;
-   
-    RCC->CFGR |= RCC_CFGR_PPRE1_DIV2;
-   
-    RCC->CR |= RCC_CR_PLLON_Msk;
-    while (! (RCC->CR & RCC_CR_PLLRDY_Msk));
-   
-    RCC->CFGR |= (RCC_CFGR_SW_PLL << RCC_CFGR_SW_Pos);
-    while (! (RCC->CFGR & RCC_CFGR_SWS_PLL));
-   
-    SystemCoreClockUpdate(); 
-}
-
-=======
     // Clear the PPRE1 bits (APB1 prescaler)
     RCC->CFGR &= ~RCC_CFGR_PPRE1;
     // Set the PPRE1 bits to divide the APB1 clock by 2
@@ -119,30 +82,33 @@ void init_tim_3()
     // Enable timer
     TIM3->CR1 |= TIM_CR1_CEN;
 }
->>>>>>> 75f85784f97fe673a595dea373771825eaca263a
 int main()
 {
-    clock_init();
+    
+clock_init();
     SystemInit();
     SysTick_Config(100000);
     __enable_irq();
-<<<<<<< HEAD
-  
-=======
     // Configure USART2 on pins PA2 and PA3
->>>>>>> 75f85784f97fe673a595dea373771825eaca263a
     Gpio pa5(GPIOC, 13);
     pa5.set_mode(GpioMode::GPIO_Mode_OUT);
     pa5.write(1);
-    
+    bool led_pin_state = false;
     while(1)
     {
+        // Change led state
         pa5.write(1);
         delay_ms(1000);
         pa5.write(0);
         delay_ms(1000);
         
-        
     }
     return 0;
 }
+
+
+
+
+
+
+
