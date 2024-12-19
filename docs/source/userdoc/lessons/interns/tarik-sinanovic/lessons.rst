@@ -10,3 +10,5 @@ Lessons by Tarik Sinanović
     stm32overview.rst
     gpio.rst
     clockinitialization.rst
+    usart.rst
+    timer.rst
