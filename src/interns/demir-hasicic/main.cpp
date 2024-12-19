@@ -28,6 +28,9 @@ void delay_ms(const uint32_t &ms)
 
 
 int main() {
+     Clock clock(25000000, TargetFrequency::Freq100MHz, SourceType::Oscillator);
+    clock.configure();
+    SysTick_Config(100000); // 1ms tick
     // Enable clock for GPIOA and USART2
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;    // Enable GPIOA clock
     RCC->APB1ENR |= RCC_APB1ENR_USART2EN;  // Enable USART2 clock
@@ -58,3 +61,26 @@ int main() {
 
     return 0;
 }
+/*
+#include "gpio.h"
+#include "USART.h"
+
+int main() {
+    // Initialize GPIO pins for USART2
+    gpio_init(GPIOA, PIN::PIN2, GPIOMODE::AFC, OTYPE::PUSH_PULL, SPEED::HIGH, PULL::NO_PULL, ALT_FUNCTION::AF7); // TX
+    gpio_init(GPIOA, PIN::PIN3, GPIOMODE::AFC, OTYPE::PUSH_PULL, SPEED::HIGH, PULL::NO_PULL, ALT_FUNCTION::AF7); // RX
+
+    // Initialize USART2 with specific parameters
+    usart_init(USART2, 9600, USART_OVERSAMPLING::OVERSAMPLING_16, USART_MODE::BOTH);
+
+    // Transmit a message via USART2
+    char message[] = "Hello, USART2!\n";
+    usart_write_buffer(USART2, message, sizeof(message) - 1);
+
+    while (1) {
+        // Main loop
+    }
+
+    return 0;
+}
+*/
