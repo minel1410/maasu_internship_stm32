@@ -1,5 +1,6 @@
 #include "usart.h"
 #include "stm32f4xx.h"
+#include <cstdio>
 
 // USART Initialization
 void usart2_init(uint32_t baud_rate) {
