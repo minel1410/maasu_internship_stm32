@@ -1,20 +1,19 @@
+#include <cstdio>
 #include <stdint.h>
-#include <stdio.h>
+//#define STM32F411xE
+#define __FPU_USED 1
 #include "stm32f4xx.h"
-#include "clock.h"
-
+#include "gpio.h"
 #include "usart.h"
-#include "timer.h"
 
+uint32_t ticks{};
 
-volatile uint32_t ticks=0;
-
-void Systick_Handler(void)
+void systick_handler()
 {
     ticks++;
 }
 
-void delay_ms(uint32_t ms)
+void delay_ms(const uint32_t &ms)
 {
     uint32_t start = ticks;
     uint32_t end = start + ms;
@@ -27,89 +26,81 @@ void delay_ms(uint32_t ms)
     while (ticks < end);
 }
 
+// Configure system clock to 100mhz
+void clock_init()
+{
+    // Enable external clock source
+    RCC->CR |= RCC_CR_HSEON;
+    while (!(RCC->CR & RCC_CR_HSERDY));
+    // Enable power controller and set voltage scale mode 1
+    RCC->APB1ENR |= RCC_APB1ENR_PWREN;
+    // Set the Regulator Voltage Scaling Output Selection to Scale 1 (VS1)
+    PWR->CR &= ~PWR_CR_VOS;
+    PWR->CR |= PWR_CR_VOS_0;
+    // Configure flash controller for 3V3 supply and 100 Mhz -> 3 wait states
+    FLASH->ACR |= FLASH_ACR_LATENCY_3WS;
+    // Clear PLLM, PLLN and PLLP bits
+    RCC->PLLCFGR &= ~(RCC_PLLCFGR_PLLM_Msk |
+                  RCC_PLLCFGR_PLLN_Msk |
+                  RCC_PLLCFGR_PLLP_Msk);
+    // Set PLLM, PLLN and PLLP, and select HSE as PLL source
+    RCC->PLLCFGR |= ((25 << RCC_PLLCFGR_PLLM_Pos) |
+                 (400 << RCC_PLLCFGR_PLLN_Pos) |
+                 (1 << RCC_PLLCFGR_PLLP_Pos) |
+                 RCC_PLLCFGR_PLLSRC_HSE);
+    // Clear the PPRE1 bits (APB1 prescaler)
+    RCC->CFGR &= ~RCC_CFGR_PPRE1;
+    // Set the PPRE1 bits to divide the APB1 clock by 2
+    RCC->CFGR |= RCC_CFGR_PPRE1_DIV2;
+    // Enable PLL and wait for ready
+    RCC->CR |= RCC_CR_PLLON_Msk;
+    while (! (RCC->CR & RCC_CR_PLLRDY_Msk));
+    // Select PLL output as system clock
+    RCC->CFGR |= (RCC_CFGR_SW_PLL << RCC_CFGR_SW_Pos);
+    while (! (RCC->CFGR & RCC_CFGR_SWS_PLL));
+    // Update the internal clock frequency variable
+    SystemCoreClockUpdate(); 
+}
+void init_tim_3()
+{
+    RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
+    // Configure alternate function
+    Gpio PB0(GPIOB, 0);
+    PB0.set_mode(GpioMode::GPIO_Mode_AF);
+    PB0.set_alt_func(GpioAlternateFunction::GPIO_AF2);
+    // Set prescaler
+    TIM3->PSC = 49;
+    // 50Mhz / 25khz = 
+    TIM3->ARR = 19999;
+    // Set duty cycle 
+    TIM3->CCR3 = 0; // 0%;
+    // Configure pwm mode to 1
+    TIM3->CCMR2 &= ~(TIM_CCMR2_OC3M);
+    TIM3->CCMR2 |= TIM_CCMR2_OC3M_1 | TIM_CCMR2_OC3M_2 | TIM_CCMR2_OC3PE;
+    // Enable capture/compare channel 3 output
+    TIM3->CCER |= TIM_CCER_CC3E;
+    // Enable timer
+    TIM3->CR1 |= TIM_CR1_CEN;
+}
 int main()
 {
-
-    usart2_init(115200);
-    usart2_send_string("USART Initialized.\r\n");
-
-    // Enable TIM3 clock
-    enableTimerClock(TIM3);
-
-    // Configure GPIO for TIM3 Channel 1 (PA6 as PWM output)
-    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN; // Enable GPIOA clock
-    configureAlternateFunction(GPIOA, 6, 2); // Alternate Function 2 for TIM3_CH1
-
-    // Timer configuration for 1kHz PWM signal
-    uint16_t prescaler = calculatePrescalerValue(SystemCoreClock, 1000000); // 1 MHz timer clock
-    uint16_t period = calculateTimerPeriod(1000000, 1000); // 1 kHz PWM frequency
-    setTimerPrescaler(TIM3, prescaler);
-    setTimerPeriod(TIM3, period);
-
-    // Configure PWM mode and enable output
-    setOutputCompareMode(TIM3, 1, 6); // PWM Mode 1
-    enableOutputComparePreload(TIM3, 1);
-    enableCaptureCompareOutput(TIM3, 1);
-
-    // Set initial duty cycle to 50%
-    setDutyCycle(TIM3, 1, period / 2);
-
-    // Start the timer
-    enableTimerCounter(TIM3);
-
-    // Main loop
-    while (1) {
-        // Increment duty cycle for testing
-        static uint16_t duty = 0;
-        duty = (duty + 10) % (period + 1);
-        setDutyCycle(TIM3, 1, duty);
-        usart2_send_string("Duty Cycle: ");
-        usart2_send_number(duty * 100 / period);
-        usart2_send_string("%\r\n");
-        for (volatile uint32_t i = 0; i < 1000000; i++); // Delay
-    }
-
-    
-
-       PLLConfig pllConfig={
-        .pllM =25,
-        .pllN=200,
-        .pllP=PLLP_DIV2 
-    };
-    ClockStatus status=initializeClock(&pllConfig);
-    if(status != CLOCK_OK){
-        while (1);
-    }
-    // Config systick at 1khz = 1ms, our HSI (high speed internal oscillator = 8mhz/8khz = 1khz)
-    SysTick_Config(8000);
-    // Enable interupts
+    clock_init();
+    SystemInit();
+    SysTick_Config(100000);
     __enable_irq();
+    // Configure USART2 on pins PA2 and PA3
+    Gpio pa5(GPIOC, 13);
+    pa5.set_mode(GpioMode::GPIO_Mode_OUT);
+    pa5.write(1);
     
- 
-
-   
-
-    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
-    GPIOA->MODER &= ~(3<<(5*2));
-    GPIOA->MODER |= (1<<(5*2));
-
-    // Init pin here (instantiate gpio object with needed GPIO port and pin)
-    // We will be using the same port and pin as an example: GPIOA and pin 5
-    // Set mode
-
     while(1)
     {
-        // Write to pin
-        GPIOA->ODR ^= (1<<5);
-        delay_ms(200);
+        pa5.write(1);
+        delay_ms(1000);
+        pa5.write(0);
+        delay_ms(1000);
+        
+        
     }
-
     return 0;
 }
-
-
-
-
-
-
-
