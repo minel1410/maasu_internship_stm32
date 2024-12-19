@@ -19,6 +19,7 @@ typedef enum {
 } ClockStatus;
 
 typedef enum {
+    PLLP_DIV1=1,
     PLLP_DIV2 = 2,
     PLLP_DIV4 = 4,
     PLLP_DIV6 = 6,
