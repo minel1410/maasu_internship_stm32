@@ -1,6 +1,5 @@
 #include <stdint.h>
 #include <stdio.h>
-
 //#define STM32F411xE
 #include "stm32f4xx.h"
 
